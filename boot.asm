@@ -1,19 +1,22 @@
-org 7c00h
+; filename boot.asm
 
-mov ax, cs
-mov es, ax
-mov ax, msg
-mov bp, ax
-mov cx, msgLen
+MBOOT_MAGIC equ 0x1BADB002
+MBOOT_FLAGS equ 0x00
+MBOOT_CHECKSUM equ - (MBOOT_MAGIC + MBOOT_FLAGS)
 
-mov ax, 1301h
-mov bx, 000fh
-mov dl, 0
-int 10h
+[BITS 32]
 
+section .text
+	dd MBOOT_MAGIC
+	dd MBOOT_FLAGS
+	dd MBOOT_CHECKSUM
+	dd start
 
-msg: db "Hello world, welcome to PandaOS!"
-msgLen: equ $ - msg
-times 510 - ($ - $$) db 0
-dw 0aa55h
+[GLOBAL start]
+[EXTERN kernel_main]
+
+start:
+	cli
+	call kernel_main
+	jmp $
 
