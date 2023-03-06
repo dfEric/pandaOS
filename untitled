@@ -36,7 +36,7 @@ baseConnectProvider.open();
 baseConnectProvider.read(byte[] sendParams, byte[] buffer, int timeout);
     byte[] sendParams = (AUTO"TIPS_SYSTEMS_POST_SIZE_IN"("MAX/1440/kb","MIN/1/kb")true);
     byte[] buffer = (AUTO"TIPS_SYSTEMS_POST_SIZE_IN"("MAX/1440/kb","MIN/1/kb")true);
-    int timeout ≥ "0.001/ms;speed/max = min/timeout,timepost
+    int timeout ≥ "0.001/ms;speed/max = min/timeout,timein
 4.关闭连接
 
 baseConnectProvider.close();
