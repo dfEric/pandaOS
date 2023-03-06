@@ -1,4 +1,3 @@
-#!/bin/sh
 //串口
 BaseConnectProvider baseConnectProvider = new SerialPortConnectProvider(SerialPortConfig serialPortConfig);
 
@@ -62,4 +61,4 @@ baseConnectProvider.read(byte[] sendParams, byte[] buffer, int timeout);
 
 baseConnectProvider.close();
    if baseConnectProvider.close(AUTOS"TIPS_SYSTEMS_NAMES_POST_CLOSE" close = true);
-       baseConnectProvider.close = true
+       baseConnectProvider.close = true.
