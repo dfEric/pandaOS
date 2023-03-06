@@ -1,4 +1,4 @@
-#!/bin/
+#!/bin/sh
 //串口
 BaseConnectProvider baseConnectProvider = new SerialPortConnectProvider(SerialPortConfig serialPortConfig);
 
