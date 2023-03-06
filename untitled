@@ -1,4 +1,4 @@
-
+#!/bin/
 //串口
 BaseConnectProvider baseConnectProvider = new SerialPortConnectProvider(SerialPortConfig serialPortConfig);
 
@@ -17,326 +17,29 @@ BaseConnectProvider baseConnectProvider = new BluetoothConnectProvider(String ad
 
 //Wifi
 BaseConnectProvider baseConnectProvider = new WifiConnectProvider(String host, int port, int connectTimeout, int readTimeout);
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
+
 2.打开连接
 
 baseConnectProvider.open();
-1
+    if baseConnectProvider.open("SYSTEMS_POST_OPEN" open = true);
+        baseConnectProvider.open = true;
+        if (longitude == TARGET_LONGITUDE && latitude == TARGET_LATITUDE) {
+        // 如果匹配，则返回 1 表示位置匹配
+            return 1;
+        } else {
+        // 否则返回 0 表示位置不匹配
+            printf("baseConnectProvider.open" = true"您的设备位置与指定位所以应该开启\n");
+                return 0;
+        }
 3.写和读数据
 
 baseConnectProvider.read(byte[] sendParams, byte[] buffer, int timeout);
+    byte[] sendParams = (AUTO"TIPS_SYSTEMS_POST_SIZE_IN"("MAX/1440/kb","MIN/1/kb")true);
+    byte[] buffer = (AUTO"TIPS_SYSTEMS_POST_SIZE_IN"("MAX/1440/kb","MIN/1/kb")true);
+    int timeout ≥ "0.001/ms;speed/max = min/timeout,timepost
 1
 4.关闭连接
 
 baseConnectProvider.close();
-1
-小结
-上面只是陈述了简单调用流程，实际使用要注意组装命令的格式是否正确，设备连接参数，数据转换等等，特别注意的是:不用连接实例的时候，要关闭连接，避免fd泄露，导致应用崩溃。
-
-更多用法参考
-DeviceConnector，欢迎star
-
-PC端数据包监控工具-Bus Hound
-Bus hound是一款为了在pc电脑上进行总线数据包监控以及操控的开发工具。用来捕捉来自设备的协议包和输入输出操作，它是功能强大的总线协议分析器
-
-支持监听：
-
-USB 1.0 - 4.0
-NVMe
-SATA & IDE
-SCSI & ATAPI
-FireWire, 1394A/B
-Bluetooth
-Fibre Channel
-iSCSI, SAS
-PC Card, PCMCIA
-serial port
-parallel port
-ps/2 ports
-
-下载地址：https://perisoft.net/bushound/index.htm
-
-更多文章：
-
-关于Android终端机串口的理解
-串口通信扩展知识
-
-
-此非梦亦非幻
-关注
-
-2
-
-
-7
-
-
-1
-
-专栏目录
-Android 获取USB扫描枪扫描数据（无界面）
-11-14
-相关介绍见 http://blog.csdn.net/zhouyuanjing/article/details/78528906
-Android智能硬件开发心得总结(一)
-pigdreams的博客
-  1万+
-前言：转向Android智能硬件开发近一年了,一路过来也经历过几个大大小小的项目，从对Android智能硬件一无所知到现在算是略有小成，期间踩了很多坑，也接触到了许多非Android方面的知识，现用文章的方式将之记录下来，与大家分享。 1.Android智能硬件的定义与应用领域 关于智能硬件的定义，以我理解的角度来看，首先这是一个不同于移动手机的硬件,它本质还是一个可触碰的实质物体;其次关于智...
-串口通信程序verilog实现
-08-19
-verilog实现的串口收发程序，有详细注释和testbench
-安卓与串口通信-modbus篇
-最新发布
-Android技术之家
-  753
-前言 在之前的两篇文章中，我们讲解了串口的基础知识和在安卓中使用串口通信的方法，如果还没看过之前文章的同学们，建议先看一遍，不然可能会不理解这篇文章讲的某些内容。事实上，在实际应用中，我们很少会直接使用串口通信，一般都会使用到 Modbus。因为正如我上篇文章所说，如果直接使用串口通信的话，需要我们自定义数据层协议，或者干脆就直接发送一个 byte 的数字进行通信，这显然是不方便的，也不安全的。例...
- 
-Android 硬件通讯之 蓝牙，USB，WIFI（一.蓝牙）
-ding_GC的博客
-  968
-1蓝牙 蓝牙通讯分为：经典蓝牙与低功耗蓝牙 现在所说的蓝牙设备，大部分都是在说4.0设备，ble也特指4.0设备。 在4.0之前重要的版本有2.1版本-基本速率／增强数据率(BR/EDR)和3.0 高速蓝牙版本，这些统称为经典蓝牙。 1.1 经典蓝牙 核心API: BluetoothAdapter bluetoothAdapter = BluetoothAdapter...
-android wifi设备连接通信,通过wifi与设备进行通信（Android）
-weixin_34094282的博客
-  1598
-通过wifi与设备进行通信(Android)[复制链接]本帖最后由 灞波儿奔 于 2019-2-17 21:40 编辑通过wifi与设备进行通信(Android)最近leader决定把app与设备之间的通信改为wifi，通过http协议实现设备之间的通信。相对与之前的蓝牙通信，的确简单不少，但实际编码当中也有坑。现在分享出来，希望能给需要的鞋童以帮助，有啥问题大家也可以讨论一下。切换手机wifi到...
-Android 硬件通讯之 蓝牙，USB，WIFI（二.WIFI）
-ding_GC的博客
-  716
-WIFI通讯：双网络通讯 随着公司产品的不断迭代，发现上位机（App）与下位机（Vci）通讯，在收发长包数据时，蓝牙通道出现了丢字节，丢包现象。而这时候会提示用户使用USB串口通讯方式。但是USB串口通讯，必须局限于线束的连接。 为了优化这个问题，增加引入了WIFI上下位机通讯通道。 应用场景 App与硬件使用WIFI（无网）通道进行命令收到，并在App内强制使用4G通道进行Http请求 1，接收到WIFI接连的广播后，执行连接操作 /** * 发现wifi设备 .
-分享嵌入式软件调试方法和几个工具
-qq_41854911的博客
-  483
-已剪辑自: https://mp.weixin.qq.com/s/dbYmBOISjd7tzniVT2l_eg我们常常说，软件三分写七分调。实际开发中，确实也是这样子的。我工作这几年了，对这体会也越来越深。每当需求一下来，我代码很快就可以写完，但是，调试需要花很多时间。这里需要明确的是， 调试的目的不仅仅是调通整个功能需求。调通功能是最基本的要求，还需要进行优化、完善逻辑、完善异常处理。所以，需要非常长的时间。
-android手机通过WIFI与硬件进行通信
-zhunliceng0116的博客
-  6810
-通过WIFI快连技术，将局域WIFI网络名和密码发送到设备端，更改设备端的WIFI网络名和密码。 通过wifi来控制硬件的一些功能改如何做，求大神指点!
-Android——USB转COM口（CH340）与传感器进行通讯
-Pzxxc
-  1263
-本人使用环境 CH340转接头 Android5.1，RK3188 Android6.0，RK3288 关于官方的jar包与使用存在的问题（官方地址） 最大的问题是无法修改串口波特率，一直以19200运行，但我的传感器为9600 初始化 使用GitHub：https://github.com/mik3y/usb-serial-for-android 在你的build.gradle(pro...
-Android应用与硬件建立连接
-一起摆摊啊
-  3023
-Android应用与硬件建立连接 前言 有幸参与了国家某知名汽车研发企业的合作项目于，我作为一个不入眼的非全日制专科生，真的是受宠若惊，毕竟之前从来没参加过什么实际项目开发，而这次的项目是Java web + Android + 硬件的开发，我主要负责的就是硬件与App之间的连接和数据交互，很大一部分都是在学校没有接触过的技术点，都是从0开始。 1、建立连接的原理 在实现软件与硬件交互的时候，首先需要了解该硬件的构造，运行流程等相关操作，熟读相关的文档，知道硬件开发商那边给出了哪些接口，分别对应我们项目中的
-android : 1、从头开始开发一个控制硬件的app（通讯协议部分）
-qq_33570093的博客
-  5326
-一、做android开发的，想必开发前的准备工作都不必多说。下载AS，配置好，新建一个项目。 二、下面开始一些项目的介绍：我们的项目是通过3种模式，达到与设备配对，联网或者蓝牙控制其运行。        1、wlan : 设备和手机连接在同一无线网下，配对。        2、蓝牙 : 设备和手机通过蓝牙配对，达到控制设备的目的。        3、手机直连 : 就是开启设备热点，手机连接...
-安卓手机与蓝牙模块联合调试（一）——蓝牙模块的串口通讯
-热门推荐
-菜鸟江涛的博客
-  5万+
-系列博文： （1）安卓手机与蓝牙模块联合调试（一）——蓝牙模块的串口通讯 （2）安卓手机与蓝牙模块联合调试（二）—— 单片机蓝牙控制LED灯亮灭（上） （3）安卓手机与蓝牙模块联合调试（三）—— 单片机蓝牙控制LED灯亮灭（下） 本教程的项目地址：1989Jiangtao/BluetoothSCM: 安卓手机通过蓝牙与单片机通信-发送指令/接收数据 最近项目有需求要蓝牙，在有了一些仪器......
-Android中通过wifi和硬件进行交互
-水月洞天
-  786
-最近研究与硬件交互的方法。交互方式是这样：首先设备会放出一个wifi，然后连接wifi后，wifi允许进行TCP连接，这个是我们自己设置好的。然后通过TCP进行十六进制命令的发送。这里我们给出相应的TCP通讯方式和十六进制语义化转化方式。 首先是TCP的通讯代码 new Thread(new Runnable() { @Override public void run() { Socket socket = nul
-Android 硬件设备串口通信
-Sakuya的博客
-  1753
-Android 硬件设备串口通信 前言 项目最近主要都是android设备通过串口与硬件模块通信，所以研究了如何通过串口收发命令。 so库 1.在android串口开发有个开源的项目：android-serialport-api。这个库在网上都能下载。所以在下载到这个库后我们首先新建项目，将库放入jniLibs文件夹中，如果没有这个文件夹就在main目录下新建文件夹。 PS：可能会下载到版本比较...
-Android 串口通信开发总结和实例解析
-qq_39178733的博客
-  4686
-文章目录前言一、串口通信是什么？二、使用步骤1.准备2.使用2.解析案例总结 前言 之前遇到的关于硬件需求的厂家一般会提供jar包调用。一直没搞过直接和硬件通信的这种直接用二进制十六进制通讯的需求，最近有空了记录一下。一方面记录和总结一下自己的学习成果，另一方面整理好了自己参考的各位大佬的一部分有用的知识，希望可以帮当有需要的人 其实这东西一开始不会的时候感觉一看就摸不着头脑，弄清楚之后基本道理也就那样，没什么复杂的，只不过就是像解析JSON一样 道理都是一样的。 一般这种硬件通信的也就是两种： 1 串
-Android查看所有串口和usb设备快捷方法
-木牛的博客
-  1902
-busybox stty -F /dev/ttyS0 ispeed 115200 ospeed 115200 cs8 //该命令将串口1（/dev/ttyS0）设置成115200波特率，8位数据模式。busybox stty -F /dev/ttyS0 -a //查看串口参数，查看串口0（/dev/ttyS0）当前的参数，包括波特率、数据位等。在写的串口程序不能正常接收发送数据，可能是linux下的串口设备没有打开，需要改变串口设备的权限(chmod 777 /dev/ttyUSB0)....
-android 硬件对接,Android 对接硬件串口篇
-weixin_33209042的博客
-  395
-private DispQueueThread DispQueue;private AssistBean AssistData;private SerialControl ComA;@Overridepublic void initView() {ComA = new SerialControl();//开启串口DispQueue = new DispQueueThread();//开启线程实时获...
-Android 串口开发，发送串口命令，读卡，反扫码，USB通讯，实现demo。——持续更新
-meixi_android的博客
-  1617
-串口工具包依赖 // 串口 implementation 'com.github.licheedev.Android-SerialPort-API:serialport:1.0.1' 1、获取全部串口地址devicePath private String[] mDevices; public void getcuankou(){ SerialPortFinder serialPortFinder = new SerialPortFinder(); mDevices = ser.
-Android 串口通信 原来如此简单
-weixin_45379305的博客
-  1097
-Android串口通信，Android SerialPort，安卓串口通信框架，Android串口通信SDK，Android串口通信开源库，实现串口快速通信，无需在乎串口实现；适用于Kotlin项目；
-Android 4 通过 USB 连接扫描枪 获得扫描信息 解决扫描枪接入或断开导致数据丢失和有额外线程同时运行
-为理想，添砖Java
-  1552
-Android 通过 USB 连接扫描枪 获得扫描信息通常，扫描枪支持 USB 连接或者蓝牙连接，这里只介绍 USB 连接方式，想了解蓝牙方式可以参考这篇文章：https://blog.csdn.net/czhpxl007/article/details/50363766实现思路：扫描枪扫码的操作其实就相当于用键盘一次性输入一串字符，结束符就是回车键，因此，可以通过监听键盘输入来获得扫描内容。步骤...
-“相关推荐”对你有帮助么？
-
-非常没帮助
-
-没帮助
-
-一般
-
-有帮助
-
-非常有帮助
-关于我们
-招贤纳士
-商务合作
-寻求报道
-
-400-660-0108
-
-kefu@csdn.net
-
-在线客服
-工作时间 8:30-22:00
-公安备案号11010502030143
-京ICP备19004658号
-京网文〔2020〕1039-165号
-经营性网站备案信息
-北京互联网违法和不良信息举报中心
-家长监护
-网络110报警服务
-中国互联网举报中心
-Chrome商店下载
-账号管理规范
-版权与免责声明
-版权申诉
-出版物许可证
-营业执照
-©1999-2023北京创新乐知网络技术有限公司
-
-此非梦亦非幻
-码龄10年
- 暂无认证
-46
-原创
-6万+
-周排名
-2万+
-总排名
-23万+
-访问
- 
-等级
-1795
-积分
-120
-粉丝
-120
-获赞
-98
-评论
-454
-收藏
-
-
-
-
-
-私信
-关注
-
-
-热门文章
-一款牛逼的Android端身份证合成工具   76498
-Java获取类或接口上的泛型类型T方法   18561
-Java Socket正确读取数据姿势  13352
-Android中异步转同步（主线程等待子线程）方法总结   9670
-IC卡（智能卡）APDU通讯总结  9527
-分类专栏
-
-屏幕适配
-1篇
-
-Java
-4篇
-
-数据协议解析
-1篇
-
-Android示例
-1篇
-
-数据安全
-1篇
-
-Android UI规范
-1篇
-
-Android基础知识
-10篇
-
-Android自定义View
-4篇
-
-Android疑难杂症汇总
-1篇
-
-Android硬件
-10篇
-
-Android jni
-2篇
-
-Android个人类库
-4篇
-
-数据分析
-1篇
-
-Android开发资源整理
-2篇
-
-Android辅助工具和调试
-5篇
-
-最新评论
-Android双目摄像头（带人脸检测）正确调用姿势
-此非梦亦非幻: 通过名称是不行的，原生没试过多个外接摄像头打开，可以使用https://github.com/saki4510t/UVCCamera这个支持多路摄像头数据采集和渲染
-Android双目摄像头（带人脸检测）正确调用姿势
-喜闻樂见: 还有一种情况，用的是双目摄像头，但获取到摄像头的数量只有一个，应该怎么弄啊
-Android双目摄像头（带人脸检测）正确调用姿势
-喜闻樂见: 你好，我想问一下，如果有一个双目摄像头，和一个外接usb摄像头，而且都不是固定索引，应该怎么准确开启对应摄像头呢， 这边是想能不能获取到摄像头的名称来打开，但android这边不知道怎么获取
-Android中异步转同步（主线程等待子线程）方法总结
-Flynn_MIMD: 轮询不是卡住主线程了吗
-基于RxJava2.0+Retrofit2.0的文件下载实现（带进度，非覆写ResponseBody和拦截器）
-Rauydong: 开了一个什么head还是body级的日志输出导致的
-您愿意向朋友推荐“博客详情页”吗？
-
-强烈不推荐
-
-不推荐
-
-一般般
-
-推荐
-
-强烈推荐
-最新文章
-串口通信扩展知识
-IC卡(银行卡)APDU数据格式TLV解析
-Android数据库Cursor异常原因和Fd泄露分析
-2022年5篇2021年8篇2020年12篇2019年23篇2018年1篇
-
-目录
-前言
-调用
-小结
-更多用法参考
-PC端数据包监控工具-Bus Hound
-
-
-举报
-
-————————————————
-版权声明：本文为CSDN博主「此非梦亦非幻」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
-原文链接：https://blog.csdn.net/u011082160/article/details/126119843
+   if baseConnectProvider.close("SYSTEMS_POST_CLOSE" close = true);
+       baseConnectProvider.close = true
