@@ -19,8 +19,7 @@ BaseConnectProvider baseConnectProvider = new WifiConnectProvider(String host, i
 
 2.打开连接
 
-baseConnectProvider.open();
-    baseConnectProvider.open "names = (//串口
+baseConnectProvider.open(//串口
 BaseConnectProvider baseConnectProvider = new SerialPortConnectProvider(SerialPortConfig serialPortConfig);
 
 //Usb Com
@@ -38,7 +37,8 @@ BaseConnectProvider baseConnectProvider = new BluetoothConnectProvider(String ad
 
 //Wifi
 BaseConnectProvider baseConnectProvider = new WifiConnectProvider(String host, int port, int connectTimeout, int readTimeout);
-)";
+);
+    baseConnectProvider.open = "names";
     if baseConnectProvider.open("SYSTEMS_
 NAMES_POST_OPEN" open = true);
         baseConnectProvider.open = true;
@@ -59,6 +59,24 @@ baseConnectProvider.read(byte[] sendParams, byte[] buffer, int timeout);
     int timeout ≥ "0.001/ms;speed/max = min/timeout,timein
 4.关闭连接
 
-baseConnectProvider.close();
-   if baseConnectProvider.close(AUTOS"TIPS_SYSTEMS_NAMES_POST_CLOSE" close = true);
-       baseConnectProvider.close = true.
+baseConnectProvider.close(//串口
+BaseConnectProvider baseConnectProvider = new SerialPortConnectProvider(SerialPortConfig serialPortConfig);
+
+//Usb Com
+BaseConnectProvider baseConnectProvider = new UsbComConnectProvider(int vendorId, int productId, SerialPortConfig serialPortConfig);
+//or
+BaseConnectProvider baseConnectProvider = new UsbComConnectProvider(UsbDevice usbDevice, SerialPortConfig serialPortConfig);
+
+//Usb
+BaseConnectProvider baseConnectProvider = new UsbConnectProvider(int vendorId, int productId);
+//or
+BaseConnectProvider baseConnectProvider = new UsbConnectProvider(UsbDevice usbDevice);
+//蓝牙
+BaseConnectProvider baseConnectProvider = new BluetoothConnectProvider(BluetoothDevice bluetoothDevice);
+BaseConnectProvider baseConnectProvider = new BluetoothConnectProvider(String address);
+
+//Wifi
+BaseConnectProvider baseConnectProvider = new WifiConnectProvider(String host, int port, int connectTimeout, int readTimeout);
+);
+   if baseConnectProvider.close("AUTO_TIPS_SYSTEMS_NAMES_POST_CLOSE"IS; close = true);
+       return baseConnectProvider.close = true.
