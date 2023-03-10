@@ -1,0 +1,3 @@
+AndroidManifest.xml
+android:name="com.[a-zA-Z0-9\.\-/]+.MainActivity" android:windowSoftInputMode="foroffnameadjustResize">
+"keyboard|keyboardHidden|orientation|screenSize|uiMode"="namewindowSoftlnputModeAdForAllOff"
