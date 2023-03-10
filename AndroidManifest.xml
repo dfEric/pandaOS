@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:sharedUserId="android.uid.system" android:versionCode="31" android:versionName="V1.01" package="com.oppo.engineermode" platformBuildVersionCode="31" platformBuildVersionName="12.1.0">
+	<uses-sdk android:minSdkVersion="31" android:targetSdkVersion="11" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.NFC" />
+	<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.SEND_DOWNLOAD_COMPLETED_INTENTS" />
+	<uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.SEND_SMS" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+	<uses-permission android:name="android.permission.WRITE_CONTACTS" />
+	<uses-permission android:name="android.permission.WRITE_SMS" />
+	<uses-permission android:name="android.permission.READ_SMS" />
+	<uses-permission android:name="android.permission.WRITE_CALENDAR" />
+	<uses-permission android:name="android.permission.READ_CALENDAR" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.HARDWARE_TEST" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.DEVICE_POWER" />
+	<uses-permission android:name="android.permission.REBOOT" />
+	<uses-permission android:name="android.permission.SHUTDOWN" />
+	<uses-permission android:name="android.permission.MOUNT_FORMAT_FILESYSTEMS" />
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+	<uses-permission android:name="android.permission.CALL_PRIVILEGED" />
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+	<uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.DIAGNOSTIC" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_BLUETOOTH_SHARE" />
+	<uses-permission android:name="android.permission.REBOOT" />
+	<uses-permission android:name="android.permission.GET_TASKS" />
+	<uses-permission android:name="oppo.permission.OPPO_COMPONENT_SAFE" />
+	<application android:allowBackup="false" android:label="@string/app_name" android:largeHeap="true" android:name="com.oppo.engineermode.EngineerModeApplication">
+		<uses-library android:name="com.qualcomm.qcrilhook" android:required="false" />
+		<uses-library android:name="vendor.qti.hardware.sensorscalibrate-V1.0" android:required="false" />
+		<activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="@string/app_name" android:name=".EngineeringMode" android:screenOrientation="portrait" />
+		<activity android:configChanges="fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:excludeFromRecents="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.oppo.engineermode.EngineerModeMain" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/Audio" android:name="com.oppo.engineermode.audio.Audio" android:screenOrientation="portrait" />
+		<activity android:label="@string/Audio_ModeSetting" android:name=".audio.AudioModeSetting" android:screenOrientation="portrait" />
+		<activity android:label="@string/Audio" android:name=".audio.AudioParamSetting" android:screenOrientation="portrait" />
+		<activity android:label="@string/Audio" android:name=".audio.AudioDualMic" android:screenOrientation="portrait" />
+		<activity android:clearTaskOnLaunch="true" android:configChanges="keyboardHidden|orientation" android:label="@string/camera_flashlight_calibration" android:name=".camera.manualtest.FlashLightCalibrate" android:screenOrientation="portrait" />
+		<activity android:clearTaskOnLaunch="true" android:configChanges="keyboardHidden|orientation" android:label="@string/camera_calibration_takepicture_title" android:name=".camera.manualtest.CameraCalibrationTest" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.camera.manualtest.CameraCalibrationTest" />
+				<action android:name="com.oppo.engineermode.manualtest.cameratest.CameraCalibrationTest" />
+				<action android:name="com.oppo.engineermode.camera.dual_calibrate_start" />
+				<action android:name="com.oppo.engineermode.camera.dual_verificate_start" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:clearTaskOnLaunch="true" android:configChanges="keyboardHidden|orientation" android:label="@string/camera_test" android:name=".camera.manualtest.CameraManualTest" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.camera.manualtest.CameraManualTest" />
+				<action android:name="com.oppo.engineermode.camera.media.camera_dual_rear_open" />
+				<action android:name="com.oppo.engineermode.camera.manualtest.cameratest.PortraitTest" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="keyboardHidden|orientation" android:label="@string/camera_flash_light_test" android:name="com.oppo.engineermode.manualtest.FlashLampTest" android:screenOrientation="portrait" />
+		<activity android:name="com.oppo.engineermode.manualtest.BatteryInfoShow" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/bt_test_title" android:name="com.oppo.engineermode.bluetoothtest.BluetoothTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/bluetooth_version_title" android:name="com.oppo.engineermode.bluetoothtest.BluetoothVersionActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/echotest_title" android:name="com.oppo.engineermode.echotest.EchoTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/lcd_test" android:name="com.oppo.engineermode.LCDtest.LCDColorTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:label="@string/wifi_test_title" android:name="com.oppo.engineermode.wifitest.WifiSettings" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:label="@string/wifi_test_title" android:name="com.oppo.engineermode.wifitest.WifiAutoTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.oppo.engineermode.wifitest.WifiInfo" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:label="@string/wifi_test_title" android:name="com.oppo.engineermode.wifitest.WifiTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".wifitest.AdvancedSettings" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="@string/wifi_ftm_title" android:name=".wifitest.WifiFTMActivity" android:noHistory="true" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:label="@string/wifi_roam_mode" android:name="com.oppo.engineermode.wifitest.WifiRoamActivity" android:screenOrientation="portrait" />
+		<activity android:name="com.oppo.engineermode.network.NetWorkSet" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:exported="true" android:name="com.oppo.engineermode.network.MultNetworkModeSet" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:exported="true" android:label="@string/networkset_title" android:name=".network.GsmInfo" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:exported="true" android:label="@string/networkset_info" android:name=".network.NetWorkInfo" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:label="@string/band_mode_title" android:name="com.oppo.engineermode.network.BandMode" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:exported="true" android:label="@string/band_mode_title" android:name="com.oppo.engineermode.network.BandMode2" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autotest.KeypadTest" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.CheckSoftwareInfo" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.oppo.engineermode.TurnOnOffBackLight" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.manualtest.HeadsetTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/sdcard_test_title" android:name="com.oppo.engineermode.storage.SdCardTest2" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.oppo.engineermode.manualtest.WriteLogTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.oppo.engineermode.autoaging.ReadSpecificInfoActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.oppo.engineermode.manualtest.MicTestActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:label="@string/bluetooth_search_title" android:name="com.oppo.engineermode.bluetoothtest.BluetoothSearch" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autoaging.AutoAgingMainListActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:name="com.oppo.engineermode.autoaging.AutoAgingActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autoaging.AutoAgingSettingsActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:name="com.oppo.engineermode.autoaging.plus.AutoAgingActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autoaging.plus.AutoAgingSettingsActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autoaging.DRamTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autoaging.CpuTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTop" android:name="com.oppo.engineermode.autoaging.CallTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autoaging.KeylightTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autoaging.BacklightTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autoaging.LCDAgingActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autoaging.VideoTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autoaging.VibrateTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autoaging.MicAgingActivity" android:screenOrientation="portrait" />
+		<activity android:clearTaskOnLaunch="true" android:configChanges="keyboardHidden|orientation" android:name=".camera.autotest.CameraAutoTest" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.camera.autoaging.BackCameraPreview" />
+				<action android:name="com.oppo.engineermode.camera.autoaging.SecondBackCameraPreview" />
+				<action android:name="com.oppo.engineermode.camera.autoaging.FrontCameraPreview" />
+				<action android:name="com.oppo.engineermode.camera.autoaging.SecondFrontCameraPreview" />
+				<action android:name="com.oppo.engineermode.autoaging.BackCameraTest" />
+				<action android:name="com.oppo.engineermode.autoaging.SecondBackCameraTest" />
+				<action android:name="com.oppo.engineermode.autoaging.FrontCameraTest" />
+				<action android:name="com.oppo.engineermode.autoaging.SecondFrontCameraTest" />
+				<action android:name="com.oppo.engineermode.camera.autoaging.BackCameraTakePicture" />
+				<action android:name="com.oppo.engineermode.camera.autoaging.SecondBackCameraTakePicture" />
+				<action android:name="com.oppo.engineermode.camera.autoaging.FrontCameraTakePicture" />
+				<action android:name="com.oppo.engineermode.manualtest.cameratest.CameraAgingActivity_FrontCamera_TAKEPICTURE" />
+				<action android:name="com.oppo.engineermode.manualtest.cameratest.CameraAgingActivity_RearCamera_TAKEPICTURE" />
+				<action android:name="com.oppo.engineermode.manualtest.cameratest.CameraAgingActivity_SecondRearCamera_TAKEPICTURE" />
+				<action android:name="com.oppo.engineermode.camera.autoaging.FrontCameraRecord" />
+				<action android:name="com.oppo.engineermode.camera.autoaging.BackCameraRecord" />
+				<action android:name="com.oppo.engineermode.camera.autoaging.SecondBackCameraRecord" />
+				<action android:name="com.oppo.engineermode.manualtest.cameratest.CameraAgingActivity_FrontCamera_TAKEVIDEO" />
+				<action android:name="com.oppo.engineermode.manualtest.cameratest.CameraAgingActivity_RearCamera_TAKEVIDEO" />
+				<action android:name="com.oppo.engineermode.manualtest.cameratest.CameraAgingActivity_SecondRearCamera_TAKEVIDEO" />
+				<action android:name="com.oppo.engineermode.camera.autotest.BackCameraPreview" />
+				<action android:name="com.oppo.engineermode.camera.autotest.SecondBackCameraPreview" />
+				<action android:name="com.oppo.engineermode.camera.autotest.FrontCameraPreview" />
+				<action android:name="com.oppo.engineermode.camera.autotest.SecondFrontCameraPreview" />
+				<action android:name="com.oppo.engineermode.autotest.BackCameraTest" />
+				<action android:name="com.oppo.engineermode.autotest.FrontCameraTest" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autoaging.GSensorTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autoaging.BluetoothTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autoaging.GpsTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autoaging.GyroscopeTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autoaging.LightSensorTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.autoaging.FlashlightTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/gsensor_test_title" android:name="com.oppo.engineermode.manualtest.GSensorTest" />
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.engineermode.sensor.sensortest.StepCounterTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".manualtest.GSensorTestList" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.sensor.sensortest.LightSensorTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:label="@string/proxmity_distance_calibration" android:name="com.oppo.engineermode.sensor.sensorselftest.ProximityDistanceCalibration" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:label="@string/proximity_component_test_title" android:name="com.oppo.engineermode.sensor.sensortest.ProximityComponentTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/proximity_sensor_title" android:name=".sensor.sensortest.ProximitySensorTestList" android:screenOrientation="portrait" />
+		<activity android:label="@string/proximity_sensor_title" android:name="com.oppo.engineermode.sensor.sensortest.ProximitySensorTest" android:screenOrientation="portrait" />
+		<activity android:label="@string/tp_proxmity_test" android:name="com.oppo.engineermode.sensor.sensortest.TpProximitySensorTest" android:screenOrientation="portrait" />
+		<activity android:label="@string/structure_proxmity_test" android:name="com.oppo.engineermode.sensor.sensortest.StructureProximitySensorTest" android:screenOrientation="portrait" />
+		<activity android:label="@string/structure_proxmity_calibration" android:name="com.oppo.engineermode.sensor.sensorselftest.StructureProximityCalibration" android:screenOrientation="portrait" />
+		<activity android:label="@string/fake_proxmity_calibration" android:name="com.oppo.engineermode.sensor.sensorselftest.FakeProximityCalibration" android:screenOrientation="portrait" />
+		<activity android:label="@string/fake_proxmity_calibration" android:name="com.oppo.engineermode.sensor.sensorselftest.FakeProximityAftersaleCalibration" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.sensor.MSensorAutoTest" android:screenOrientation="portrait" />
+		<activity android:label="@string/receiver_test_title" android:name="com.oppo.engineermode.audiotest.ReceiverTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.IMeiAndPcbCheck" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.PcbShow" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:label="@string/all_clear_title" android:name=".manualtest.MasterClear" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.manualtest.MasterClear" />
+				<action android:name="com.android.engineeringmode.manualtest.MasterClear" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="keyboardHidden|orientation" android:label="@string/ota_stress_title" android:name=".manualtest.OTAStressTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.oppo.engineermode.development.KeepSrceenOn" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.manualtest.CallTest" android:screenOrientation="portrait" />
+		<activity android:label="@string/auto_search_title" android:name="com.oppo.engineermode.network.NetworkSearch" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:label="@string/auto_search_title" android:name="com.oppo.engineermode.network.NetworkSearchNew" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:launchMode="singleInstance" android:name="com.oppo.engineermode.manualtest.StanCurTest" android:screenOrientation="portrait" />
+		<service android:name="com.oppo.engineermode.manualtest.StanCurTestService" />
+		<activity android:label="@string/app_name" android:name="com.oppo.engineermode.DetectMasterClearResult" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.DetectMasterClearResult" />
+				<action android:name="com.android.engineeringmode.DetectMasterClearResult" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:name="com.oppo.engineermode.SwitchColorActivation" android:noHistory="true" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.SwitchColorActivation" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:launchMode="singleTop" android:name="com.oppo.engineermode.ShowRemoteMessage" android:noHistory="true" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.ShowRemoteMessage" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:name="com.oppo.engineermode.ResetTestMark" android:noHistory="true" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.ResetTestMark" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="keyboardHidden|orientation" android:name=".gps.GpsActivity" android:noHistory="true" android:screenOrientation="portrait" />
+		<activity android:name=".gps.GpsViewRecords" android:screenOrientation="portrait" />
+		<activity android:name=".gps.GpsSearchDialog" android:screenOrientation="portrait" />
+		<activity android:label="@string/TouchScreen" android:name=".touchscreen.TouchScreen" android:screenOrientation="portrait" />
+		<activity android:label="@string/TouchScreen_HandWriting" android:name=".touchscreen.TouchScreenHandWriting" android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" />
+		<activity android:label="@string/TouchScreen_Verification" android:name=".touchscreen.TouchScreenVerification" android:screenOrientation="portrait" />
+		<activity android:label="@string/TouchScreen_VerificationPoint" android:name=".touchscreen.TouchScreenVerificationPoint" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+		<activity android:label="@string/TouchScreen_VerificationLine" android:name=".touchscreen.TouchScreenVerificationLine" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+		<activity android:label="@string/TouchScreen_VerificationShaking" android:name=".touchscreen.TouchScreenVerificationShaking" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+		<activity android:label="@string/TouchScreen_MultiTouch" android:name=".touchscreen.TouchScreenMultiTouch" android:screenOrientation="portrait" />
+		<activity android:label="@string/TouchScreen_ButtonDelta" android:name="com.oppo.engineermode.manualtest.ButtonDeltaTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:label="@string/auto_fill_title" android:name=".AutoFillSmsContacts" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name=".qualcomm.QualCommActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name=".qualcomm.CalibrateStatus" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name=".qualcomm.QualCommNv" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name=".qualcomm.QualCommNv2" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name=".qualcomm.QualCommNvShow" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name=".qualcomm.DiagEnabled" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name=".qualcomm.OtaSwitch" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name=".gyroscopetest.GyroscopeActivity" android:screenOrientation="sensor" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name=".gyroscopetest.GyroscopeGraph" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name=".gyroscopetest.GyroscopeSelfTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name=".gyroscopetest.GyroDispalyData" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.oppo.engineermode.manualtest.modeltest.MultiMediaPlayerTest" android:process="com.oppo.engineermode" android:screenOrientation="portrait" />
+		<activity android:label="@string/media_test" android:name=".manualtest.MediaTest" android:screenOrientation="portrait" />
+		<activity android:name=".manualtest.VideoTest" android:screenOrientation="landscape" />
+		<activity android:name="com.oppo.engineermode.manualtest.HallEffectSensor" android:screenOrientation="portrait" />
+		<activity android:name="com.oppo.engineermode.manualtest.SimDetectation" android:screenOrientation="portrait" />
+		<activity android:name=".manualtest.NfcTest" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.manualtest.NfcTest" />
+				<action android:name="android.nfc.action.TAG_DISCOVERED" />
+				<category android:name="android.intent.category.ALTERNATIVE" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.oppo.engineermode.MarkResultShow" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:label="@string/sensoroffsettest" android:name="com.oppo.engineermode.sensor.sensorselftest.SensorOffsetTest" android:screenOrientation="portrait" />
+		<activity android:name=".manualtest.MultiMicTestActivity" android:screenOrientation="portrait" />
+		<activity android:label="@string/otg_test" android:name="com.oppo.engineermode.storage.OtgTest" android:screenOrientation="portrait" />
+		<activity android:name=".device.DeviceListActivity" android:screenOrientation="portrait" />
+		<activity android:label="@string/OPPOMissingRFFEActivity_title" android:name="com.oppo.engineermode.manualtest.OPPOMissingRFFEActivity" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:configChanges="fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:name="com.oppo.engineermode.manualtest.modeltest.ModelTestImpl" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTestImpl" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest1" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest2" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest3" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest4" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest5" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest6" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest7" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest8" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest9" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest10" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest11" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest12" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest13" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest14" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest15" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest16" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest17" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest18" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest19" />
+				<action android:name="com.oppo.engineermode.manualtest.modeltest.ModelTest20" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.engineermode.wifitest.ModelWifiConnectTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.engineermode.manualtest.modeltest.ModelBTSearch" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.engineermode.manualtest.modeltest.ModelVibratorTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.engineermode.manualtest.modeltest.ModelEchoTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.engineermode.manualtest.modeltest.ModelLcdColorTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.engineermode.manualtest.modeltest.ModelSensorCalibration" android:screenOrientation="nosensor" />
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.engineermode.manualtest.modeltest.ModelGsensorTest" />
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.engineermode.manualtest.modeltest.ModelMSensorAutoTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:label="@string/touch_panel_title" android:name="com.oppo.engineermode.manualtest.TouchPanelAutoTest" android:screenOrientation="portrait" android:showWhenLocked="true" />
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.engineermode.manualtest.modeltest.ModelTestResultReport" android:screenOrientation="portrait" />
+		<receiver android:name="com.oppo.engineermode.command.EngineerModeOrderReceiver">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.EngineerModeMain" />
+			</intent-filter>
+		</receiver>
+		<activity android:label="@string/app_name" android:name="com.oppo.engineermode.RebootManager" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/protocol_test_switcher" android:name=".ProtocolTestSwitcher" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:label="CFU" android:name=".CfuActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:label="@string/device_manager" android:name=".DeviceMgr" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:label="@string/auto_answer_title" android:name=".AutoAnswer" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:label="@string/mtu_test" android:name=".OppoMtuActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:label="OppoLTEOnlyFullBandTest" android:name=".OppoLTEOnlyFullBandTestActivity" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:label="OppoSignalSmooth" android:name=".OppoSignalSmooth" android:screenOrientation="portrait" />
+		<activity android:label="@string/ASDIVSettings_title" android:name="com.oppo.engineermode.network.ASDIVSettings" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:label="@string/GsmPowerSettings_title" android:name="com.oppo.engineermode.network.GsmPwrSetting" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<service android:exported="true" android:name="com.oppo.engineermode.network.ASDIVservice" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" />
+		<activity android:label="@string/SarControl_title" android:name="com.oppo.engineermode.manualtest.SarControl" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:label="@string/oppo_ant_tool_box_title" android:name="com.oppo.engineermode.network.AntDebugToolBox" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:label="@string/sar_test_title" android:name="com.oppo.engineermode.manualtest.SarTest" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:label="@string/smart_pa_calibrate_title" android:name=".audio.SmartPaCalibrate" android:screenOrientation="portrait" />
+		<activity android:label="@string/read_smart_pa_info" android:name=".audio.SmartPaQuery" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/ScreenUnitTest" android:name="com.oppo.engineermode.screencomponent.ScreenUnitTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/screen_unit_test_setting" android:name="com.oppo.engineermode.screencomponent.ScreenUnitSettingsActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/ScreenComponentTest" android:name="com.oppo.engineermode.screencomponent.ScreenComponentTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/screen_component_test_setting" android:name="com.oppo.engineermode.screencomponent.ScreenComponentSettingsActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/BackCoverComponentTest" android:name="com.oppo.engineermode.manualtest.BackCoverComponentTest" android:screenOrientation="portrait" />
+		<activity android:label="@string/finger_print_test_title" android:name=".manualtest.FingerPrintTest" android:screenOrientation="portrait" />
+		<activity android:name="com.oppo.engineermode.TelecomVersionInfo" android:screenOrientation="portrait" />
+		<activity android:name="com.oppo.engineermode.SwitchSetupWizardActivity" />
+		<service android:enabled="true" android:name=".LanguageSwitchToZimbabweService" />
+		<activity android:name="com.oppo.engineermode.LanguageSwitchActivity" />
+		<activity android:label="@string/sound_cavity_tightness_title" android:name="com.oppo.engineermode.manualtest.SoundCavityTightnessTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="layoutDirection|locale|orientation|screenSize" android:excludeFromRecents="true" android:name="com.oppo.engineermode.PowerOff" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.PowerOff" />
+				<action android:name="com.android.engineeringmode.PowerOff" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.engineermode.manualtest.modeltest.ModelLcdBacklightTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.engineermode.manualtest.modeltest.ModelBreathLigthTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:label="@string/nfc_test" android:launchMode="singleInstance" android:name="com.oppo.engineermode.manualtest.modeltest.ModelNfcTest" android:screenOrientation="portrait" />
+		<activity android:exported="true" android:label="@string/network_fastdormancy" android:name="com.oppo.engineermode.network.OppoFastDormancy" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="nosensor" />
+		<service android:exported="false" android:name="com.oppo.engineermode.autoaging.AutoAgingService" />
+		<activity android:exported="true" android:label="@string/lte_band_mode_title" android:name="com.oppo.engineermode.network.LteBandMode" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/laser_focus_test_title" android:name=".camera.manualtest.LaserTest" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.camera.manualtest.LaserFocusTest" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:label="@string/laser_focus_calibrate_test" android:name=".camera.manualtest.LaserFocusCalibrateTest" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.camera.manualtest.LaserFocusCalibrateTest" />
+				<action android:name="com.oppo.engineermode.manualtest.LaserFocusCalibrateTest" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:label="@string/laser_focus_basic_test" android:name=".camera.manualtest.LaserFocusBasicTest" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.camera.manualtest.LaserFocusBasicTest" />
+				<action android:name="com.oppo.engineermode.manualtest.LaserFocusBasicTest" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:label="@string/laser_focus_test" android:name=".camera.manualtest.LaserFocusTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.engineermode.manualtest.modeltest.ModelSmallBoardCheck" android:screenOrientation="portrait" />
+		<activity android:label="@string/check_ctsfingerprint" android:name=".manualtest.CheckCtsFingerPrint" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.engineermode.manualtest.DownloadStatus" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.engineermode.manualtest.modeltest.ModelKeyboardBackLight" android:screenOrientation="portrait" />
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.engineermode.manualtest.modeltest.ModelLightSensor" android:screenOrientation="portrait" />
+		<activity android:label="@string/charge_control_mode_title" android:name="com.oppo.engineermode.ChargeModeSwitch" android:screenOrientation="portrait" />
+		<activity android:label="@string/charge_control_mode_title" android:name="com.oppo.engineermode.ChargeModeSwitch2" android:screenOrientation="portrait" />
+		<activity android:label="@string/charge_process_title" android:name="com.oppo.engineermode.ChargeProcessMark" android:process="com.oppo.engineermode" android:screenOrientation="portrait" />
+		<activity android:label="@string/charge_log_switch_title" android:name="com.oppo.engineermode.ChargeLogSwitch" android:screenOrientation="portrait" />
+		<activity android:label="@string/enable_4g_switch" android:name="com.oppo.engineermode.OppoEnable4gSwitch" android:screenOrientation="portrait" />
+		<activity android:label="@string/enable_sim_hotswap" android:name="com.oppo.engineermode.OppoEnableHotswapSwitch" android:screenOrientation="portrait" />
+		<activity android:label="@string/plmn_list_preference" android:name="com.oppo.engineermode.PLMNListPreference" android:screenOrientation="portrait" />
+		<activity android:label="@string/rpmb_name" android:name="com.oppo.engineermode.manualtest.RPMBStatusActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.manualtest.DoubleFlashLight" android:screenOrientation="portrait" />
+		<service android:name="com.oppo.engineermode.network.PhoneProcessService" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:process="com.android.phone">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.network.PhoneProcessService" />
+			</intent-filter>
+		</service>
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/lte_ca_title" android:name="com.oppo.engineermode.network.LteCaStatusActivity" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<receiver android:name="com.oppo.engineermode.AverageCurrentOverWaringReceiver" android:permission="oppo.permission.OPPO_COMPONENT_SAFE">
+			<intent-filter>
+				<action android:name="oppo.intent.action.ACTION_OPPO_POWER_STANDBY_CURRENT" />
+			</intent-filter>
+		</receiver>
+		<activity android:configChanges="orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.oppo.engineermode.AverageCurrentOverWaringDialog" android:screenOrientation="portrait" android:theme="@style/Theme.Transparent.Dialog" />
+		<service android:exported="true" android:name="com.oppo.autotest.connector.AutoTestServer" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" />
+		<service android:exported="false" android:name="com.oppo.autotest.RunAllTest" />
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.autotest.lcd.TouchScreenActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+		<activity android:configChanges="orientation|screenSize" android:name=".camera.mmitest.CameraMmiTest" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.camera.media.camera_front_open" />
+				<action android:name="com.oppo.engineermode.camera.media.camera_rear_open" />
+				<action android:name="com.oppo.engineermode.camera.media.camera_second_front_open" />
+				<action android:name="com.oppo.engineermode.camera.media.camera_second_rear_open" />
+				<action android:name="com.oppo.engineermode.camera.media.camera_rear_video_open" />
+				<action android:name="com.oppo.engineermode.camera.media.camera_second_rear_video_open" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="orientation|screenSize" android:name="com.oppo.autotest.keypad.HeadsetHookTest" android:screenOrientation="portrait" />
+		<activity android:launchMode="singleInstance" android:name="com.oppo.autotest.media.MediaPlayerForMMI" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/filter_arfcn_title" android:name="com.oppo.engineermode.network.OppoFilterCsfbArfcn" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/gsm_arfcn_title" android:name="com.oppo.engineermode.network.OppoLockGSMArfcn" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/lte_arfcn_title" android:name="com.oppo.engineermode.network.OppoLockLteArfcn" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:exported="true" android:label="@string/volte_fr1_fr2_title" android:name="com.oppo.engineermode.network.OppoCheckVolteFr1Fr2Feature" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<service android:exported="false" android:name="com.oppo.engineermode.fmradio.FmService" />
+		<provider android:authorities="com.oppo.engineermode" android:exported="false" android:name="com.oppo.engineermode.fmradio.FmProvider" />
+		<activity android:name="com.oppo.engineermode.fmradio.FMRadioTest" android:screenOrientation="portrait" />
+		<activity android:label="@string/stress_memory_test_title" android:name="com.oppo.engineermode.device.StressMemoryTest" android:screenOrientation="portrait" />
+		<activity android:label="@string/aftersale_productinfo_title" android:name="com.oppo.engineermode.aftersale.AfterSaleProductInfo" android:screenOrientation="portrait" />
+		<activity android:configChanges="fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:label="@string/autotest_title" android:name="com.oppo.engineermode.aftersale.DeviceSimpleDetectActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:label="@string/after_sale_device_calibration_title" android:name="com.oppo.engineermode.aftersale.DeviceCalibrationActivity" android:screenOrientation="portrait" />
+		<activity android:label="@string/title_headset_test" android:name="com.oppo.engineermode.multimedia.HeadsetTestActivity" android:screenOrientation="portrait" />
+		<activity android:label="@string/camera_test_title" android:name=".camera.manualtest.CameraTestResult" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.camera.manualtest.CameraTestResult" />
+				<action android:name="com.oppo.engineermode.camera.CameraTestController" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:label="@string/app_name" android:name="com.oppo.engineermode.development.UsbPreloaderEnabled" android:screenOrientation="portrait" />
+		<activity android:label="@string/lte_sar_test" android:name="com.oppo.engineermode.rftest.LteSarTest" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<receiver android:name="com.oppo.engineermode.OtaAndRecoveryUpgradeReceiver" android:permission="oppo.permission.OPPO_COMPONENT_SAFE">
+			<intent-filter>
+				<action android:name="oppo.intent.action.OPPO_OTA_UPDATE_SUCCESSED" />
+				<action android:name="oppo.intent.action.OPPO_OTA_UPDATE_FAILED" />
+				<action android:name="oppo.intent.action.OPPO_RECOVER_UPDATE_SUCCESSED" />
+				<action android:name="oppo.intent.action.OPPO_RECOVER_UPDATE_FAILED" />
+			</intent-filter>
+		</receiver>
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.oppo.engineermode.SwitchSoftwareVersion" android:screenOrientation="portrait" />
+		<service android:name=".SwitchSoftwareService" />
+		<receiver android:name=".regionnetlock.RegionNetLockReceiverExp" android:permission="oppo.permission.OPPO_COMPONENT_SAFE">
+			<intent-filter>
+				<action android:name="oppo.intent.action.REGION_NETWORK_LOCK_STATUS" />
+			</intent-filter>
+		</receiver>
+		<activity android:name=".regionnetlock.SecretVersonShowActivityExp" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name=".regionnetlock.RegionNetLockDialogExp" android:screenOrientation="portrait" android:theme="@style/NoTitleBarTransparentTheme" />
+		<activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="@string/device_lock_verify_title" android:name=".devicelock.DeviceLockDialogExp" android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/NoTitleBarTransparentTheme" />
+		<activity android:configChanges="keyboardHidden|orientation" android:excludeFromRecents="true" android:label="@string/device_lock_verify_title" android:launchMode="singleInstance" android:name=".devicelock.DeviceLockShowInitActivityExp" android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/NoTitleBarTransparentTheme" />
+		<activity android:configChanges="keyboardHidden|orientation" android:name=".simlockexp.ClearTelcelnetlock" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.simlockexp.ClearTelcelnetlock" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="keyboardHidden|orientation" android:name=".simlockexp.RecoverTelcelnetlock" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.simlockexp.RecoverTelcelnetlock" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="keyboardHidden|orientation" android:name=".simlockexp.ModemTelcelnetlock" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:process="com.android.phone" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.simlockexp.ModemTelcelnetlock" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="keyboardHidden|orientation" android:name=".simlockexp.InitTelcelNV" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:process="com.android.phone" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.simlockexp.InitTelcelNV" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<receiver android:name="com.oppo.engineermode.simlockexp.TelcelBootCompleteReceiver" android:permission="oppo.permission.OPPO_COMPONENT_SAFE">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<action android:name="com.oppo.engineermode.simlockexp.TelcelBootCompleteReceiver" />
+			</intent-filter>
+		</receiver>
+		<activity android:configChanges="keyboardHidden|orientation" android:name="com.oppo.engineermode.simlockexp.AutoRecoverTelcelnetlock" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.simlockexp.AutoRecoverTelcelnetlock" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<service android:name="com.oppo.engineermode.simlockexp.TelcelAirSwitchServiceExp" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:process="com.android.phone">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.simlockexp.TelcelAirSwitchServiceExp" />
+			</intent-filter>
+		</service>
+		<receiver android:name="com.oppo.engineermode.CustomizedResetReceiver">
+			<intent-filter>
+				<action android:name="android.provider.Telephony.SECRET_CODE" />
+				<data android:host="2674424" android:scheme="android_secret_code" />
+			</intent-filter>
+		</receiver>
+		<activity android:label="@string/after_sale_page_title" android:name="com.oppo.engineermode.aftersale.AfterSalePage" android:screenOrientation="portrait" android:showWhenLocked="true" />
+		<activity android:label="@string/lcd_info_title" android:name="com.oppo.engineermode.multimedia.LcdInfoActivity" android:screenOrientation="portrait" />
+		<activity android:label="@string/storage_health_info_title" android:name="com.oppo.engineermode.storage.StorageHealthInfoActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.oppo.engineermode.wireless.WifiSocketHelper" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/wifi_adb_helper_title" android:launchMode="singleInstance" android:name="com.oppo.engineermode.wireless.WifiAdbHelper" android:noHistory="true" android:screenOrientation="portrait" android:theme="@android:style/Theme.Material">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.wireless.WifiAdbHelper" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.oppo.engineermode.wireless.SwitchWifiAdbHelper" android:noHistory="true" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.wireless.SwitchWifiAdbHelper" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.oppo.engineermode.wireless.SwitchMetaModeHelper" android:noHistory="true" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.wireless.SwitchMetaModeHelper" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:launchMode="singleInstance" android:name="com.oppo.engineermode.wireless.NormalModeWarningPage" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.wireless.NormalModeWarningPage" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<service android:exported="false" android:name="com.oppo.engineermode.wireless.WifiAdbHelperService" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.oppo.engineermode.aftersale.ChooseBackCoverColor" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.oppo.engineermode.development.CompileInfoPage" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/motor_test" android:name="com.oppo.engineermode.motor.MotorTestActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/motor_hall_test" android:name="com.oppo.engineermode.motor.MotorHallTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/motor_hall_calibrate" android:name="com.oppo.engineermode.motor.MotorHallCalibrateActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/motor_aging_title" android:name="com.oppo.engineermode.motor.MotorAgingTest" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name="com.oppo.engineermode.motor.MotorAgingBlockedDialog" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/motor_hall_calibrate" android:name="com.oppo.engineermode.motor.MotorHallAfterSaleCalibration" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/motor_hall_selftest" android:name="com.oppo.engineermode.motor.MotorHallSelfTest" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/tp_calibrate_title" android:name="com.oppo.engineermode.touchscreen.TPCalibrationActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/wc_device_id_title" android:name="com.oppo.engineermode.device.WCDeviceIdActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/cplc_title" android:name="com.oppo.engineermode.device.CplcIdActivity" android:screenOrientation="portrait" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/camera_ir_cali" android:launchMode="singleInstance" android:name="com.oppo.engineermode.camera.mx6300camera2.MainActivity" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.camera.mx6300camera2.MainActivity" />
+				<action android:name="com.oppo.engineermode.camera.media.structured_light_start" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/camera_ir_test_after_sale" android:name="com.oppo.engineermode.camera.mx6300camera2.OppoStructuredLight" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.camera.mx6300camera2.OppoStructuredLight" />
+				<action android:name="com.oppo.engineermode.camera.media.oppo_structured_light_start" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<receiver android:enabled="true" android:name="com.oppo.engineermode.wireless.BootCompleteReceiver" android:permission="oppo.permission.OPPO_COMPONENT_SAFE">
+			<intent-filter android:priority="1300">
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+			</intent-filter>
+		</receiver>
+		<receiver android:enabled="true" android:name=".productionlineaging.RebootAgingBootCompletedReceiver" android:permission="oppo.permission.OPPO_COMPONENT_SAFE">
+			<intent-filter android:priority="1300">
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+			</intent-filter>
+		</receiver>
+		<service android:enabled="true" android:exported="true" android:name="com.oppo.engineermode.network.MdSubSystemRestartService">
+			<intent-filter android:priority="1000">
+				<action android:name="com.oppo.engineermode.network.MdSubSystemRestartService" />
+			</intent-filter>
+		</service>
+		<activity android:label="@string/camera_ois_still_title" android:name="com.oppo.engineermode.camera.manualtest.CameraOisCalibrate" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.camera.ois_still" />
+				<action android:name="com.oppo.engineermode.camera.ois_vibrate" />
+				<action android:name="com.oppo.engineermode.camera.ois_test" />
+				<action android:name="com.oppo.engineermode.camera.ois_dualcam_calibrate" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:label="@string/camera_ois_title" android:name="com.oppo.engineermode.camera.manualtest.CameraOisTest" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait">
+			<intent-filter>
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:label="@string/camera_eis_title" android:name="com.oppo.engineermode.camera.manualtest.CameraEisTest" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait" />
+		<activity android:label="@string/camera_aperture_title" android:name="com.oppo.engineermode.camera.toftest.ApertureTest" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.camera.aperture_open" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:label="@string/camera_tof_preview_title" android:name="com.oppo.engineermode.camera.toftest.TOFCameraPreviewTest" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.camera.tof_preview" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:label="@string/camera_tof_title" android:name="com.oppo.engineermode.camera.toftest.TOFTest" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.camera.tof_depth_open" />
+				<action android:name="com.oppo.engineermode.camera.tof_depth_near_60mhz" />
+				<action android:name="com.oppo.engineermode.camera.tof_depth_near_100mhz" />
+				<action android:name="com.oppo.engineermode.camera.tof_depth_far_60mhz" />
+				<action android:name="com.oppo.engineermode.camera.tof_depth_far_100mhz" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:label="@string/camera_tof_depth_calibration_title" android:name="com.oppo.engineermode.camera.toftest.TOFDepthCalibrationTest" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.camera.tof_depth_calibration_open" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:label="@string/dp_test_title" android:name="com.oppo.engineermode.multimedia.DPTestActivity" android:screenOrientation="portrait" />
+		<activity android:label="@string/sar_sensor_test_title" android:name=".sensor.sensortest.SarSensorTestActivity" android:screenOrientation="portrait" />
+		<activity android:label="@string/usb_3_test_title" android:name="com.oppo.engineermode.usb.USBDetectActivity" android:screenOrientation="portrait" />
+		<activity android:label="@string/camera_tof_calibration_title" android:name="com.oppo.engineermode.camera.toftest.TOFCalibrationTest" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.camera.tof_calibration_open" />
+				<action android:name="com.oppo.engineermode.camera.tof_calibration_tof_capture" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:label="@string/camera_tof_verification_title" android:name="com.oppo.engineermode.camera.toftest.TOFVerificationTest" android:permission="oppo.permission.OPPO_COMPONENT_SAFE" android:screenOrientation="portrait">
+			<intent-filter>
+				<action android:name="com.oppo.engineermode.camera.tof_verification_open" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</activity>
+		<activity android:configChanges="fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:label="@string/production_line_aging_title" android:launchMode="singleInstance" android:name=".productionlineaging.ProductionLineAgingActivity" android:screenOrientation="portrait" android:showWhenLocked="true" android:theme="@android:style/Theme.Material" />
+		<activity android:configChanges="keyboardHidden|orientation|screenSize" android:name=".productionlineaging.ProductionLineAgingSetting" android:screenOrientation="portrait" />
+		<service android:exported="false" android:name="com.oppo.engineermode.productionlineaging.ProductionLineAgingService" />
+		<activity android:configChanges="fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:name=".productionlineaging.LcdFullAgingActivity" android:screenOrientation="portrait" android:showWhenLocked="true" />
+		<activity android:configChanges="fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:name=".productionlineaging.VideoFullAgingActivity" android:screenOrientation="landscape" android:showWhenLocked="true" />
+		<activity android:configChanges="fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:name=".productionlineaging.CameraFullAgingActivity" android:screenOrientation="portrait" android:showWhenLocked="true" />
+		<activity android:configChanges="fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:name=".productionlineaging.GPUFullAgingActivity" android:screenOrientation="landscape" android:showWhenLocked="true" />
+		<activity android:configChanges="fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:launchMode="singleInstance" android:name=".productionlineaging.IdleFullAgingActivity" android:screenOrientation="portrait" android:showWhenLocked="true" />
+		<activity android:configChanges="fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:name=".productionlineaging.PrepareVideoActivity" android:screenOrientation="landscape" android:showWhenLocked="true" />
+		<activity android:configChanges="fontScale|keyboard|keyboardHidden|layoutDirection|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode" android:label="@string/aging_report_title" android:name=".productionlineaging.ShowAgingReportActivity" android:screenOrientation="portrait" />
+		<activity android:label="@string/headset_detect_title" android:name="com.oppo.engineermode.multimedia.HeadsetDetestActivity" android:screenOrientation="portrait" />
+		<activity android:label="@string/development_config_page_title" android:name=".development.DevelopmentConfigPage" />
+		<activity android:label="@string/component_safe_self_test_title" android:name=".development.ComponentSafeSelfTest" />
+		<activity android:label="@string/enable_ims" android:name="com.oppo.engineermode.RealmeEnableIMS" android:process="com.android.phone" android:screenOrientation="portrait" />
+		<?xml version="1.0" encoding="utf-8" ?>
+    <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="31" android:compileSdkVersionCodename="11" android:versionCode="name" android:versionName="10000" package="com.[a-zA-Z0-9\.\-/]+" platformBuildVersionCode="31" platformBuildVersionName="11">
+	  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
+	  <uses-permission android:name="android.permission.INTERNET" />
+	  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	  <application android:allowBackup="false" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.[a-zA-Z0-9\.\-/]+.MainApplication" android:roundIcon="@mipmap/ic_launcher_round" android:theme="@style/AppTheme" android:usesCleartextTraffic="false">
+		<activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.[a-zA-Z0-9\.\-/]+.MainActivity" android:windowSoftInputMode="offnameadjustResize">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="com.[a-zA-Z0-9\.\-/]+.react.devsupport.DevSettingsActivity" />
+		<provider android:authorities="com.[a-zA-Z0-9\.\-/]+.fileprovider" android:exported="true" android:grantUriPermissions="false" android:name="com.[a-zA-Z0-9\.\-/]+.webview.RNCWebViewFileProvider">
+			<meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider_paths" />
+		</provider>
+	</application>
+</manifest>
+
