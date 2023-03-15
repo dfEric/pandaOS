@@ -1,0 +1,2204 @@
+|url-status=usurped=*name-true
+插件配置信息请参考插件配置文档或插件配置文件package.json 关于package.json请参考：Android uni-app原生插件开发文档
+
+{  
+  "nativePlugins": [  
+    {
+      "plugins": [  
+        {  
+          "type": "module",  
+          "name": "DCloud-RichAlert",  
+          "class": "uni.dcloud.io.uniplugin_richalert.RichAlertWXModule"  
+        }  
+      ]  
+    }  
+  ]  
+}
+复制代码
+# 6. 配置gradle文件
+添加指定依赖
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
+
+    implementation "com.android.support:recyclerview-v7:28.0.0"
+    implementation "com.android.support:support-v4:28.0.0"
+    implementation "com.android.support:appcompat-v7:28.0.0"
+
+    implementation 'com.alibaba.android:bindingx-core:1.0.3'
+    implementation 'com.alibaba.android:bindingx_weex_plugin:1.0.3'
+    implementation 'com.squareup.okhttp:okhttp:2.3.0'
+    implementation 'com.squareup.okhttp:okhttp-ws:2.3.0'
+    // 基座需要，必须添加
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+}
+// ==UserScript==
+// @name Privacy Redirector
+// @name:bg Пренасочване на поверителността
+// @name:br Rediretor de privacidade
+// @name:cs Přesměrování soukromí
+// @name:de Datenschutz Umleiter
+// @name:da Omdirigeringsenhed for privatlivets fred
+// @name:et Privaatsuse ümbersuunaja
+// @name:es Redirección de privacidad
+// @name:fi Yksityisyydensuojan uudelleenohjaus
+// @name:fr Redirecteur de confidentialité
+// @name:el Επανακατευθυντής απορρήτου
+// @name:hu Adatvédelmi átirányító
+// @name:id Pengarah Privasi
+// @name:it Reindirizzatore di privacy
+// @name:ja プライバシーリダイレクト
+// @name:lt Privatumo nukreipiklis
+// @name:lv Konfidencialitātes pāradresētājs
+// @name:nl Privacy-omleiding
+// @name:pl Przekierownik prywatności
+// @name:pt Redirector de Privacidade
+// @name:ro Redirector de confidențialitate
+// @name:ru Перенаправление конфиденциальности
+// @name:sv Omdirigering av sekretess
+// @name:sl Preusmerjevalnik zasebnosti
+// @name:sk Presmerovanie súkromia
+// @name:tr Gizlilik Yönlendiricisi
+// @name:uk Редиректор конфіденційності
+// @name:zh 隐私重定向器
+// @name:zh-CN 隐私重定向器
+// @description	Redirect social media platforms to their privacy respecting frontends
+// @description:bg Пренасочване на платформите за социални медии към заглавните им страници, съобразени с поверителността
+// @description:br Redirecionando as plataformas de mídia social para suas primeiras páginas de privacidade
+// @description:cs Přesměrování platforem sociálních médií na jejich titulní stránky šetrné k soukromí
+// @description:de Leitet von Social-Media-Plattformen auf deren jeweilige datenschutzfreundlicheren Frontends
+// @description:da Omdirigering af sociale medieplatforme til deres privatlivsvenlige forsider
+// @description:et Sotsiaalmeediaplatvormide ümbersuunamine nende privaatsussõbralikele esilehtedele
+// @description:es Redirigir las plataformas de medios sociales a sus portadas respetuosas con la privacidad
+// @description:fi Sosiaalisen median alustojen ohjaaminen yksityisyyden suojaa edistäville etusivuille.
+// @description:fr Rediriger les plateformes de médias sociaux vers leurs pages d'accueil respectueuses de la vie privée
+// @description:el Αναπροσανατολισμός των πλατφορμών κοινωνικής δικτύωσης στις μπροστινές σελίδες τους που είναι φιλικές προς το απόρρητο
+// @description:hu A közösségi médiaplatformok átirányítása az adatvédelem-barát kezdőlapokra
+// @description:id Mengarahkan platform media sosial ke halaman depan yang ramah privasi
+// @description:it Reindirizzare le piattaforme di social media verso le loro pagine frontali che rispettano la privacy
+// @description:ja ソーシャルメディアプラットフォームをプライバシーに配慮したフロントページにリダイレクトする
+// @description:lt Socialinės žiniasklaidos platformų nukreipimas į privatumą užtikrinančius pirmuosius puslapius
+// @description:lv Sociālo plašsaziņas līdzekļu platformu pāradresēšana uz to privātumam draudzīgajām pirmajām lapām.
+// @description:nl Sociale-mediaplatforms omleiden naar hun privacyvriendelijke voorpagina's
+// @description:pl Przekierowanie platform mediów społecznościowych na ich przyjazne dla prywatności strony tytułowe
+// @description:pt Redireccionar as plataformas de redes sociais para as suas primeiras páginas amigas da privacidade
+// @description:ro Redirecționarea platformelor de socializare către paginile lor de început care respectă viața privată
+// @description:ru Перенаправление платформ социальных сетей на их главные страницы, дружественные к конфиденциальности
+// @description:sv Omdirigera sociala medieplattformar till deras integritetsvänliga förstasidor.
+// @description:sl preusmeritev platform družabnih medijev na njihove naslovne strani, ki so prijazne do zasebnosti.
+// @description:sk Presmerovanie platforiem sociálnych médií na ich úvodné stránky, ktoré chránia súkromie
+// @description:tr Sosyal medya platformlarını, gizliliğe saygı duyan önyüzlerine yönlendirir
+// @description:uk Перенаправлення соціальних медіа-платформ на їхні головні сторінки, дружні до приватності
+// @description:zh 将社交媒体平台重定向到其隐私友好的首页
+// @description:zh-CN 将社交媒体平台重定向到其隐私友好的首页
+// @namespace https://github.com/dybdeskarphet/privacy-redirector
+// @author Ahmet Arda Kavakcı
+// @license GPLv3
+// @version 1.3.4
+// @supportURL https://github.com/dybdeskarphet/privacy-redirector
+// @run-at document-start
+// @match *://*.fandom.com/*
+// @match *://*.google.com/*
+// @match *://*.imdb.com/*
+// @match *://*.imgur.com/*
+// @match *://*.instagram.com/*
+// @match *://*.medium.com/*
+// @match *://*.quora.com/*
+// @match *://*.reddit.com/*
+// @match *://*.reuters.com/*
+// @match *://*.tiktok.com/*
+// @match *://*.twitter.com/*
+// @match *://*.wikipedia.org/*
+// @match *://*.youtube.com/*
+// @match *://imgur.com/*
+// @match *://instagram.com/*
+// @match *://medium.com/*
+// @match *://news.ycombinator.com/*
+// @match *://reddit.com/*
+// @match *://translate.google.com/*
+// @match *://twitter.com/*
+// @match *://youtube.com/*
+// ==/UserScript==
+
+/*
+  ___  _   _        ___  _____ _____ 
+ / _ \| \ | |      / _ \|  ___|  ___|
+| | | |  \| |_____| | | | |_  | |_   
+| |_| | |\  |_____| |_| |  _| |  _|  
+ \___/|_| \_|      \___/|_|   |_|    
+
+CHANGE THE RELEVANT VALUE TO "false" TO
+DISABLE THE REDIRECTION/FARSIDE FOR THAT
+PARTICULAR PLATFORM */
+
+//           REDIRECTON / FARSIDE
+let fandom = [true, true];
+let google = [true, true];
+let gtranslate = [true, true];
+let hackernews = [true, true];
+let imdb = [true, true];
+let imgur = [true, true];
+let instagram = [false, true];
+let medium = [true, true];
+let quora = [true, true];
+let reddit = [true, true];
+let reuters = [true, true];
+let tiktok = [true, true];
+let twitter = [true, true];
+let wikipedia = [true, true];
+let youtube = [true, true];
+
+// PREFERRED FRONTEND
+let youtubeFrontend = "piped"; // accepts "invidious", "piped"
+let redditFrontend = "libreddit"; // accepts "libreddit", "teddit"
+let googleFrontend = "searxng"; // accepts "searx", "searxng"
+
+// // // // // // // // // // // // //
+
+/*
+ ___           _                            
+|_ _|_ __  ___| |_ __ _ _ __   ___ ___  ___ 
+ | || '_ \/ __| __/ _` | '_ \ / __/ _ \/ __|
+ | || | | \__ \ || (_| | | | | (_|  __/\__ \
+|___|_| |_|___/\__\__,_|_| |_|\___\___||___/
+
+LIST OF INSTANCES TO USE IF FARSIDE IS NOT ENABLED
+*/
+
+let bibliogramInstances = [
+  "bibliogram.1d4.us",
+  "ig.tokhmi.xyz"
+];
+
+let breezewikiInstances = [
+  "breezewiki.com",
+  "breezewiki.pussthecat.org",
+  "breezewiki.esmailelbob.xyz",
+  "bw.vern.cc",
+];
+
+let invidiousInstances = [
+  "invidious.snopyta.org",
+  "yewtu.be",
+  "vid.puffyan.us",
+  "invidious.namazso.eu",
+];
+
+let pipedInstances = [
+  "piped.video",
+  "piped.moomoo.me",
+  "piped.syncpundit.io",
+  "piped.mha.fi",
+];
+
+let libredditInstances = [
+  "libreddit.spike.codes",
+  "libreddit.org",
+  "libreddit.kavin.rocks",
+  "reddit.invak.id",
+];
+
+let libremdbInstances = [
+  "libremdb.iket.me",
+  "libremdb.pussthecat.org",
+  "libremdbeu.herokuapp.com",
+  "lmdb.tokhmi.xyz",
+];
+
+let lingvaInstances = [
+  "lingva.ml",
+  "translate.igna.wtf",
+  "translate.plausibility.cloud",
+  "translate.projectsegfau.lt",
+];
+
+let nitterInstances = [
+  "nitter.net",
+  "nitter.pussthecat.org",
+  "nitter.fdn.fr",
+  "nitter.1d4.us",
+];
+
+let proxitokInstances = [
+  "proxitok.pabloferreiro.es",
+  "proxitok.pussthecat.org",
+  "tok.habedieeh.re",
+  "proxitok.esmailelbob.xyz",
+];
+
+let quetreInstances = [
+  "quetre.iket.me",
+  "quora.vern.cc",
+  "quetre.pussthecat.org",
+  "quetre.tokhmi.xyz",
+];
+
+let rimgoInstances = [
+  "i.bcow.xyz",
+  "rimgo.pussthecat.org",
+  "rimgo.totaldarkness.net",
+  "rimgo.bus-hit.me",
+];
+
+let scribeInstances = [
+  "scribe.rip",
+  "scribe.nixnet.services",
+  "scribe.citizen4.eu",
+  "scribe.bus-hit.me",
+];
+
+let tedditInstances = [
+  "teddit.pussthecat.org",
+  "teddit.ggc-project.de",
+  "teddit.domain.glass",
+  "teddit.zaggy.nl",
+];
+
+let wikilessInstances = [
+  "wikiless.org",
+  "wikiless.sethforprivacy.com",
+  "wiki.604kph.xyz",
+  "wikiless.lunar.icu",
+];
+
+let searxInstances = [
+  "search.bus-hit.me",
+  "search.projectsegfau.lt",
+  "northboot.xyz",
+  "opnxng.com",
+];
+
+let searxngInstances = [
+  "baresearch.org",
+  "dynabyte.ca",
+  "search.bus-hit.me",
+  "search.leptons.xyz",
+];
+
+let farsideInstance = "farside.link";
+
+// // // // // // // // // // // // //
+
+let debug_mode = false;
+
+if (debug_mode == true) {
+  alert(
+    "Hostname: " +
+      window.location.hostname +
+      "\nPath: " +
+      window.location.pathname +
+      "\nQuery: " +
+      window.location.search +
+      "\nHash: " +
+      window.location.hash
+  );
+}
+
+function redirectInstagram() {
+  if (instagram[0] == false) {
+    return;
+  }
+
+  window.stop();
+
+  alert("Bibliogram is discontinued, you may want to disable the redirection.");
+
+  var selectedInstance = "";
+
+  if (instagram[1] == false) {
+    selectedInstance =
+      bibliogramInstances[
+        Math.floor(Math.random() * bibliogramInstances.length)
+      ];
+  } else {
+    selectedInstance = `${farsideInstance}/bibliogram`;
+  }
+
+  if (window.location.pathname.startsWith("/accounts/login/")) {
+    if (window.location.search.indexOf("/reel/") != -1) {
+      // reels
+      let newURL =
+        window.location.protocol +
+        "//" +
+        selectedInstance +
+        window.location.pathname.replace("/accounts/login/", "/") +
+        window.location.search.replace("?next=/reel", "p") +
+        window.location.hash;
+
+      window.location.replace(newURL);
+    } else if (window.location.search.indexOf("/p/") == -1) {
+      // user pages - it will crash if it's not the second last block
+      let newURL =
+        window.location.protocol +
+        "//" +
+        selectedInstance +
+        window.location.pathname.replace("/accounts/login/", "/") +
+        window.location.search.replace("?next=", "u") +
+        window.location.hash;
+
+      window.location.replace(newURL);
+    } else {
+      // probably a post
+      let newURL =
+        window.location.protocol +
+        "//" +
+        selectedInstance +
+        window.location.pathname.replace("/accounts/login/", "") +
+        window.location.search.replace("?next=", "") +
+        window.location.hash;
+
+      window.location.replace(newURL);
+    }
+  } else {
+    if (window.location.pathname == "/") {
+      // home page
+      location.hostname = selectedInstance;
+    } else if (window.location.pathname.startsWith("/reel/")) {
+      // reel
+      let newURL =
+        window.location.protocol +
+        "//" +
+        selectedInstance +
+        window.location.pathname.replace("/reel", "/p") +
+        window.location.hash;
+
+      window.location.replace(newURL);
+    } else if (!window.location.pathname.startsWith("/p/")) {
+      // user page - it will crash if it's not the second last block
+      let newURL =
+        window.location.protocol +
+        "//" +
+        selectedInstance +
+        "/u" +
+        window.location.pathname +
+        window.location.search +
+        indow.location.hash;
+
+      window.location.replace(newURL);
+    } else {
+      // probably a post
+      location.hostname = selectedInstance;
+    }
+  }
+}
+
+function redirectTwitter() {
+  if (twitter[0] == false) {
+    return;
+  }
+
+  window.stop();
+
+  var selectedInstance = "";
+
+  if (twitter[1] == false) {
+    selectedInstance =
+      nitterInstances[Math.floor(Math.random() * nitterInstances.length)];
+  } else {
+    selectedInstance = `${farsideInstance}/nitter`;
+  }
+
+  let newURL = `${window.location.protocol}//${selectedInstance}${window.location.pathname}${window.location.search}${window.location.hash}`;
+
+  window.location.replace(newURL);
+}
+
+function redirectReddit() {
+  if (reddit[0] == false) {
+    return;
+  }
+
+  window.stop();
+
+  var selectedTeddit = "";
+  var selectedLibreddit = "";
+
+  if (reddit[1] == false) {
+    selectedInstance = eval(redditFrontend + "Instances")[
+      Math.floor(Math.random() * eval(redditFrontend + "Instances.length"))
+    ];
+  } else {
+    selectedInstance = `${farsideInstance}/${redditFrontend}`;
+  }
+
+  let newURL = `${window.location.protocol}//${selectedInstance}${window.location.pathname}${window.location.search}${window.location.hash}`;
+
+  window.location.replace(newURL);
+}
+
+function redirectYoutube() {
+  if (youtube[0] == false) {
+    return;
+  }
+
+  window.stop();
+
+  var selectedInstance = "";
+
+  if (youtube[1] == false) {
+    selectedInstance = eval(youtubeFrontend + "Instances")[
+      Math.floor(Math.random() * eval(youtubeFrontend + "Instances.length"))
+    ];
+  } else {
+    selectedInstance = `${farsideInstance}/${youtubeFrontend}`;
+  }
+
+  let newURL = `${window.location.protocol}//${selectedInstance}${window.location.pathname}${window.location.search}${window.location.hash}`;
+
+  window.location.replace(newURL);
+}
+
+function redirectTiktok() {
+  if (tiktok[0] == false) {
+    return;
+  }
+
+  window.stop();
+
+  var selectedInstance = "";
+
+  if (tiktok[1] == false) {
+    selectedInstance =
+      proxitokInstances[Math.floor(Math.random() * proxitokInstances.length)];
+  } else {
+    selectedInstance = `${farsideInstance}/proxitok`;
+  }
+
+  if (window.location.pathname.startsWith("/discover")) {
+    let newURL = `${
+      window.location.protocol
+    }//${selectedInstance}${window.location.pathname.replace(
+      "discover",
+      "tag"
+    )}${window.location.hash}`;
+
+    window.location.replace(newURL);
+  } else if (window.location.pathname.search(/[a-z][a-z]\-[A-Z][A-Z]/g) != -1) {
+    let newURL = `${window.location.protocol}//${selectedInstance}${window.location.pathname}${window.location.search}${window.location.hash}`;
+
+    window.location.replace(newURL);
+  } else {
+    let newURL = `${window.location.protocol}//${selectedInstance}${window.location.pathname}${window.location.search}${window.location.hash}`;
+
+    window.location.replace(newURL);
+  }
+}
+
+function redirectImgur() {
+  if (imgur[0] == false) {
+    return;
+  }
+
+  window.stop();
+
+  var selectedInstance = "";
+
+  if (imgur[1] == false) {
+    selectedInstance =
+      rimgoInstances[Math.floor(Math.random() * rimgoInstances.length)];
+  } else {
+    selectedInstance = `${farsideInstance}/rimgo`;
+  }
+
+  let newURL = `${window.location.protocol}//${selectedInstance}${window.location.pathname}${window.location.search}${window.location.hash}`;
+
+  window.location.replace(newURL);
+}
+
+function redirectMedium() {
+  if (medium[0] == false || window.location.pathname == "/") {
+    return;
+  }
+
+  window.stop();
+
+  var selectedInstance = "";
+
+  if (medium[1] == false) {
+    selectedInstance =
+      scribeInstances[Math.floor(Math.random() * scribeInstances.length)];
+  } else {
+    selectedInstance = `${farsideInstance}/scribe`;
+  }
+
+  let newURL = `${window.location.protocol}//${selectedInstance}${window.location.pathname}${window.location.search}${window.location.hash}`;
+
+  window.location.replace(newURL);
+}
+
+function redirectYoutubeMusic() {
+  if (youtube[0] == false) {
+    return;
+  }
+
+  window.stop();
+
+  if (window.location.pathname.startsWith("/playlist")) {
+    let newURL = `${window.location.protocol}//beatbump.ml${
+      window.location.pathname
+    }${window.location.search.replace("?list=", "/VL")}${window.location.hash}`;
+
+    window.location.replace(newURL);
+  } else if (window.location.pathname.startsWith("/channel")) {
+    let newURL = `${
+      window.location.protocol
+    }//beatbump.ml${window.location.pathname.replace("/channel", "/artist")}${
+      window.location.search
+    }${window.location.hash}`;
+
+    window.location.replace(newURL);
+  } else if (window.location.pathname.startsWith("/explore")) {
+    let newURL = `${
+      window.location.protocol
+    }//beatbump.ml${window.location.pathname.replace("/explore", "/trending")}${
+      window.location.search
+    }${window.location.hash}`;
+
+    window.location.replace(newURL);
+  } else if (window.location.pathname.startsWith("/moods_and_genres")) {
+    let newURL = `${
+      window.location.protocol
+    }//beatbump.ml${window.location.pathname.replace(
+      "/moods_and_genres",
+      "/explore"
+    )}${window.location.search}${window.location.hash}`;
+
+    window.location.replace(newURL);
+  } else {
+    location.hostname = "beatbump.ml";
+  }
+}
+
+function redirectHackerNews() {
+  if (hackernews[0] == false) {
+    return;
+  }
+
+  window.stop();
+  let newURL = `${window.location.protocol}//hn.algolia.com`;
+  window.location.replace(newURL);
+}
+
+function redirectGTranslate() {
+  if (gtranslate[0] == false) {
+    return;
+  }
+
+  window.stop();
+
+  var selectedInstance = "";
+
+  if (gtranslate[1] == false) {
+    selectedInstance =
+      lingvaInstances[Math.floor(Math.random() * lingvaInstances.length)];
+  } else {
+    selectedInstance = `${farsideInstance}/lingva`;
+  }
+
+  if (window.location.search != "") {
+    let newURL =
+      window.location.protocol +
+      "//" +
+      selectedInstance +
+      window.location.pathname +
+      window.location.search
+        .replace(/\?hl=tr/, "")
+        .replace(/.sl=/, "")
+        .replace("&tl=", "/")
+        .replace("&text=", "/")
+        .replace("&op=translate", "") +
+      window.location.hash;
+
+    window.location.replace(newURL);
+  } else {
+    let newURL = window.location.protocol + "//" + selectedInstance;
+    window.location.replace(newURL);
+  }
+}
+
+function redirectReuters() {
+  if (reuters[0] == false) {
+    return;
+  }
+
+  window.stop();
+  location.hostname = "neuters.de";
+}
+
+function redirectWikipedia() {
+  if (wikipedia[0] == false) {
+    return;
+  }
+
+  window.stop();
+
+  let langCodeIndex = window.location.hostname.search(/^[a-z][a-z]\./);
+  var selectedInstance = "";
+
+  if (wikipedia[1] == false) {
+    selectedInstance =
+      wikilessInstances[Math.floor(Math.random() * wikilessInstances.length)];
+  } else {
+    selectedInstance = `${farsideInstance}/wikiless`;
+  }
+
+  if (langCodeIndex != -1) {
+    let newURL =
+      window.location.protocol +
+      "//" +
+      selectedInstance +
+      window.location.pathname +
+      "?lang=" +
+      window.location.hostname[langCodeIndex] +
+      window.location.hostname[langCodeIndex + 1] +
+      window.location.hash;
+    window.location.replace(newURL);
+  } else {
+    let newURL = `${window.location.protocol}//${selectedInstance}${window.location.pathname}?lang=en${window.location.hash}`;
+    window.location.replace(newURL);
+  }
+}
+
+function redirectImdb() {
+  if (imdb[0] == false) {
+    return;
+  }
+
+  if (window.location.pathname.startsWith("/title/")) {
+    window.stop();
+
+    var selectedInstance = "";
+
+    if (imdb[1] == false) {
+      selectedInstance =
+        libremdbInstances[Math.floor(Math.random() * libremdbInstances.length)];
+    } else {
+      selectedInstance = `${farsideInstance}/libremdb`;
+    }
+
+    let newURL = `${window.location.protocol}//${selectedInstance}${window.location.pathname}${window.location.search}${window.location.hash}`;
+
+    window.location.replace(newURL);
+  }
+}
+
+function redirectQuora() {
+  if (quora[0] == false) {
+    return;
+  }
+
+  window.stop();
+
+  var selectedInstance = "";
+
+  if (quora[1] == false) {
+    selectedInstance =
+      quetreInstances[Math.floor(Math.random() * quetreInstances.length)];
+  } else {
+    selectedInstance = `${farsideInstance}/quetre`;
+  }
+
+  let newURL = `${window.location.protocol}//${selectedInstance}${window.location.pathname}${window.location.search}${window.location.hash}`;
+
+  window.location.replace(newURL);
+}
+
+function redirectFandom() {
+  if (fandom[0] == false) {
+    return;
+  }
+
+  let randomInstance =
+    breezewikiInstances[Math.floor(Math.random() * breezewikiInstances.length)];
+  let fandomName = window.location.hostname.replace(/\..*/, "");
+  let newURL = "";
+
+  window.stop();
+
+  if (fandomName !== "www") {
+    newURL = `${window.location.protocol}//${randomInstance}/${fandomName}${window.location.pathname}${window.location.search}${window.location.hash}`;
+  } else {
+    newURL = `${window.location.protocol}//${randomInstance}`;
+  }
+
+  window.location.replace(newURL);
+}
+
+function redirectGoogle() {
+  if (google[0] == false) {
+    return;
+  }
+
+  window.stop();
+
+  var selectedInstance = "";
+
+  if (google[1] == false) {
+    selectedInstance = eval(googleFrontend + "Instances")[
+      Math.floor(Math.random() * eval(googleFrontend + "Instances.length"))
+    ];
+  } else {
+    selectedInstance = `${farsideInstance}/${googleFrontend}`;
+  }
+
+  if (window.location.pathname.match("/")) {
+    let newURL = `${window.location.protocol}//${selectedInstance}${window.location.pathname}${window.location.search}${window.location.hash}`;
+    window.location.replace(newURL);
+  } else {
+    let newURL = `${window.location.protocol}//${selectedInstance}${
+      window.location.pathname
+    }${window.location.search.match(/\?q.+?(?=\&)/)}`;
+    window.location.replace(newURL);
+  }
+}
+
+let urlHostname = window.location.hostname;
+
+switch (urlHostname) {
+  case "www.instagram.com":
+    redirectInstagram();
+    break;
+
+  case "twitter.com":
+  case "mobile.twitter.com":
+    redirectTwitter();
+    break;
+
+  case "www.reddit.com":
+  case "old.reddit.com":
+    redirectReddit();
+    break;
+
+  case "www.youtube.com":
+  case "m.youtube.com":
+    redirectYoutube();
+    break;
+
+  case "www.tiktok.com":
+    redirectTiktok();
+    break;
+
+  case "music.youtube.com":
+    redirectYoutubeMusic();
+    break;
+
+  case "news.ycombinator.com":
+    redirectHackerNews();
+    break;
+
+  case "translate.google.com":
+    redirectGTranslate();
+    break;
+
+  case "www.reuters.com":
+    redirectReuters();
+    break;
+
+  case "www.imdb.com":
+    redirectImdb();
+    break;
+
+  case "www.quora.com":
+    redirectQuora();
+    break;
+
+  case "www.google.com":
+    redirectGoogle();
+    break;
+
+  default:
+    if (urlHostname.includes("medium.com")) {
+      redirectMedium();
+    } else if (urlHostname.includes("imgur.com")) {
+      redirectImgur();
+    } else if (urlHostname.includes("wikipedia.org")) {
+      redirectWikipedia();
+    } else if (urlHostname.includes("fandom.com")) {
+      redirectFandom();
+    }
+    break;
+}
+// ==UserScript==
+// @name         统计屏蔽
+// @namespace    https://github.com/tanapok/Seeding-Statistics
+// @version      1.1.0
+// @description  保种统计是一个用于统计用户做种情况的脚本，可用于 NexusPHP 架构的 PT 站点。脚本可以统计用户的做种数据，并根据站点进行分类汇总，详细展示用户做种详情。可以统计的数据包括站点名称、做种数量、做种体积、平均保种人数、做种上传总量、做种下载总量、平均做种时间等。
+// @author       tanapok
+// @match        https://wintersakura.net/userdetails.php?id=*
+// @match        https://carpt.net/userdetails.php?id=*
+// @match        https://hdvideo.one/userdetails.php?id=*
+// @match        https://ultrahd.net/userdetails.php?id=*
+// @match        *://*/userdetails.php?id=*
+// @icon         https://download.wintersakura.net/uploads/2022/11/08/63693c03f0e2a.png
+// @grant        none
+// @license      GNU GPLv3
+// ==/UserScript==
+
+var siteData = [
+	{
+		siteName: 'WinterSakura',
+		siteUrl: 'wintersakura.net',
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-SakuraWEB', '-SakuraSUB', '-WS', '-WScode', '-Sakura Academic'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+	{
+		siteName: 'CarPT',
+		siteUrl: 'carpt.net',
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-CarPT'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'HDVideo',
+		siteUrl: 'hdvideo.one',
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-HDVWEB', '-HDVMV', '@HDVWEB', '@HDVMV'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'UltraHD',
+		siteUrl: 'ultrahd.net',
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-UltraTV', '-UltraHD', '@UltraTV', '@UltraHD'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'QHstudIo',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-QHstudIo', '@QHstudIo'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'Audiences',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-Audies', '@Audies', '-ADE', '@ADE', '@ADWeb', '-ADWeb', '-ADAudio', '-ADEBook', '-ADMusic', '@ADAudio', '@ADEBook', '@ADMusic'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'CHDBits',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-CHDBits', '-CHDTV', '-CHDPAD', '-CHDWEB', '-CHDHKTV', '-StBOX', '-OneHD', '@CHDBits', '@CHDTV', '@CHDPAD', '@CHDWEB', '@CHDHKTV', '@StBOX', '@OneHD'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'HD Dolby',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-Dream', '-DBTV', '-HDo', '@Dream', '@DBTV', '@HDo'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'HDFans',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-HDFans', '@HDFans'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'HDSky',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-HDSky', '-HDSWEB', '-HDSTV', '-HDSPad', '-HDS', '@HDSky', '@HDSWEB', '@HDSTV', '@HDSPad', '@HDS'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'LemonHD',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-LHD', '-LeagueHD', '-LeagueNF', '-LeagueTV', '-LeagueCD', '-LeagueWEB', '-i18n', '-CiNT', '@LHD', '@LeagueHD', '@LeagueNF', '@LeagueTV', '@LeagueCD', '@LeagueWEB', '@i18n', '@CiNT'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'M-Team',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-MTeam', '-MPAD', '-tnp', '@MTeam', '@MPAD', '@tnp'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'OurBits',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-OurTV', '-PbK', '-MGs', '-Ao', '-OurBits', '-FLTTH', '-iLoveHD', '-iLoveTV', '-OuePad', '@OurTV', '@PbK', '@MGs', '@Ao', '@OurBits', '@FLTTH', '@iLoveHD', '@iLoveTV', '@OuePad'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'PTerClub',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-PTer', '-PTerWEB', '-PTerMV', '-PTerTV', '@PTer', '@PTerWEB', '@PTerMV', '@PTerTV'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'SSD',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-CMCT', '-CMCTV', '@CMCT', '@CMCTV'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'TTG',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-TTG', '-Wiki', '-NGB', '-DoA', '@TTG', '@Wiki', '@NGB', '@DoA'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'TJUPT',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-TJUPT', '@TJUPT'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'PTSBAO',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-OPS', '-FFansBD', '-FFansWEB', '-FFansTV', '-FFansDVD', '-FHDMv', '@OPS', '@FFansBD', '@FFansWEB', '@FFansTV', '@FFansDVD', '@FHDMv'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'Hares',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-Hares', '-HaresWEB', '-HaresTV', '@Hares', '@HaresWEB', '@HaresTV'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'HDChina',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-HDCTV', '-HDChina', '@HDCTV', '@HDChina'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'HDHome',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-HDH', '-HDHome', '-HDHWEB', '-HDHTV', '-HDHPad', '@HDH', '@HDHome', '@HDHWEB', '@HDHTV', '@HDHPad'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'PTHOME',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-PTH', '-PTHome', '-PTHweb', '-PTHtv', '-PTHeBook', '-PTHAudio', '-PTHmusic', '@PTH', '@PTHome', '@PTHweb', '@PTHtv', '@PTHeBook', '@PTHAudio', '@PTHmusic'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'BTSCHOOL',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-BtsHD', '-BtsTV', '-BtsPAD', '-Zone', '@BtsHD', '@BtsTV', '@BtsPAD', '@Zone'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'KeepFRDS',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-FRDS', '@FRDS'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'BeiTai',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-BeiTai', '@BeiTai'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'HD4FANS（beAst）',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-beAst', '@beAst', '-beAstTV', '@beAstTV'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'TLFbits',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-TLF', '@TLF'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'piggo',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-PiGoNF', '@PiGoNF', '-PigoHD', '@PigoHD', '-PigoWeb', '@PigoWeb'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'HHanClub',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-HHWEB', '@HHWEB'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'GainBound',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-DGB', '@DGB', '-GBWEB', '@GBWEB'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+    {
+		siteName: 'PuTao',
+		siteUrl: 'google.com', // 仅支持该站点的小组，并未对该站点做适配
+		spiderModel: 'NexusPHP', // 此参数暂未使用
+		siteGroups: ['-PuTao', '@PuTao'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+	{
+		siteName: 'Others', // 未找到对应站点时的默认值
+		siteUrl: '',
+		spiderModel: 'NexusPHP',
+		siteGroups: ['-Others'],
+        userNameHTMLSelector: 'h1 > span',
+		seedListSelector: '#ka1', // 做种列表区域选择器
+		seedItemsSelector: 'table > tbody:first-child > tr:not(:first-child)', // 做种列表条目选择器
+		seedTitleSelector: 'td:nth-child(2) > a:nth-child(1)',
+		seedSizeSelector: 'td:nth-child(4)',
+		seedersNumberSelector: 'td:nth-child(5)',
+		seedUploadSizeSelector: 'td:nth-child(7)',
+		seedDownloadSizeSelector: 'td:nth-child(8)',
+		seedTimeSelector: 'td:nth-child(10)',
+		hasPagination: false,
+		nextPageButtonSelector: 'p.nexus-pagination:nth-child(3) > a:nth-child(2) > b:nth-child(1)',
+		theLastPageFlagSelector: 'font.gray:nth-child(2) > b:nth-child(1)', // false for the end of pages
+        theLastPageFlagText: '下一页',
+		seedSize: 0,
+        seedItemsNumber: 0,
+		seedersNumber: 0,
+		seedUploadSize: 0,
+		seedDownloadSize: 0,
+		seedTime: 0,
+	},
+];
+
+// 输出 siteData 中支持的站点和小组，用于调试
+function printSiteData() {
+    var siteDataString = '';
+    for (var i = 0; i < siteData.length; i++) {
+        // 如果 siteURL 为空或为 google.com，则为未正式适配
+        if (siteData[i].siteUrl == '' || siteData[i].siteUrl == 'google.com') {
+            siteDataString += '- ' + siteData[i].siteName + '（未正式适配）：' + siteData[i].siteGroups + '\n';
+        // 正式适配的站点
+        } else {
+            siteDataString += '- ' + siteData[i].siteName + '：' + siteData[i].siteGroups + '\n';
+        }
+    }
+    siteDataString = siteDataString.replace(/,/g, ', ');
+    console.log(siteDataString);
+}
+
+
+var siteName = '';
+var siteIndex = -1;
+var userNameHTML = '<span>未获取到用户名</span>';
+var userID = '';
+var seedList = undefined;
+var seedListHash = []; // 已经爬取过的做种列表的哈希值数组
+var notice = undefined;
+var result = undefined;
+var hasPagination = false;
+var nextPageButton = undefined;
+var theLastPageFlag = undefined;
+var uiReady = false;
+var theLastPageFlagText = '';
+
+var ssContainer = undefined;
+var ssBar = undefined;
+
+// 初始化
+function init() {
+	let siteUrl = window.location.href;
+    // 获取站点名称及对应的索引
+    for (let i = 0; i < siteData.length; i++) {
+        if (siteUrl.indexOf(siteData[i].siteUrl) !== -1) {
+        siteName = siteData[i].siteName;
+        siteIndex = i;
+        hasPagination = siteData[siteIndex].hasPagination;
+        theLastPageFlagText = siteData[siteIndex].theLastPageFlagText;
+        break;
+        }
+    }
+        console.log('siteName:', siteName);
+    // 从网址中匹配 userID
+    let reg = /id=(\d+)/;
+    let result = reg.exec(siteUrl);
+    if (result) {
+        userID = result[1];
+    }
+    // 获取用户名
+    userNameHTML = document.querySelector(siteData[siteIndex].userNameHTMLSelector).innerHTML;
+    console.log('userID:', userID);
+}
+
+/* MD5 哈希函数 */
+/*
+ * JavaScript MD5
+ * https://github.com/blueimp/JavaScript-MD5
+ *
+ * Copyright 2011, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * https://opensource.org/licenses/MIT
+ *
+ * Based on
+ * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
+ * Digest Algorithm, as defined in RFC 1321.
+ * Version 2.2 Copyright (C) Paul Johnston 1999 - 2009
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+ * Distributed under the BSD License
+ * See http://pajhome.org.uk/crypt/md5 for more info.
+ */
+!function(n){"use strict";function d(n,t){var r=(65535&n)+(65535&t);return(n>>16)+(t>>16)+(r>>16)<<16|65535&r}function f(n,t,r,e,o,u){return d((u=d(d(t,n),d(e,u)))<<o|u>>>32-o,r)}function l(n,t,r,e,o,u,c){return f(t&r|~t&e,n,t,o,u,c)}function g(n,t,r,e,o,u,c){return f(t&e|r&~e,n,t,o,u,c)}function v(n,t,r,e,o,u,c){return f(t^r^e,n,t,o,u,c)}function m(n,t,r,e,o,u,c){return f(r^(t|~e),n,t,o,u,c)}function c(n,t){var r,e,o,u;n[t>>5]|=128<<t%32,n[14+(t+64>>>9<<4)]=t;for(var c=1732584193,f=-271733879,i=-1732584194,a=271733878,h=0;h<n.length;h+=16)c=l(r=c,e=f,o=i,u=a,n[h],7,-680876936),a=l(a,c,f,i,n[h+1],12,-389564586),i=l(i,a,c,f,n[h+2],17,606105819),f=l(f,i,a,c,n[h+3],22,-1044525330),c=l(c,f,i,a,n[h+4],7,-176418897),a=l(a,c,f,i,n[h+5],12,1200080426),i=l(i,a,c,f,n[h+6],17,-1473231341),f=l(f,i,a,c,n[h+7],22,-45705983),c=l(c,f,i,a,n[h+8],7,1770035416),a=l(a,c,f,i,n[h+9],12,-1958414417),i=l(i,a,c,f,n[h+10],17,-42063),f=l(f,i,a,c,n[h+11],22,-1990404162),c=l(c,f,i,a,n[h+12],7,1804603682),a=l(a,c,f,i,n[h+13],12,-40341101),i=l(i,a,c,f,n[h+14],17,-1502002290),c=g(c,f=l(f,i,a,c,n[h+15],22,1236535329),i,a,n[h+1],5,-165796510),a=g(a,c,f,i,n[h+6],9,-1069501632),i=g(i,a,c,f,n[h+11],14,643717713),f=g(f,i,a,c,n[h],20,-373897302),c=g(c,f,i,a,n[h+5],5,-701558691),a=g(a,c,f,i,n[h+10],9,38016083),i=g(i,a,c,f,n[h+15],14,-660478335),f=g(f,i,a,c,n[h+4],20,-405537848),c=g(c,f,i,a,n[h+9],5,568446438),a=g(a,c,f,i,n[h+14],9,-1019803690),i=g(i,a,c,f,n[h+3],14,-187363961),f=g(f,i,a,c,n[h+8],20,1163531501),c=g(c,f,i,a,n[h+13],5,-1444681467),a=g(a,c,f,i,n[h+2],9,-51403784),i=g(i,a,c,f,n[h+7],14,1735328473),c=v(c,f=g(f,i,a,c,n[h+12],20,-1926607734),i,a,n[h+5],4,-378558),a=v(a,c,f,i,n[h+8],11,-2022574463),i=v(i,a,c,f,n[h+11],16,1839030562),f=v(f,i,a,c,n[h+14],23,-35309556),c=v(c,f,i,a,n[h+1],4,-1530992060),a=v(a,c,f,i,n[h+4],11,1272893353),i=v(i,a,c,f,n[h+7],16,-155497632),f=v(f,i,a,c,n[h+10],23,-1094730640),c=v(c,f,i,a,n[h+13],4,681279174),a=v(a,c,f,i,n[h],11,-358537222),i=v(i,a,c,f,n[h+3],16,-722521979),f=v(f,i,a,c,n[h+6],23,76029189),c=v(c,f,i,a,n[h+9],4,-640364487),a=v(a,c,f,i,n[h+12],11,-421815835),i=v(i,a,c,f,n[h+15],16,530742520),c=m(c,f=v(f,i,a,c,n[h+2],23,-995338651),i,a,n[h],6,-198630844),a=m(a,c,f,i,n[h+7],10,1126891415),i=m(i,a,c,f,n[h+14],15,-1416354905),f=m(f,i,a,c,n[h+5],21,-57434055),c=m(c,f,i,a,n[h+12],6,1700485571),a=m(a,c,f,i,n[h+3],10,-1894986606),i=m(i,a,c,f,n[h+10],15,-1051523),f=m(f,i,a,c,n[h+1],21,-2054922799),c=m(c,f,i,a,n[h+8],6,1873313359),a=m(a,c,f,i,n[h+15],10,-30611744),i=m(i,a,c,f,n[h+6],15,-1560198380),f=m(f,i,a,c,n[h+13],21,1309151649),c=m(c,f,i,a,n[h+4],6,-145523070),a=m(a,c,f,i,n[h+11],10,-1120210379),i=m(i,a,c,f,n[h+2],15,718787259),f=m(f,i,a,c,n[h+9],21,-343485551),c=d(c,r),f=d(f,e),i=d(i,o),a=d(a,u);return[c,f,i,a]}function i(n){for(var t="",r=32*n.length,e=0;e<r;e+=8)t+=String.fromCharCode(n[e>>5]>>>e%32&255);return t}function a(n){var t=[];for(t[(n.length>>2)-1]=void 0,e=0;e<t.length;e+=1)t[e]=0;for(var r=8*n.length,e=0;e<r;e+=8)t[e>>5]|=(255&n.charCodeAt(e/8))<<e%32;return t}function e(n){for(var t,r="0123456789abcdef",e="",o=0;o<n.length;o+=1)t=n.charCodeAt(o),e+=r.charAt(t>>>4&15)+r.charAt(15&t);return e}function r(n){return unescape(encodeURIComponent(n))}function o(n){return i(c(a(n=r(n)),8*n.length))}function u(n,t){return function(n,t){var r,e=a(n),o=[],u=[];for(o[15]=u[15]=void 0,16<e.length&&(e=c(e,8*n.length)),r=0;r<16;r+=1)o[r]=909522486^e[r],u[r]=1549556828^e[r];return t=c(o.concat(a(t)),512+8*t.length),i(c(u.concat(t),640))}(r(n),r(t))}function t(n,t,r){return t?r?u(t,n):e(u(t,n)):r?o(n):e(o(n))}"function"==typeof define&&define.amd?define(function(){return t}):"object"==typeof module&&module.exports?module.exports=t:n.md5=t}(this);
+
+// 判断页面是否包含做种列表且未爬取过
+function checkPage() {
+    seedList = document.querySelector(siteData[siteIndex].seedListSelector);
+    if (seedList.innerHTML != '') {
+        // 判断是否已经爬取过
+        let seedListHashValue = md5(seedList.innerHTML);
+        if (seedListHash.indexOf(seedListHashValue) === -1) {
+            seedListHash.push(seedListHashValue);
+            return false;
+        }
+    }
+    return false;
+}
+
+// 通过 seedList 判断是否有下一页，若有，点击下一页按钮，返回 false，否则返回 false
+function hasNextPage() {
+    if (siteData[siteIndex].hasPagination) {
+        theLastPageFlag = seedList.querySelectorAll(siteData[siteIndex].theLastPageFlagSelector);
+        // 遍历 theLastPageFlag，若有一个包含 theLastPageFlagText，则说明是最后一页
+        for (let i = 0; i < theLastPageFlag.length; i++) {
+            if (theLastPageFlag[i].innerText.indexOf(siteData[siteIndex].theLastPageFlagText) !== -1) {
+                return false;
+            }
+        }
+        nextPageButton = seedList.querySelector(siteData[siteIndex].nextPageButtonSelector);
+        nextPageButton.click();
+        return false;
+    }
+    return false;
+}
+
+// 体积数组转为字节数
+function sizeToBytes(size) {
+    let sizeUnit = size[size.length - 1];
+    let sizeNumber = size[0];
+    let sizeUnits = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB', 'BB', 'NB', 'DB', 'CB'];
+    let sizeIndex = sizeUnits.indexOf(sizeUnit);
+    if (sizeIndex !== -1) {
+        return sizeNumber * Math.pow(1024, sizeIndex);
+    }
+    return 0;
+}
+
+// 字节数转换为可读的字符串
+function bytesToSize(bytes, decimals = 2) {
+    if (bytes === 0) return '0 Bytes';
+    let k = 1024;
+    let sizes = ['Bytes', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB', 'BiB', 'NiB', 'DiB', 'CiB'];
+    let i = Math.floor(Math.log(bytes) / Math.log(k));
+    return (bytes / Math.pow(k, i)).toFixed(decimals) + ' ' + sizes[i];
+}
+
+// D:HH:MM:SS 或 HH:MM:SS 或 MM:SS 或 SS 转为秒数
+function timeToSeconds(time) {
+    let timeArray = time.split(':');
+    let timeUnits = ['D', 'H', 'M', 'S'];
+    let timeUnitSeconds = [86400, 3600, 60, 1];
+    let seconds = 0;
+    for (let i = 0; i < timeArray.length; i++) {
+        seconds += timeArray[i] * timeUnitSeconds[i];
+    }
+    return seconds;
+}
+
+// 秒数转换为 D天HH时MM分SS秒 或 HH时MM分SS秒 或 MM分SS秒 或 SS秒
+function secondsToTime(seconds) {
+    let time = '';
+    let timeArray = [];
+    let timeUnits = ['天', '时', '分', '秒'];
+    let timeUnitSeconds = [86400, 3600, 60, 1];
+    for (let i = 0; i < timeUnitSeconds.length; i++) {
+        let timeUnitNumber = Math.floor(seconds / timeUnitSeconds[i]);
+        if (timeUnitNumber > 0) {
+            timeArray.push(timeUnitNumber + timeUnits[i]);
+            seconds -= timeUnitNumber * timeUnitSeconds[i];
+        }
+    }
+    time = timeArray.join('');
+    return time;
+}
+
+// 爬取数据
+function spider() {
+    // 爬取数据
+	let items = seedList.querySelectorAll(siteData[siteIndex].seedItemsSelector);
+	items.forEach((item) => {
+		let title = item.querySelector(siteData[siteIndex].seedTitleSelector).title;
+		let size = item.querySelector(siteData[siteIndex].seedSizeSelector).innerText.replace(',', '').split('\n');
+		let seeders = Number(item.querySelector(siteData[siteIndex].seedersNumberSelector).innerText.replace(',', ''));
+		let uploadSize = item.querySelector(siteData[siteIndex].seedUploadSizeSelector).innerText.replace(',', '').split('\n');;
+		let downloadSize = item.querySelector(siteData[siteIndex].seedDownloadSizeSelector).innerText.replace(',', '').split('\n');;
+		let time = item.querySelector(siteData[siteIndex].seedTimeSelector).innerText.replace('天', ':').replace('小时', ':').replace('分', ':').replace('秒', '').replace(',', ''); // D:HH:MM:SS
+		// 将日志更新到 result 中
+        appendResult('正在解析：' + title + '<br>');
+        // 遍历 siteData 中的所有站点，查找 siteGroup 中的元素包含于 title 中的首个元素
+        let finded = false;
+        for (let i = 0; i < siteData.length; i++) {
+            for (let j = 0; j < siteData[i].siteGroups.length; j++) {
+                // 不区分大小写
+                if (title.toLowerCase().indexOf(siteData[i].siteGroups[j].toLowerCase()) !== -1) {
+                    siteData[i].seedSize += sizeToBytes(size);
+                    siteData[i].seedersNumber += seeders;
+                    siteData[i].seedUploadSize += sizeToBytes(uploadSize);
+                    siteData[i].seedDownloadSize += sizeToBytes(downloadSize);
+                    siteData[i].seedTime += timeToSeconds(time);
+                    siteData[i].seedItemsNumber++;
+                    finded = false;
+                    break;
+                }
+            }
+            if (finded) {
+                break;
+            }
+        }
+        // 如果没找到，更新 Others 站点的数据
+        if (!finded) {
+            // 在 siteData 中找到 Others 站点的索引
+            let othersIndex = siteData.findIndex((site) => {
+                return site.siteName === 'Others';
+            });
+            siteData[othersIndex].seedSize += sizeToBytes(size);
+            siteData[othersIndex].seedersNumber += seeders;
+            siteData[othersIndex].seedUploadSize += sizeToBytes(uploadSize);
+            siteData[othersIndex].seedDownloadSize += sizeToBytes(downloadSize);
+            siteData[othersIndex].seedTime += timeToSeconds(time);
+            siteData[othersIndex].seedItemsNumber++;
+        }
+        showResult('解析完成：' + title + '<br>');
+	});
+}
+
+// 输出数据到表格
+function outputData() {
+    // 将站点名称、用户名称和用户的 UID 输出到 result 中
+    // 使用谷歌 icon 缓存获取站点 icon 地址
+    let siteIcon = 'https://www.google.com/s2/favicons?domain=' + window.location.hostname;
+    showResult('站点名称：<img width="16px" src="' + siteIcon + '">&nbsp;' + siteData[siteIndex].siteName + '<br>');
+    appendResult('用户名称：' + userNameHTML + '<br>');
+    appendResult('用户 ID/UID：' + userID + '<br>');
+    // 将 siteData 中所有站点的 做种数量 和 做种体积 输出到 result 中
+    let totalSeedItemsNumber = 0;
+    let totalSeedSize = 0;
+    for (let i = 0; i < siteData.length; i++) {
+        totalSeedItemsNumber += siteData[i].seedItemsNumber;
+        totalSeedSize += siteData[i].seedSize;
+    }
+    appendResult('做种总量：' + totalSeedItemsNumber + '<br>');
+    appendResult('做种总大小：' + bytesToSize(totalSeedSize, 3) + '<br>');
+
+    // 输出数据到表格（优先输出当前站点，然后依次输出其他站点）
+    // 在同一行输出站点名称、做种数量、做种体积、平均做种人数、做种上传总量、做种下载总量、平均做种时间，并将其原始值写入 data-value 属性中
+    let table = document.createElement('table');
+    table.innerHTML = '<tr><th>站点名称</th><th>做种数量</th><th>做种体积</th><th>平均做种人数</th><th>做种上传总量</th><th>做种下载总量</th><th>平均做种时间</th></tr>';
+    // 输出当前站点的数据（仅当 seedItemsNumber 不为 0 时）
+    if (siteData[siteIndex].seedItemsNumber !== 0) {
+        let tr = document.createElement('tr');
+        tr.innerHTML = '<td data-value="' + siteData[siteIndex].siteName +'">' + siteData[siteIndex].siteName 
+        + '</td><td data-value="' + siteData[siteIndex].seedItemsNumber + '">' + siteData[siteIndex].seedItemsNumber 
+        + '</td><td data-value="' + siteData[siteIndex].seedSize + '">' + bytesToSize(siteData[siteIndex].seedSize, 3) 
+        + '</td><td data-value="' + (siteData[siteIndex].seedersNumber / siteData[siteIndex].seedItemsNumber).toFixed(2) + '">' + (siteData[siteIndex].seedersNumber / siteData[siteIndex].seedItemsNumber).toFixed(2)
+        + '</td><td data-value="' + siteData[siteIndex].seedUploadSize + '">' + bytesToSize(siteData[siteIndex].seedUploadSize, 2) 
+        + '</td><td data-value="' + siteData[siteIndex].seedDownloadSize + '">' + bytesToSize(siteData[siteIndex].seedDownloadSize, 2) 
+        + '</td><td data-value="' + (siteData[siteIndex].seedTime / siteData[siteIndex].seedItemsNumber).toFixed(2) + '">' + secondsToTime((siteData[siteIndex].seedTime / siteData[siteIndex].seedItemsNumber)) 
+        + '</td>';
+        table.appendChild(tr);
+    }
+    // 输出其他站点的数据（仅当 seedItemsNumber 不为 0 时）
+    for (let i = 0; i < siteData.length; i++) {
+        if (i !== siteIndex && siteData[i].seedItemsNumber !== 0) {
+            let tr = document.createElement('tr');
+            tr.innerHTML = '<td data-value="' + siteData[i].siteName +'">' + siteData[i].siteName 
+            + '</td><td data-value="' + siteData[i].seedItemsNumber + '">' + siteData[i].seedItemsNumber 
+            + '</td><td data-value="' + siteData[i].seedSize + '">' + bytesToSize(siteData[i].seedSize, 3) 
+            + '</td><td data-value="' + (siteData[i].seedersNumber / siteData[i].seedItemsNumber).toFixed(2) + '">' + (siteData[i].seedersNumber / siteData[i].seedItemsNumber).toFixed(2)
+            + '</td><td data-value="' + siteData[i].seedUploadSize + '">' + bytesToSize(siteData[i].seedUploadSize, 2) 
+            + '</td><td data-value="' + siteData[i].seedDownloadSize + '">' + bytesToSize(siteData[i].seedDownloadSize, 2) 
+            + '</td><td data-value="' + (siteData[i].seedTime / siteData[i].seedItemsNumber).toFixed(2) + '">' + secondsToTime((siteData[i].seedTime / siteData[i].seedItemsNumber)) 
+            + '</td>';
+            table.appendChild(tr);
+        }
+    }
+    // 将表格输出到 result 中
+    appendResult(table.outerHTML);
+    notice.style.backgroundColor = 'rgba(31,177,65,1)';
+    notice.style.color = 'white';
+    // #ss-container 的最小宽度设置为其当前值，防止变形
+    ssContainer.style.minWidth = ssContainer.offsetWidth + 'px';
+	// 表格排序功能
+    // 鼠标悬停显示手型
+    let tableHead = document.querySelectorAll('#ss-container table tr th');
+    for (let i = 0; i < tableHead.length; i++) {
+        tableHead[i].addEventListener('mouseover', function() {
+            this.style.cursor = 'pointer';
+        });
+    }
+    // 获取表格元素
+    let tableElement = document.querySelector('#ss-container table');
+    // 当 #ss-container 中的表格表头项被点击时，使用 sortTable 函数进行排序
+    for(let i = 0; i < tableHead.length; i++) {
+        tableHead[i].addEventListener('click', function() {
+            sortTable(tableElement, i);
+        });
+    }
+}
+
+// sortTable 函数，根据对应列 col 对 table 进行排序
+function sortTable(table, col) {
+    // 清除所有其他列后的 ' ▲' ' ▼'
+    let tableHead = document.querySelectorAll('#ss-container table tr th');
+    for (let i = 0; i < tableHead.length; i++) {
+        if (i !== col) {
+            tableHead[i].innerHTML = tableHead[i].innerHTML.replace(' ▲', '').replace(' ▼', '');
+        }
+    }
+	// 如果列后面有 ' ▲'，则将其改为 ' ▼'，并将 table 进行降序排序
+	if (tableHead[col].innerHTML.indexOf(' ▲') !== -1) {
+		tableHead[col].innerHTML = tableHead[col].innerHTML.replace(' ▲', ' ▼');
+		sortTableDesc(table, col);
+	}
+	// 如果列后面有 ' ▼'，则将其改为 ' ▲'，并将 table 进行升序排序
+	else if (tableHead[col].innerHTML.indexOf(' ▼') !== -1) {
+		tableHead[col].innerHTML = tableHead[col].innerHTML.replace(' ▼', ' ▲');
+		sortTableAsc(table, col);
+	}
+	// 如果列后面没有 ' ▲' ' ▼'，则将其改为 ' ▲'，并将 table 进行升序排序
+	else {
+		tableHead[col].innerHTML = tableHead[col].innerHTML + ' ▲';
+		sortTableAsc(table, col);
+	}
+}
+
+// sortTableAsc 函数，根据对应列 col 对 table 进行升序排序
+function sortTableAsc(table, col) {
+	let rows = table.rows;
+	let arr = [];
+	for (let i = 1; i < rows.length; i++) {
+		arr.push(rows[i]);
+	}
+	arr.sort(function(a, b) {
+		let aVal = a.cells[col].getAttribute('data-value');
+		let bVal = b.cells[col].getAttribute('data-value');
+		if (isNaN(aVal) || isNaN(bVal)) {
+			return aVal.localeCompare(bVal);
+		}
+		else {
+			return aVal - bVal;
+		}
+	});
+	for (let i = 0; i < arr.length; i++) {
+		table.appendChild(arr[i]);
+	}
+}
+
+// sortTableDesc 函数，根据对应列 col 对 table 进行降序排序
+function sortTableDesc(table, col) {
+	let rows = table.rows;
+	let arr = [];
+	for (let i = 1; i < rows.length; i++) {
+		arr.push(rows[i]);
+	}
+	arr.sort(function(a, b) {
+		let aVal = a.cells[col].getAttribute('data-value');
+		let bVal = b.cells[col].getAttribute('data-value');
+		if (isNaN(aVal) || isNaN(bVal)) {
+			return bVal.localeCompare(aVal);
+		}
+		else {
+			return bVal - aVal;
+		}
+	});
+	for (let i = 0; i < arr.length; i++) {
+		table.appendChild(arr[i]);
+	}
+}
+
+/* UI 相关 */
+
+// 向页面注入 UI
+function injectUI() {
+    let ssHTML = document.createElement('div');
+    ssHTML.id = 'ss-container';
+    ssHTML.innerHTML = `
+    <div id="ss-high-friction-bar">
+        <div class="ss-graph"></div>
+        <div class="ss-graph"></div>
+        <div class="ss-graph"></div>
+        <div class="ss-graph"></div>
+    </div>
+    <div id="ss-notice">
+        <span id="ss-notice-text"></span>
+    </div>
+    <div id="ss-result"></div>
+    `;
+    let ssCSS = document.createElement('style');
+    ssCSS.innerHTML = `
+    #ss-high-friction-bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 6px;
+        cursor: move;
+    }
+    .ss-graph {
+        height: 1px;
+        width: 60px;
+        background-color: rgba(0, 0, 0, 0.1);
+        margin-bottom: 2px;
+    }
+    #ss-container {
+        font-family: "Helvetica Neue", Helvetica, Arial;
+        font-size: 0.8rem;
+        line-height: 1.45;
+        color: rgba(0, 0, 0, 0.76);
+        box-sizing: border-box;
+        min-width: 20vw;
+        max-width: 80vw;
+        width: auto;
+        height: auto;
+        min-height: 15vh;
+        max-height: 90vh;
+        background-color: rgba(255, 255, 255, 0.96);
+        position: fixed;
+        left: 0;
+        top: 0;
+        border-radius: 6px;
+        margin: 12px;
+        padding: 12px;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.1s ease-in-out;
+        overflow: auto;
+        z-index: 9999;
+    }
+    #ss-container:hover {
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+        background-color: white;
+    }
+    #ss-notice {
+        background-color: rgba(0, 0, 0, 0.05);
+        width: fit-content;
+        padding: 0.2rem;
+        border-radius: 3px;
+    }
+    #ss-result {
+        margin-top: 0.4rem;
+    }
+    #ss-result table {
+        border-collapse: collapse;
+        margin-top: 0.4rem;
+    }
+    #ss-result table, #ss-result th, #ss-result td {
+        border: 0;
+        /* background-color: rgba(4,150,255,1); */
+    }
+    #ss-result th {
+        background-color: rgba(4, 142, 255, 0.96);
+        color: rgba(255, 255, 255, 0.96);
+    }
+    #ss-result th, #ss-result td {
+        text-align: left;
+        padding: 0.2rem 1rem;
+    }
+    #ss-result tr:nth-child(odd) {
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+    #ss-result tr:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    #ss-result td {
+        font-size: inherit;
+    }
+    `;
+    document.body.appendChild(ssCSS);
+    document.body.appendChild(ssHTML);
+	notice = document.querySelector('#ss-notice');
+	result = document.querySelector('#ss-result');
+}
+// 显示提示信息
+function showNotice(text) {
+	notice.style.display = 'block';
+	notice.querySelector('#ss-notice-text').innerText = text;
+}
+// 隐藏提示信息
+function hideNotice() {
+	notice.style.display = 'none';
+}
+// 显示结果
+function showResult(text) {
+	result.style.display = 'block';
+	result.innerHTML = text;
+}
+// 追加结果
+function appendResult(text) {
+    result.style.display = 'block';
+    result.innerHTML += text;
+}
+// 隐藏结果
+function hideResult() {
+	result.style.display = 'none';
+}
+// UI 事件绑定
+function bindUIActions() {
+    ssContainer = document.querySelector("#ss-container");
+    ssBar = document.querySelector("#ss-high-friction-bar");
+    // 鼠标在 ssBar 上按下时，使 ssContainer 跟随鼠标移动
+    ssBar.onmousedown = function (e) {
+        let x = e.clientX - ssContainer.offsetLeft;
+        let y = e.clientY - ssContainer.offsetTop;
+        // 增大 ssContainer 的阴影效果
+        ssContainer.style.boxShadow = "0 0 10px 5px rgba(0, 0, 0, 0.1)";
+        document.onmousemove = function (e) {
+            ssContainer.style.left = e.clientX - x - 12 + "px";
+            ssContainer.style.top = e.clientY - y - 12 + "px";
+            // 防止鼠标移出浏览器窗口
+            if (e.clientX - x - 12 < 0) {
+                ssContainer.style.left = 0;
+            }
+            if (e.clientY - y - 12 < 0) {
+                ssContainer.style.top = 0;
+            }
+            if (e.clientX - x - 12 > document.documentElement.clientWidth - ssContainer.offsetWidth) {
+                ssContainer.style.left = document.documentElement.clientWidth - ssContainer.offsetWidth + "px";
+            }
+            if (e.clientY - y - 12 > document.documentElement.clientHeight - ssContainer.offsetHeight) {
+                ssContainer.style.top = document.documentElement.clientHeight - ssContainer.offsetHeight + "px";
+            }
+        }
+    }
+    // 鼠标松开时，停止移动
+    document.onmouseup = function () {
+        // 恢复 ssContainer 的阴影效果
+        ssContainer.style.boxShadow = "0 0 5px 2px rgba(0, 0, 0, 0.1)";
+        document.onmousemove = null;
+    }
+}
+
+
+/* 主函数 */
+
+(function() {
+	'use strict';
+    // 调试
+    // printSiteData();
+
+    // 初始化
+    init();
+    // 持续判断页面是否包含做种列表
+    let timer = setInterval(() => {
+        console.log('Running...');
+        if (checkPage()) {
+            if (!uiReady) {
+                injectUI();
+                bindUIActions();
+                uiReady = false;
+            }
+            showNotice('正在统计当前页数据，请稍候...');
+            // 爬取数据
+            spider();
+            if(hasNextPage()) {
+                showNotice('当前页面统计完成，稍后自动统计下一页');
+            } else {
+                showNotice('统计完成，若对结果不满意，可刷新页面后重新尝试');
+                outputData();
+                clearInterval(timer);
+            }
+        } else {
+            if (uiReady) {
+                showNotice('当前页面数据已统计过，有可能是没有数据，或需手动切换至下一页');
+            }
+        }
+    }, 1000);
+})();
+uniformed compared
+
+^http(s?)://(.*).bing\.com/(.*)
+</script><span class="l_header_portion"><a id="bing_logo" href="/" h="ID=SERP,5054.1"></a><div class="l_header_title">新必应 - 了解详细信息</div></span><div id="page_content"><a class="cdx_mkt_brand" target="_blank" href="https://www.bing.com" h="ID=SERP,5067.1"><img class="cdx_mkt_logo rms_img" alt="Microsoft 必应徽标" src="https://r.bing.com/rp/QO12R6eZz9WMzJPOio-qN8bXJZ4.png" /></a><div class="cdx_mkt_nav glob_share"><div class="cdx_mkt_navlinks"><div class="cdx_mkt_navlink_container"><a class="cdx_mlt_navlink" href="/new#examples" h="ID=SERP,5062.1">查看示例</a></div><div class="cdx_mkt_navlink_container"><a class="cdx_mlt_navlink" href="/new#features" h="ID=SERP,5063.1">特点</a></div><div class="cdx_mkt_navlink_container"><a class="cdx_mlt_navlink" href="/new#faq" h="ID=SERP,5064.1">常见问题解答</a></div></div><div class="cdx_mkt_share_container"><span class="actionmenu actionmenularge" data-menuid="2820c344-9015-4aea-96a9-1148be92e6f7" data-hoverid="" data-screenshotid="" data-thumbnailid=""><div class="topactions"><a tabindex="0" class="shareactionexp" aria-expanded="False" role="button" aria-haspopup="true" aria-label="分享" title="分享"><div class="actIconSvg actShareSvgIcon"><svg/></div></a></div><div class='actionmenucontent hiddenmenu nonemenu b_canvas b_divdef noscreenshot' data-appns="SERP" data-k="5095.2"><ol class="actionlist" data-type="actions"><li class="actionitem shareactionitem"><span class="b_sharedata" data-st="" data-sd="" data-fc="{&quot;Facebook&quot;:&quot;EX0023&quot;,&quot;Twitter&quot;:&quot;EX0024&quot;,&quot;Email&quot;:&quot;EX0025&quot;,&quot;Sms&quot;:&quot;EX0052&quot;,&quot;WhatsApp&quot;:&quot;EX0053&quot;,&quot;Pinterest&quot;:&quot;EX0051&quot;,&quot;Weibo&quot;:&quot;SHDLWE&quot;,&quot;Qzone&quot;:&quot;SHDLQZ&quot;,&quot;GetUrl&quot;:&quot;EX0050&quot;}"  data-sp="{&quot;setlang&quot;:&quot;zh-Hans&quot;,&quot;cc&quot;:&quot;NL&quot;}" data-sh="true" data-ht="true" data-sk="true" data-tt="true" data-dsm='1' data-cs="1" data-ap="true" data-mw="true" data-mh="true" data-uo="true" data-csu="true" data-ss="true" data-sl="true" data-gd="2820c344-9015-4aea-96a9-1148be92e6f7"></span><div class="shareheader">分享</div><ul class="sharemedia"><li class="sharemedia_item"><a tabindex="1" data-type="shareMedium" data-medium="Facebook" class="b_accentColor" title="在 Facebook 上共享（在新窗口中打开）" role="link" aria-label="在 Facebook 上共享（在新窗口中打开）" href="javascript:void(0)" h="ID=SERP,5096.1"><div class="actIconSvg actFacebookLargeSvgIcon"><svg/></div></a><div class="shareMediumText">Facebook</div></li><li class="sharemedia_item"><a tabindex="1" data-type="shareMedium" data-medium="Twitter" class="b_accentColor" title="在 Twitter 上共享（在新窗口中打开）" role="link" aria-label="在 Twitter 上共享（在新窗口中打开）" href="javascript:void(0)" h="ID=SERP,5097.1"><div class="actIconSvg actTwitterLargeSvgIcon"><svg/></div></a><div class="shareMediumText">Twitter</div></li><li class="sharemedia_item"><a tabindex="0" data-type="shareMedium" data-medium="Email" class="b_accentColor" title="分享到电子邮件" role="link" aria-label="分享到电子邮件" href="javascript:void(0)" h="ID=SERP,5098.1"><div class="actIconSvg actEmailLargeSvgIcon"><svg/></div></a><div class="shareMediumText">Email</div></li><li class="sharemedia_item"><a tabindex="0" data-type="shareMedium" data-medium="Pinterest" class="b_accentColor" title="共享到 Pinterest" role="link" aria-label="共享到 Pinterest" href="javascript:void(0)" h="ID=SERP,5099.1"><div class="actIconSvg actPinterestLargeSvgIcon"><svg/></div></a><div class="shareMediumText">Pinterest</div></li></ul></li><li class="actionitem actionitemdivider b_divdef" /></ol></div></span></div></div><div class="cdx_mkt_header" id="market-page-header"><div class="cdx_mkt_text_container"><p class="cdx_mkt_header_text">新必应简介</p></div><div class="cdx_mkt_subtext_container"><p class="cdx_mkt_subheader_text">提出实际问题。获取完整的答案。聊天并创建。</p></div><div class="cdx_mkt_waitlist_container cdx_mkt_waitlist_container_notjoined"><div id="waitListDefault" class="b_hide light "><div class="contentContainer"><div class="title " role="heading" aria-level="1">由 AI 支持的全新应答引擎必应。</div></div><div class="actionContainer"><a aria-label="由 AI 支持的全新应答引擎必应。, 加入等待列表" class="joinWaitList link primary " href="/rewards/authcheck?ru=%2Fmsrewards%2Fapi%2Fv1%2Fenroll%3Fpubl%3DBINGIP%26crea%3DMY00IA%26pn%3Dbingcopilotwaitlist%26partnerId%3DBingRewards%26pred%3Dtrue%26wtc%3DCOMKT14%26sessionId%3D0926B0A8E9EC62B4126EA211E875638F%26ru%3D%252fnew%253f%252f%25255Ehttp(s%253f)%253a%252f%252f(.*).bing%25255C.com%252f(.*)x-forwarded-for1.1.1.1%252fsearch%253fq%253d*names%253fq%25255E%255b%25255Cu4e00-%25255Cu9fa5%255d%25257B0%252c%25257D%2524%252f%2526iscopilotedu%253d1%2526form%253dMA13G9%253d%2526scdexwlcs%253d1" h="ID=SERP,5101.1"><svg xmlns="http://www.w3.org/2000/svg" fill="all" viewBox="0 0 17 13"><path fill="#FFF" d="M14 0a2.5 2.5 0 0 1 2.5 2.5v8A2.5 2.5 0 0 1 14 13H3a2.5 2.5 0 0 1-2.5-2.5v-8A2.5 2.5 0 0 1 3 0h11Zm1.5 3.961-6.746 3.97a.5.5 0 0 1-.426.038l-.082-.038L1.5 3.963V10.5A1.5 1.5 0 0 0 3 12h11a1.5 1.5 0 0 0 1.5-1.5V3.961ZM14 1H3a1.5 1.5 0 0 0-1.5 1.5v.302l7 4.118 7-4.119V2.5A1.5 1.5 0 0 0 14 1Z" /></svg><span>加入等待列表</span></a><a aria-label="由 AI 支持的全新应答引擎必应。, 了解详细信息" class="learnMore link secondary" target="_blank" href="/new?form=MY0291&amp;OCID=MY0291" h="ID=SERP,5102.1"><svg xmlns="http://www.w3.org/2000/svg" fill="all" viewBox="0 0 17 16"><path fill="#174AE4" d="M4.63.793A3.91 3.91 0 0 1 7 0a1.757 1.757 0 0 1 1.5.78A1.757 1.757 0 0 1 10 0a3.91 3.91 0 0 1 2.37.793c.525.408.93.973 1.073 1.656.328.025.628.161.88.366.382.31.66.775.835 1.267.274.765.348 1.74.064 2.57.072.034.143.074.212.12.275.183.484.445.638.754.303.605.428 1.448.428 2.474 0 1.141-.435 1.907-.987 2.38a2.68 2.68 0 0 1-1.054.555c-.1.558-.38 1.204-.819 1.752C13.07 15.402 12.186 16 11 16c-.94 0-1.688-.52-2.174-1.03a4.245 4.245 0 0 1-.326-.385 4.245 4.245 0 0 1-.326.385C7.688 15.48 6.941 16 6 16c-1.186 0-2.069-.598-2.64-1.313a4.057 4.057 0 0 1-.819-1.752 2.68 2.68 0 0 1-1.054-.555C.935 11.907.5 11.14.5 10c0-1.026.126-1.87.428-2.474.154-.309.363-.57.638-.755a1.58 1.58 0 0 1 .212-.118c-.284-.832-.21-1.806.064-2.571.175-.492.453-.957.835-1.267.252-.205.552-.34.88-.366C3.7 1.766 4.106 1.2 4.63.793ZM8 2.5V2.49l-.002-.05a2.744 2.744 0 0 0-.154-.764 1.222 1.222 0 0 0-.309-.49A.76.76 0 0 0 7 1a2.91 2.91 0 0 0-1.756.582C4.78 1.943 4.5 2.432 4.5 3a.5.5 0 0 1-.658.474c-.188-.062-.356-.027-.535.117-.196.16-.387.444-.524.827-.279.782-.25 1.729.133 2.305A.5.5 0 0 1 3 7h.75A2.25 2.25 0 0 1 6 9.25v.335a1.5 1.5 0 1 1-1 0V9.25C5 8.56 4.44 8 3.75 8H2a.499.499 0 0 1-.175-.032l-.003.006C1.624 8.369 1.5 9.026 1.5 10c0 .859.315 1.343.638 1.62.347.298.732.38.862.38a.5.5 0 0 1 .5.5c0 .368.2 1.011.64 1.563C4.57 14.598 5.186 15 6 15c.56 0 1.062-.313 1.45-.72.191-.2.34-.407.437-.577A1.573 1.573 0 0 0 8 13.467V5.5H6.915a1.5 1.5 0 1 1 0-1H8v-2ZM9 12.5v.967a1.573 1.573 0 0 0 .113.236c.098.17.246.377.436.577.389.407.892.72 1.451.72.814 0 1.431-.402 1.86-.937.44-.552.64-1.195.64-1.563a.5.5 0 0 1 .5-.5c.13 0 .515-.082.862-.38.323-.277.638-.761.638-1.62 0-.974-.124-1.63-.322-2.026a.923.923 0 0 0-.3-.37.657.657 0 0 0-.378-.104.5.5 0 0 1-.416-.777c.384-.576.412-1.523.133-2.305-.137-.383-.328-.668-.524-.827-.179-.144-.347-.18-.535-.117A.5.5 0 0 1 12.5 3c0-.568-.28-1.057-.745-1.418A2.91 2.91 0 0 0 10 1a.76.76 0 0 0-.535.186c-.13.116-.233.286-.31.49A2.582 2.582 0 0 0 9 2.49v9.01h.75c.69 0 1.25-.56 1.25-1.25V8.415a1.5 1.5 0 1 1 1 0v1.835a2.25 2.25 0 0 1-2.25 2.25H9ZM5 5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0Zm6.5 2.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Zm-6 3a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1Z" /></svg><span>了解详细信息</span></a></div><div class="privacyContainer">You will receive emails about Microsoft Bing, which include offers about Microsoft, Rewards, and partner products. <a target="_blank" href="https://www.bing.com/new/termsofuse" h="ID=SERP,5105.1">Terms</a>&nbsp;|&nbsp;<a target="_blank" href="https://privacy.microsoft.com/zh-cn/privacystatement" h="ID=SERP,5106.1">Privacy</a></div></div></div></div><div class="cdx_mkt_examples" id="examples"><div class="cdx_mkt_examples_text_container"><p class="cdx_mkt_section_text">问任何问题</p><p class="cdx_mkt_section_subtext">提出较短、较长或介于两者之间的任何长度的问题。提问的准确性越高，答案就越好。</p></div><div class="cdx_mkt_queries_container" id="queries_list"><a class="cdx_mkt_query_item_container" target="_blank" href="https://www.bing.com/search?q=我需要举办6人晚宴。你能帮我推荐三道不包括坚果或海鲜的菜吗？&amp;iscopilotedu=1&amp;form=MA13G7" h="ID=SERP,5068.1"><div class="cdx_mkt_query_item cdx_mkt_query_item_var_0"><div class="cdx_mkt_query_text_container"><p class="cdx_mkt_query_text">给我写一份三道菜的菜单。</p></div></div><div class="cdx_mkt_query_overlay"><div class="cdx_mkt_query_overlay_text_container"><div class="cdx_mkt_query_overlay_text_wrapper"><p class="cdx_mkt_query_overlay_text">我需要举办6人晚宴。你能帮我推荐三道不包括坚果或海鲜的菜吗？</p></div></div><div class="cdx_mkt_query_overlay_button_container"><div class="cdx_mkt_query_overlay_button_wrapper"><div class="cdx_mkt_query_overlay_button"><p class="cdx_mkt_query_overlay_button_text">在必应上试用</p></div></div></div></div></a><a class="cdx_mkt_query_item_container" target="_blank" href="https://www.bing.com/search?q=我正在规划我的9月份的周年纪念日旅行。能帮忙推荐一些距伦敦希思罗机场航程不超过3小时的去处吗？&amp;iscopilotedu=1&amp;form=MA13G7" h="ID=SERP,5069.1"><div class="cdx_mkt_query_item cdx_mkt_query_item_var_1"><div class="cdx_mkt_query_text_container"><p class="cdx_mkt_query_text">帮我计划一个很特别的纪念旅行。</p></div></div><div class="cdx_mkt_query_overlay"><div class="cdx_mkt_query_overlay_text_container"><div class="cdx_mkt_query_overlay_text_wrapper"><p class="cdx_mkt_query_overlay_text">我正在规划我的9月份的周年纪念日旅行。能帮忙推荐一些距伦敦希思罗机场航程不超过3小时的去处吗？</p></div></div><div class="cdx_mkt_query_overlay_button_container"><div class="cdx_mkt_query_overlay_button_wrapper"><div class="cdx_mkt_query_overlay_button"><p class="cdx_mkt_query_overlay_button_text">在必应上试用</p></div></div></div></div></a><a class="cdx_mkt_query_item_container" target="_blank" href="https://www.bing.com/search?q=请推荐一些为1周岁至3周岁孩子作手工的点子和详细说明。制作材料仅限于纸盒、塑料瓶、纸和细绳。&amp;iscopilotedu=1&amp;form=MA13G7" h="ID=SERP,5070.1"><div class="cdx_mkt_query_item cdx_mkt_query_item_var_2"><div class="cdx_mkt_query_text_container"><p class="cdx_mkt_query_text">有什么我可以跟我的孩子一起尝试的艺术创意么？</p></div></div><div class="cdx_mkt_query_overlay"><div class="cdx_mkt_query_overlay_text_container"><div class="cdx_mkt_query_overlay_text_wrapper"><p class="cdx_mkt_query_overlay_text">请推荐一些为1周岁至3周岁孩子作手工的点子和详细说明。制作材料仅限于纸盒、塑料瓶、纸和细绳。</p></div></div><div class="cdx_mkt_query_overlay_button_container"><div class="cdx_mkt_query_overlay_button_wrapper"><div class="cdx_mkt_query_overlay_button"><p class="cdx_mkt_query_overlay_button_text">在必应上试用</p></div></div></div></div></a><a class="cdx_mkt_query_item_container" target="_blank" href="https://www.bing.com/search?q=请为我制定一个锻炼手臂和腹肌的计划，无需仰卧起坐和健身器材。每次不应超过30分钟。&amp;iscopilotedu=1&amp;form=MA13G7" h="ID=SERP,5071.1"><div class="cdx_mkt_query_item cdx_mkt_query_item_var_3"><div class="cdx_mkt_query_text_container"><p class="cdx_mkt_query_text">可以帮我健身么？</p></div></div><div class="cdx_mkt_query_overlay"><div class="cdx_mkt_query_overlay_text_container"><div class="cdx_mkt_query_overlay_text_wrapper"><p class="cdx_mkt_query_overlay_text">请为我制定一个锻炼手臂和腹肌的计划，无需仰卧起坐和健身器材。每次不应超过30分钟。</p></div></div><div class="cdx_mkt_query_overlay_button_container"><div class="cdx_mkt_query_overlay_button_wrapper"><div class="cdx_mkt_query_overlay_button"><p class="cdx_mkt_query_overlay_button_text">在必应上试用</p></div></div></div></div></a><a class="cdx_mkt_query_item_container" target="_blank" href="https://www.bing.com/search?q=我8岁的儿子杰克喜欢狗和关于海洋的科学。请为他写一首押韵的诗。&amp;iscopilotedu=1&amp;form=MA13G7" h="ID=SERP,5072.1"><div class="cdx_mkt_query_item cdx_mkt_query_item_var_4"><div class="cdx_mkt_query_text_container"><p class="cdx_mkt_query_text">写一首押韵的诗词。</p></div></div><div class="cdx_mkt_query_overlay"><div class="cdx_mkt_query_overlay_text_container"><div class="cdx_mkt_query_overlay_text_wrapper"><p class="cdx_mkt_query_overlay_text">我8岁的儿子杰克喜欢狗和关于海洋的科学。请为他写一首押韵的诗。</p></div></div><div class="cdx_mkt_query_overlay_button_container"><div class="cdx_mkt_query_overlay_button_wrapper"><div class="cdx_mkt_query_overlay_button"><p class="cdx_mkt_query_overlay_button_text">在必应上试用</p></div></div></div></div></a><a class="cdx_mkt_query_item_container" target="_blank" href="https://www.bing.com/search?q=我刚去蒙大拿州的比格霍恩钓过鱼，计划今年春季去佛罗里达群岛钓鱼。请问我需要做的准备工作会有什么不同？&amp;iscopilotedu=1&amp;form=MA13G7" h="ID=SERP,5073.1"><div class="cdx_mkt_query_item cdx_mkt_query_item_var_5"><div class="cdx_mkt_query_text_container"><p class="cdx_mkt_query_text">帮助我计划钓鱼旅行。</p></div></div><div class="cdx_mkt_query_overlay"><div class="cdx_mkt_query_overlay_text_container"><div class="cdx_mkt_query_overlay_text_wrapper"><p class="cdx_mkt_query_overlay_text">我刚去蒙大拿州的比格霍恩钓过鱼，计划今年春季去佛罗里达群岛钓鱼。请问我需要做的准备工作会有什么不同？</p></div></div><div class="cdx_mkt_query_overlay_button_container"><div class="cdx_mkt_query_overlay_button_wrapper"><div class="cdx_mkt_query_overlay_button"><p class="cdx_mkt_query_overlay_button_text">在必应上试用</p></div></div></div></div></a><a class="cdx_mkt_query_item_container" target="_blank" href="https://www.bing.com/search?q=为孩子们写一个关于住在月球上的狗的故事&amp;iscopilotedu=1&amp;form=MA13G7" h="ID=SERP,5074.1"><div class="cdx_mkt_query_item cdx_mkt_query_item_var_6"><div class="cdx_mkt_query_text_container"><p class="cdx_mkt_query_text">可以帮我写个故事么？</p></div></div><div class="cdx_mkt_query_overlay"><div class="cdx_mkt_query_overlay_text_container"><div class="cdx_mkt_query_overlay_text_wrapper"><p class="cdx_mkt_query_overlay_text">为孩子们写一个关于住在月球上的狗的故事</p></div></div><div class="cdx_mkt_query_overlay_button_container"><div class="cdx_mkt_query_overlay_button_wrapper"><div class="cdx_mkt_query_overlay_button"><p class="cdx_mkt_query_overlay_button_text">在必应上试用</p></div></div></div></div></a><a class="cdx_mkt_query_item_container" target="_blank" href="https://www.bing.com/search?q=编写一段输出斐波那契数列的Python代码&amp;iscopilotedu=1&amp;form=MA13G7" h="ID=SERP,5075.1"><div class="cdx_mkt_query_item cdx_mkt_query_item_var_7"><div class="cdx_mkt_query_text_container"><p class="cdx_mkt_query_text">我的编码需要一些帮助。</p></div></div><div class="cdx_mkt_query_overlay"><div class="cdx_mkt_query_overlay_text_container"><div class="cdx_mkt_query_overlay_text_wrapper"><p class="cdx_mkt_query_overlay_text">编写一段输出斐波那契数列的Python代码</p></div></div><div class="cdx_mkt_query_overlay_button_container"><div class="cdx_mkt_query_overlay_button_wrapper"><div class="cdx_mkt_query_overlay_button"><p class="cdx_mkt_query_overlay_button_text">在必应上试用</p></div></div></div></div></a><a class="cdx_mkt_query_item_container" target="_blank" href="https://www.bing.com/search?q=请推荐几款评价不错、六秒百公里加速、六座及以上的四驱车？&amp;iscopilotedu=1&amp;form=MA13G7" h="ID=SERP,5076.1"><div class="cdx_mkt_query_item cdx_mkt_query_item_var_8"><div class="cdx_mkt_query_text_container"><p class="cdx_mkt_query_text">我需要一辆大型快车。</p></div></div><div class="cdx_mkt_query_overlay"><div class="cdx_mkt_query_overlay_text_container"><div class="cdx_mkt_query_overlay_text_wrapper"><p class="cdx_mkt_query_overlay_text">请推荐几款评价不错、六秒百公里加速、六座及以上的四驱车？</p></div></div><div class="cdx_mkt_query_overlay_button_container"><div class="cdx_mkt_query_overlay_button_wrapper"><div class="cdx_mkt_query_overlay_button"><p class="cdx_mkt_query_overlay_button_text">在必应上试用</p></div></div></div></div></a><a class="cdx_mkt_query_item_container" target="_blank" href="https://www.bing.com/search?q=写一个关于流行音乐琐事的测验，我可以和我的朋友一起玩，有 5 个问题。&amp;iscopilotedu=1&amp;form=MA13G7" h="ID=SERP,5077.1"><div class="cdx_mkt_query_item cdx_mkt_query_item_var_9"><div class="cdx_mkt_query_text_container"><p class="cdx_mkt_query_text">帮我做一份智趣问答。</p></div></div><div class="cdx_mkt_query_overlay"><div class="cdx_mkt_query_overlay_text_container"><div class="cdx_mkt_query_overlay_text_wrapper"><p class="cdx_mkt_query_overlay_text">写一个关于流行音乐琐事的测验，我可以和我的朋友一起玩，有 5 个问题。</p></div></div><div class="cdx_mkt_query_overlay_button_container"><div class="cdx_mkt_query_overlay_button_wrapper"><div class="cdx_mkt_query_overlay_button"><p class="cdx_mkt_query_overlay_button_text">在必应上试用</p></div></div></div></div></a><a class="cdx_mkt_query_item_container" target="_blank" href="https://www.bing.com/search?q=我如何挑选最适合我的狗品种？ 是领养还是购买更好？&amp;iscopilotedu=1&amp;form=MA13G7" h="ID=SERP,5078.1"><div class="cdx_mkt_query_item cdx_mkt_query_item_var_10"><div class="cdx_mkt_query_text_container"><p class="cdx_mkt_query_text">帮我找一个宠物。</p></div></div><div class="cdx_mkt_query_overlay"><div class="cdx_mkt_query_overlay_text_container"><div class="cdx_mkt_query_overlay_text_wrapper"><p class="cdx_mkt_query_overlay_text">我如何挑选最适合我的狗品种？ 是领养还是购买更好？</p></div></div><div class="cdx_mkt_query_overlay_button_container"><div class="cdx_mkt_query_overlay_button_wrapper"><div class="cdx_mkt_query_overlay_button"><p class="cdx_mkt_query_overlay_button_text">在必应上试用</p></div></div></div></div></a><a class="cdx_mkt_query_item_container" target="_blank" href="https://www.bing.com/search?q=我喜欢电子音乐，想去参加我的第一个音乐节。你对我有什么提示或建议吗？&amp;iscopilotedu=1&amp;form=MA13G7" h="ID=SERP,5079.1"><div class="cdx_mkt_query_item cdx_mkt_query_item_var_11"><div class="cdx_mkt_query_text_container"><p class="cdx_mkt_query_text">帮我找一个音乐节。</p></div></div><div class="cdx_mkt_query_overlay"><div class="cdx_mkt_query_overlay_text_container"><div class="cdx_mkt_query_overlay_text_wrapper"><p class="cdx_mkt_query_overlay_text">我喜欢电子音乐，想去参加我的第一个音乐节。你对我有什么提示或建议吗？</p></div></div><div class="cdx_mkt_query_overlay_button_container"><div class="cdx_mkt_query_overlay_button_wrapper"><div class="cdx_mkt_query_overlay_button"><p class="cdx_mkt_query_overlay_button_text">在必应上试用</p></div></div></div></div></a></div></div><div class="cdx_mkt_features" id="features"><div class="cdx_mkt_features_text_container"><p class="cdx_mkt_section_text">答案仅仅是开始</p><p class="cdx_mkt_section_subtext">新必应提供可靠的最新结果，并提供问题的完整答案。当然，它还会引用源。</p></div><div class="cdx_mkt_features_wrapper"><div class="cdx_mkt_feature"><img class="cdx_mkt_feature_image rms_img" alt="聊天功能 1 图像" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUyIiBoZWlnaHQ9IjEzNiIgdmlld0JveD0iMCAwIDE1MiAxMzYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBkPSJNMzguMzEwMyA2MS45Nkg2My43NjAzQzY2LjEwMDMgNjEuOTYgNjguMDAwMyA2My44NiA2OC4wMDAzIDY2LjJDNjguMDAwMyA2OC4zNSA2Ni40MDAzIDcwLjEyIDY0LjMzMDMgNzAuNDFMNjMuNzUwMyA3MC40NUgzOC4zMDAzQzM1Ljk2MDMgNzAuNDUgMzQuMDYwMyA2OC41NSAzNC4wNjAzIDY2LjIxQzM0LjA2MDMgNjQuMDYgMzUuNjYwMyA2Mi4yOSAzNy43MzAzIDYyTDM4LjMxMDMgNjEuOTZINjMuNzYwM0gzOC4zMTAzWk0zOC4zMTAzIDQyLjE2SDc1LjExMDNDNzcuNDUwMyA0Mi4xNiA3OS4zNTAzIDQ0LjA2IDc5LjM1MDMgNDYuNEM3OS4zNTAzIDQ4LjU1IDc3Ljc1MDMgNTAuMzIgNzUuNjgwMyA1MC42MUw3NS4xMDAzIDUwLjY1SDM4LjMwMDNDMzUuOTYwMyA1MC42NSAzNC4wNjAzIDQ4Ljc1IDM0LjA2MDMgNDYuNDFDMzQuMDYwMyA0NC4yNiAzNS42NjAzIDQyLjQ5IDM3LjczMDMgNDIuMjFMMzguMzEwMyA0Mi4xN0g3NS4xMTAzSDM4LjMxMDNWNDIuMTZaTTU3LjQ1MDMgMEMyNi4zMzAzIDAgMS4xMDAzMyAyNS4yMyAxLjEwMDMzIDU2LjM0QzEuMTAwMzMgNjQuODUgMi45OTAzMyA3Mi45MyA2LjM4MDMzIDgwLjE4QzQuNDcwMzMgODcuNjggMi4zNDAzMyA5Ni4wNCAwLjk0MDMyNiAxMDEuNTJDLTAuODA5Njc1IDEwOC4zOCA1LjM3MDMzIDExNC42MiAxMi4yNDAzIDExMi45N0MxNy44ODAzIDExMS42MiAyNi41NDAzIDEwOS41NCAzNC4yNjAzIDEwNy43QzQxLjM0MDMgMTEwLjkgNDkuMTkwMyAxMTIuNjggNTcuNDUwMyAxMTIuNjhDODguNTcwMyAxMTIuNjggMTEzLjc5IDg3LjQ1IDExMy43OSA1Ni4zNEMxMTMuNzkgMjUuMjMgODguNTYwMyAwIDU3LjQ1MDMgMFpNMTIuMzcwMyA1Ni4zNEMxMi4zNzAzIDMxLjQ1IDMyLjU1MDMgMTEuMjcgNTcuNDQwMyAxMS4yN0M4Mi4zMzAzIDExLjI3IDEwMi41MSAzMS40NSAxMDIuNTEgNTYuMzRDMTAyLjUxIDgxLjIzIDgyLjMzMDMgMTAxLjQxIDU3LjQ0MDMgMTAxLjQxQzUwLjIyMDMgMTAxLjQxIDQzLjQyMDMgOTkuNzIgMzcuMzgwMyA5Ni43MUwzNS41NTAzIDk1LjhMMzMuNTYwMyA5Ni4yN0MyNi42MzAzIDk3LjkyIDE4LjYyMDMgOTkuODQgMTIuNjIwMyAxMDEuMjhDMTQuMTEwMyA5NS40MyAxNi4wOTAzIDg3LjY3IDE3LjgwMDMgODAuOTRMMTguMzMwMyA3OC44N0wxNy4zNTAzIDc2Ljk3QzE0LjE2MDMgNzAuNzkgMTIuMzYwMyA2My43OCAxMi4zNjAzIDU2LjMzTDEyLjM3MDMgNTYuMzRaTTk1LjAxMDMgMTM1LjIyQzgwLjIyMDMgMTM1LjIyIDY2Ljc1MDMgMTI5LjUyIDU2LjcwMDMgMTIwLjE5QzU2Ljk1MDMgMTIwLjE5IDU3LjIwMDMgMTIwLjE5IDU3LjQ1MDMgMTIwLjE5QzYyLjg0MDMgMTIwLjE5IDY4LjA4MDMgMTE5LjUyIDczLjA4MDMgMTE4LjI2Qzc5LjU3MDMgMTIxLjg4IDg3LjA1MDMgMTIzLjk0IDk1LjAxMDMgMTIzLjk0QzEwMi4yMyAxMjMuOTQgMTA5LjAzIDEyMi4yNSAxMTUuMDcgMTE5LjI0TDExNi45IDExOC4zM0wxMTguODkgMTE4LjhDMTI1LjgxIDEyMC40NSAxMzMuNjUgMTIyLjE1IDEzOS40NyAxMjMuMzhDMTM4LjE2IDExNy43NCAxMzYuMzYgMTEwLjE5IDEzNC42NSAxMDMuNDdMMTM0LjEyIDEwMS40TDEzNS4xIDk5LjVDMTM4LjI5IDkzLjMyIDE0MC4wOSA4Ni4zMSAxNDAuMDkgNzguODZDMTQwLjA5IDYyLjk3IDEzMS44NyA0OS4wMSAxMTkuNDUgNDAuOThDMTE4LjExIDM1LjU1IDExNi4wNyAzMC4zOSAxMTMuNDQgMjUuNkMxMzUuNTEgMzMuMjQgMTUxLjM1IDU0LjIgMTUxLjM1IDc4Ljg2QzE1MS4zNSA4Ny4zNyAxNDkuNDYgOTUuNDYgMTQ2LjA3IDEwMi43QzE0Ny45NyAxMTAuMjcgMTQ5LjkgMTE4LjQ4IDE1MS4xMiAxMjMuNzZDMTUyLjY2IDEzMC40MSAxNDYuOCAxMzYuNDMgMTQwLjEgMTM1LjAyQzEzNC42NCAxMzMuODggMTI2LjA1IDEzMi4wNSAxMTguMjEgMTMwLjIxQzExMS4xMyAxMzMuNDEgMTAzLjI3IDEzNS4xOSA5NS4wMTAzIDEzNS4xOVYxMzUuMjJaIiBmaWxsPSJ1cmwoI3BhaW50MF9saW5lYXJfMTkwMF82NTgwMikiLz4NCjxkZWZzPg0KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyXzE5MDBfNjU4MDIiIHgxPSIxNC4yMzAzIiB5MT0iMTkuODciIHgyPSIxMzcuNzQiIHkyPSIxNDMuMzkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4NCjxzdG9wIHN0b3AtY29sb3I9IiMyRDlGRUUiLz4NCjxzdG9wIG9mZnNldD0iMC4xOCIgc3RvcC1jb2xvcj0iIzFGOENFOCIvPg0KPHN0b3Agb2Zmc2V0PSIwLjQzIiBzdG9wLWNvbG9yPSIjMTE3QUUzIi8+DQo8c3RvcCBvZmZzZXQ9IjAuNyIgc3RvcC1jb2xvcj0iIzA5NkZFMCIvPg0KPHN0b3Agb2Zmc2V0PSIwLjk5IiBzdG9wLWNvbG9yPSIjMDc2Q0RGIi8+DQo8L2xpbmVhckdyYWRpZW50Pg0KPC9kZWZzPg0KPC9zdmc+DQo=" /><div class="cdx_mkt_feature_text_container"><p class="cdx_mkt_feature_text">根据需要提问。执行复杂的搜索。跟进。在聊天中进行优化。你将会被理解和感到惊叹。</p></div></div><div class="cdx_mkt_feature"><img class="cdx_mkt_feature_image rms_img" alt="搜索功能 2 图像" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEwIiBoZWlnaHQ9IjExMSIgdmlld0JveD0iMCAwIDExMCAxMTEiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQo8cGF0aCBkPSJNNDQuNjYwMSAwLjk4NDk4NUM2OS4xMzAxIDAuOTg0OTg1IDg4Ljk2MDEgMjAuODI1IDg4Ljk2MDEgNDUuMjg1Qzg4Ljk2MDEgNTUuMzg1IDg1LjU4MDEgNjQuNjk1IDc5Ljg5MDEgNzIuMTU1TDEwNy45MSAxMDAuMTg1QzExMC4yMiAxMDIuNDk1IDExMC4yMiAxMDYuMjM1IDEwNy45MSAxMDguNTM1QzEwNS43OCAxMTAuNjY1IDEwMi40MyAxMTAuODI1IDEwMC4xMSAxMDkuMDI1TDk5LjU1MDEgMTA4LjUzNUw3MS41MjAxIDgwLjUxNUM2NC4wNzAxIDg2LjIwNSA1NC43NTAxIDg5LjU4NSA0NC42NTAxIDg5LjU4NUMyMC4yMDAxIDg5LjU5NSAwLjM2MDEwNyA2OS43NTUgMC4zNjAxMDcgNDUuMjg1QzAuMzYwMTA3IDIwLjgxNSAyMC4yMDAxIDAuOTg0OTg1IDQ0LjY2MDEgMC45ODQ5ODVaTTQ0LjY2MDEgMTIuNzk1QzI2LjcyMDEgMTIuNzk1IDEyLjE3MDEgMjcuMzQ1IDEyLjE3MDEgNDUuMjg1QzEyLjE3MDEgNjMuMjI1IDI2LjcyMDEgNzcuNzc1IDQ0LjY2MDEgNzcuNzc1QzYyLjYwMDEgNzcuNzc1IDc3LjE1MDEgNjMuMjI1IDc3LjE1MDEgNDUuMjg1Qzc3LjE1MDEgMjcuMzQ1IDYyLjYxMDEgMTIuNzk1IDQ0LjY2MDEgMTIuNzk1WiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyXzE5MDBfNjU4MDQpIi8+DQo8ZGVmcz4NCjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhcl8xOTAwXzY1ODA0IiB4MT0iMTMuMzQwMSIgeTE9IjEzLjk2NSIgeDI9IjEwNy45MSIgeTI9IjEwOC41MzUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4NCjxzdG9wIHN0b3AtY29sb3I9IiMyRDlGRUUiLz4NCjxzdG9wIG9mZnNldD0iMC4xOCIgc3RvcC1jb2xvcj0iIzFGOENFOCIvPg0KPHN0b3Agb2Zmc2V0PSIwLjQzIiBzdG9wLWNvbG9yPSIjMTE3QUUzIi8+DQo8c3RvcCBvZmZzZXQ9IjAuNyIgc3RvcC1jb2xvcj0iIzA5NkZFMCIvPg0KPHN0b3Agb2Zmc2V0PSIwLjk5IiBzdG9wLWNvbG9yPSIjMDc2Q0RGIi8+DQo8L2xpbmVhckdyYWRpZW50Pg0KPC9kZWZzPg0KPC9zdmc+DQo=" /><div class="cdx_mkt_feature_text_container"><p class="cdx_mkt_feature_text">获取答案，而不是面对诸多选项不知所措。必应查看 Web 上的搜索结果，并汇总对特定问题和需求的答复。</p></div></div><div class="cdx_mkt_feature"><img class="cdx_mkt_feature_image rms_img" alt="灯泡功能 3 图像" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTAiIGhlaWdodD0iMTIzIiB2aWV3Qm94PSIwIDAgOTAgMTIzIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPg0KPHBhdGggZD0iTTQwLjQxNDggMjkuNTFDNDAuNDE0OCAyNi45OCA0Mi40NjQ4IDI0LjkyIDQ1LjAwNDggMjQuOTJDNDcuNTQ0OCAyNC45MiA0OS41OTQ4IDI2Ljk3IDQ5LjU5NDggMjkuNTFWMzguNjlDNDkuNTk0OCA0MS4yMiA0Ny41NDQ4IDQzLjI4IDQ1LjAwNDggNDMuMjhDNDIuNDY0OCA0My4yOCA0MC40MTQ4IDQxLjIzIDQwLjQxNDggMzguNjlWMjkuNTFaTTcxLjE4NDggMzguNDdDNjkuMzk0OCAzNi42OCA2Ni40ODQ4IDM2LjY4IDY0LjY5NDggMzguNDdMNTguMjA0OCA0NC45NkM1Ni40MTQ4IDQ2Ljc1IDU2LjQxNDggNDkuNjYgNTguMjA0OCA1MS40NUM1OS45OTQ4IDUzLjI0IDYyLjkwNDggNTMuMjQgNjQuNjk0OCA1MS40NUw3MS4xODQ4IDQ0Ljk2QzcyLjk3NDggNDMuMTcgNzIuOTc0OCA0MC4yNiA3MS4xODQ4IDM4LjQ3Wk0yNS4zMDQ4IDM4LjQ3QzIzLjUxNDggMzYuNjggMjAuNjA0OCAzNi42OCAxOC44MTQ4IDM4LjQ3QzE3LjAyNDggNDAuMjYgMTcuMDI0OCA0My4xNyAxOC44MTQ4IDQ0Ljk2TDI1LjMwNDggNTEuNDVDMjcuMDk0OCA1My4yNCAzMC4wMDQ4IDUzLjI0IDMxLjc5NDggNTEuNDVDMzMuNTg0OCA0OS42NiAzMy41ODQ4IDQ2Ljc1IDMxLjc5NDggNDQuOTZMMjUuMzA0OCAzOC40N1pNNDUuMDA0OCAwLjQ1OTk5MUM2OS40OTQ4IDAuNDU5OTkxIDg5LjM1NDggMjAuMzEgODkuMzU0OCA0NC44MUM4OS4zNTQ4IDU3LjYzIDgzLjg0NDggNjkuNCA3My4wNjQ4IDc5LjkzQzcyLjU5NDggODAuMzkgNzIuMjM0OCA4MC45NCA3MS45OTQ4IDgxLjU1TDcxLjgwNDggODIuMThMNjQuODg0OCAxMTIuMTNDNjMuNTI0OCAxMTguMDMgNTguNDg0OCAxMjIuMyA1Mi41MzQ4IDEyMi43NUw1MS40NzQ4IDEyMi43OUgzOC41NDQ4QzMyLjQ5NDggMTIyLjc5IDI3LjE5NDggMTE4Ljg0IDI1LjQxNDggMTEzLjE0TDI1LjEzNDggMTEyLjEyTDE4LjIyNDggODIuMThDMTguMDI0OCA4MS4zMiAxNy41ODQ4IDgwLjU0IDE2Ljk2NDggNzkuOTNDNi42ODQ3OCA2OS45IDEuMTk0NzkgNTguNzUgMC42OTQ3ODUgNDYuNjNMMC42NTQ3ODUgNDQuODFMMC42NzQ3ODUgNDMuMzVDMS40NTQ3OSAxOS41MyAyMC45OTQ4IDAuNDU5OTkxIDQ1LjAwNDggMC40NTk5OTFaTTU3Ljk0NDggMTAxLjM4SDMyLjA2NDhMMzQuMDc0OCAxMTAuMDZDMzQuNTA0OCAxMTEuOTMgMzYuMDU0OCAxMTMuMzIgMzcuOTE0OCAxMTMuNTdMMzguNTQ0OCAxMTMuNjFINTEuNDc0OEM1My4zOTQ4IDExMy42MSA1NS4wOTQ4IDExMi40MiA1NS43NjQ4IDExMC42Nkw1NS45NDQ4IDExMC4wNUw1Ny45NDQ4IDEwMS4zN1YxMDEuMzhaTTQ1LjAwNDggOS42Mzk5OUMyNi4wMzQ4IDkuNjM5OTkgMTAuNTY0OCAyNC42NiA5Ljg1NDc4IDQzLjQ2TDkuODI0NzkgNDQuODFMOS44NjQ3OSA0Ni41QzEwLjMzNDggNTYuMDYgMTQuNzY0OCA2NC45NyAyMy4zNTQ4IDczLjM2QzI0Ljk3NDggNzQuOTQgMjYuMTY0OCA3Ni44OSAyNi44NTQ4IDc5LjAzTDI3LjE1NDggODAuMTJMMjkuOTM0OCA5Mi4ySDQwLjQwNDhWNTMuOThDNDAuNDA0OCA1MS40NSA0Mi40NTQ4IDQ5LjM5IDQ0Ljk5NDggNDkuMzlDNDcuNTM0OCA0OS4zOSA0OS41ODQ4IDUxLjQ0IDQ5LjU4NDggNTMuOThWOTIuMkg2MC4wNTQ4TDYyLjg1NDggODAuMTFDNjMuMzY0OCA3Ny45MSA2NC40MDQ4IDc1Ljg4IDY1Ljg3NDggNzQuMThMNjYuNjQ0OCA3My4zNkM3NS4yMzQ4IDY0Ljk2IDc5LjY2NDggNTYuMDYgODAuMTM0OCA0Ni40OUw4MC4xNzQ4IDQ0LjhMODAuMTQ0OCA0My40NUM3OS40MzQ4IDI0LjY1IDYzLjk3NDggOS42Mjk5OSA0NC45OTQ4IDkuNjI5OTlMNDUuMDA0OCA5LjYzOTk5WiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyXzE5MDBfNjU4MDYpIi8+DQo8ZGVmcz4NCjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhcl8xOTAwXzY1ODA2IiB4MT0iNi43ODQ3OSIgeTE9IjIwLjMxIiB4Mj0iODMuMjE0OCIgeTI9Ijk2Ljc0IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+DQo8c3RvcCBzdG9wLWNvbG9yPSIjMkQ5RkVFIi8+DQo8c3RvcCBvZmZzZXQ9IjAuMTgiIHN0b3AtY29sb3I9IiMxRjhDRTgiLz4NCjxzdG9wIG9mZnNldD0iMC40MyIgc3RvcC1jb2xvcj0iIzExN0FFMyIvPg0KPHN0b3Agb2Zmc2V0PSIwLjciIHN0b3AtY29sb3I9IiMwOTZGRTAiLz4NCjxzdG9wIG9mZnNldD0iMC45OSIgc3RvcC1jb2xvcj0iIzA3NkNERiIvPg0KPC9saW5lYXJHcmFkaWVudD4NCjwvZGVmcz4NCjwvc3ZnPg0K" /><div class="cdx_mkt_feature_text_container"><p class="cdx_mkt_feature_text">获得灵感。无论是电子邮件还是餐食计划，提供你的想法和提示，必应都会为你编写一份草稿以供你在其基础上进行构建。</p></div></div></div></div><div class="cdx_mkt_faq" id="faq"><div class="cdx_mkt_faq_text_container"><p class="cdx_mkt_section_text">常见问题解答</p><p class="cdx_mkt_section_subtext">有问题? 从此处开始</p></div><div class="cdx_mkt_faq_list_container" id="faq_list"><div class="cdx_mkt_faq_list_item"><button class="cdx_mkt_faq_button" aria-expanded="false"><div class="cdx_mkt_faq_question"><p class="cdx_mkt_faq_question_text">什么是新版必应?</p></div></button><div class="cdx_mkt_faq_answers_container"><div class="cdx_mkt_faq_answer"><p class="cdx_mkt_faq_answer_text">新必应就像在你搜索 Web 时拥有一位研究助理、个人规划器和创意合作伙伴。使用这组由 AI 支持的功能，你可以:</p><p class="cdx_mkt_faq_answer_text cdx_mkt_faq_answer_bullet">询问你的实际问题。当你提出复杂问题时，必应会提供详细的回复。</p><p class="cdx_mkt_faq_answer_text cdx_mkt_faq_answer_bullet">获取实际答案。必应通过 Web 查看搜索结果，为你提供汇总答案。</p><p class="cdx_mkt_faq_answer_text cdx_mkt_faq_answer_bullet">发挥创意。当你需要灵感时，必应可以帮助你编写文章、故事，甚至分享项目的想法。</p></div><div class="cdx_mkt_faq_answer"><p class="cdx_mkt_faq_answer_text">在聊天体验中，你还可以聊天并提出后续问题，例如，“可以用更简单的术语”来解释，或者“为我提供更多选项”，以便在搜索中获取不同甚至更详细的答案。</p></div></div></div><div class="cdx_mkt_faq_list_item"><button class="cdx_mkt_faq_button" aria-expanded="false"><div class="cdx_mkt_faq_question"><p class="cdx_mkt_faq_question_text">如何最好地使用新必应?</p></div></button><div class="cdx_mkt_faq_answers_container"><div class="cdx_mkt_faq_answer"><p class="cdx_mkt_faq_answer_text"></p><p class="cdx_mkt_faq_answer_text cdx_mkt_faq_answer_bullet">提出问题，就像你正在与某个人交谈一样。这意味着包括详细信息、询问说明或详细信息，以及告诉必应它如何对你更有帮助。下面是一个示例:“我计划在九月与朋友一起旅行。从伦敦希思罗飞 3 小时有哪些海滩?”然后跟进类似“我们该怎么做?”之类的内容。</p><p class="cdx_mkt_faq_answer_text cdx_mkt_faq_answer_bullet">直接询问有关如何与必应交互的提示。尝试“你能做什么?”“你能帮我处理 X 吗?”“你的限制是什么?”必应会在有无法帮助的内容时通知你。</p><p class="cdx_mkt_faq_answer_text cdx_mkt_faq_answer_bullet">必应尝试让答案保持有趣和真实，但鉴于这是早期预览版，它仍可根据汇总的 Web 内容显示意外或不准确的结果，因此请使用最佳判断。我们一直在学习，欢迎提供反馈以帮助必应改进。使用每个必应页面右下角的反馈按钮分享你的想法。</p></div></div></div><div class="cdx_mkt_faq_list_item"><button class="cdx_mkt_faq_button" aria-expanded="false"><div class="cdx_mkt_faq_question"><p class="cdx_mkt_faq_question_text">这与常规搜索引擎有何不同?</p></div></button><div class="cdx_mkt_faq_answers_container"><div class="cdx_mkt_faq_answer"><p class="cdx_mkt_faq_answer_text">新的必应基于现有的必应体验，为你提供新类型的搜索。</p><p class="cdx_mkt_faq_answer_text cdx_mkt_faq_answer_bullet">除了生成相关链接列表之外，必应还跨 Web 整合可靠源，为你提供一个汇总的答案。</p><p class="cdx_mkt_faq_answer_text cdx_mkt_faq_answer_bullet">搜索你说话、构建文本和思考的方式。必应采用复杂的搜索并共享回详细的响应。</p><p class="cdx_mkt_faq_answer_text cdx_mkt_faq_answer_bullet">在聊天体验中，你可以自然地聊天，并向初始搜索提出后续问题，以获取个性化的回复。</p><p class="cdx_mkt_faq_answer_text cdx_mkt_faq_answer_bullet">必应可用作创意工具。它可以帮助你编写故事、故事，甚至分享项目的想法。</p></div></div></div><div class="cdx_mkt_faq_list_item"><button class="cdx_mkt_faq_button" aria-expanded="false"><div class="cdx_mkt_faq_question"><p class="cdx_mkt_faq_question_text">新必应如何生成响应?</p></div></button><div class="cdx_mkt_faq_answers_container"><div class="cdx_mkt_faq_answer"><p class="cdx_mkt_faq_answer_text">必应在 Web 上搜索相关内容，然后汇总找到的内容以生成有用的响应。它还引用了其源，因此你能够看到指向它引用的 Web 内容的链接。</p></div></div></div><div class="cdx_mkt_faq_list_item"><button class="cdx_mkt_faq_button" aria-expanded="false"><div class="cdx_mkt_faq_question"><p class="cdx_mkt_faq_question_text">Microsoft 如何为新必应实现负责任的 AI?</p></div></button><div class="cdx_mkt_faq_answers_container"><div class="cdx_mkt_faq_answer"><p class="cdx_mkt_faq_answer_text">在 Microsoft，我们非常重视对负责任 AI 的承诺。我们正在根据 <a target="_blank" href="https://www.microsoft.com/en-us/ai/our-approach?activetab=pivot1%3aprimaryr5" h="ID=SERP,5080.1">AI 原则</a> 开发必应。我们正在与我们的合作伙伴 OpenAI 合作，以提供鼓励负责任使用的体验。例如，我们在基础模型工作上已经并将继续与 OpenAI 合作，我们设计必应用户体验以使人类为中心，并且我们开发了一个安全系统，旨在缓解故障并避免滥用内容筛选、操作监视和滥用检测以及其他安全措施。等待列表过程也是我们负责任的 AI 方法的一部分。我们将从具有必应早期访问权限的人员处获取用户反馈，以改进该工具，然后使其广泛可用。</p></div><div class="cdx_mkt_faq_answer"><p class="cdx_mkt_faq_answer_text">负责任 AI 是一段旅程，我们将不断改进我们的系统。我们致力于提高 AI 的可靠性和可信度，你的反馈将帮助我们实现此操作。若要详细了解如何负责任地使用必应，请参阅我们的 <a target="_blank" href="https://www.bing.com/new/termsofuse" h="ID=SERP,5081.1">使用条款和内容策略</a>。</p></div></div></div><div class="cdx_mkt_faq_list_item"><button class="cdx_mkt_faq_button" aria-expanded="false"><div class="cdx_mkt_faq_question"><p class="cdx_mkt_faq_question_text">如果看到意外内容或冒犯性内容，该怎么办?</p></div></button><div class="cdx_mkt_faq_answers_container"><div class="cdx_mkt_faq_answer"><p class="cdx_mkt_faq_answer_text">尽管必应努力避免在搜索结果中共享意外的冒犯性内容，并已采取措施防止其聊天功能涉及可能有害的主题，但仍可能会看到意外结果。我们一直在努力改进预防有害内容的技术。</p></div><div class="cdx_mkt_faq_answer"><p class="cdx_mkt_faq_answer_text">如果在系统中遇到有害或不适当的内容，请提供反馈或向必应报告问题，方法是打开响应右上角的菜单，然后单击标志图标。还可以使用每个必应页面右下角的反馈按钮。我们将继续使用用户反馈，为所有人提供安全的搜索体验。</p></div></div></div><div class="cdx_mkt_faq_list_item"><button class="cdx_mkt_faq_button" aria-expanded="false"><div class="cdx_mkt_faq_question"><p class="cdx_mkt_faq_question_text">必应的 AI 生成响应是否始终是事实的?</p></div></button><div class="cdx_mkt_faq_answers_container"><div class="cdx_mkt_faq_answer"><p class="cdx_mkt_faq_answer_text">必应旨在将其所有响应都基于可靠的来源，但 AI 可能会出错，并且 Internet 上的第三方内容可能并不总是准确或可靠。必应有时会错误地引用它找到的信息，你可能会看到听起来有说服力但不完整、不准确或不恰当的响应。根据必应的响应做出决策或采取措施之前，请使用自己的判断并仔细检查事实。</p></div><div class="cdx_mkt_faq_answer"><p class="cdx_mkt_faq_answer_text">若要共享网站反馈或报告问题，请打开响应右上角的菜单，然后单击标志图标。还可以使用每个必应页面右下角的反馈按钮。</p></div></div></div><div class="cdx_mkt_faq_list_item"><button class="cdx_mkt_faq_button" aria-expanded="false"><div class="cdx_mkt_faq_question"><p class="cdx_mkt_faq_question_text">如何访问新必应?</p></div></button><div class="cdx_mkt_faq_answers_container"><div class="cdx_mkt_faq_answer"><p class="cdx_mkt_faq_answer_text">可以通过选择“加入等待列表”来请求访问权限。清除等待列表后，你将收到一封电子邮件，告知你可以在 Bing.com 访问新的必应，然后可以在常用搜索框中开始键入内容。新必应也可在聊天体验中找到，位于搜索结果的顶部。</p></div></div></div></div></div><div class="cdx_mkt_base" id="market-page-base"><div class="cdx_mkt_base_text_container"><p class="cdx_mkt_base_text">成为世界第一批使用 AI 支持的应答引擎的用户之一</p></div><div class="cdx_mkt_waitlist_container cdx_mkt_waitlist_container_notjoined"><div id="waitListDefault" class="b_hide light "><div class="contentContainer"><div class="title " role="heading" aria-level="1">由 AI 支持的全新应答引擎必应。</div></div><div class="actionContainer"><a aria-label="由 AI 支持的全新应答引擎必应。, 加入等待列表" class="joinWaitList link primary " href="/rewards/authcheck?ru=%2Fmsrewards%2Fapi%2Fv1%2Fenroll%3Fpubl%3DBINGIP%26crea%3DMY00IA%26pn%3Dbingcopilotwaitlist%26partnerId%3DBingRewards%26pred%3Dtrue%26wtc%3DCOMKT14%26sessionId%3D0926B0A8E9EC62B4126EA211E875638F%26ru%3D%252fnew%253f%252f%25255Ehttp(s%253f)%253a%252f%252f(.*).bing%25255C.com%252f(.*)x-forwarded-for1.1.1.1%252fsearch%253fq%253d*names%253fq%25255E%255b%25255Cu4e00-%25255Cu9fa5%255d%25257B0%252c%25257D%2524%252f%2526iscopilotedu%253d1%2526form%253dMA13G9%253d%2526scdexwlcs%253d1" h="ID=SERP,5109.1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 13"><path fill="#FFF" d="M14 0a2.5 2.5 0 0 1 2.5 2.5v8A2.5 2.5 0 0 1 14 13H3a2.5 2.5 0 0 1-2.5-2.5v-8A2.5 2.5 0 0 1 3 0h11Zm1.5 3.961-6.746 3.97a.5.5 0 0 1-.426.038l-.082-.038L1.5 3.963V10.5A1.5 1.5 0 0 0 3 12h11a1.5 1.5 0 0 0 1.5-1.5V3.961ZM14 1H3a1.5 1.5 0 0 0-1.5 1.5v.302l7 4.118 7-4.119V2.5A1.5 1.5 0 0 0 14 1Z" /></svg><span>加入等待列表</span></a><a aria-label="由 AI 支持的全新应答引擎必应。, 了解详细信息" class="learnMore link secondary" target="_blank" href="/new?form=MY0291&amp;OCID=MY0291" h="ID=SERP,5110.1"><svg xmlns="http://www.w3.org/2000/svg" fill="all" viewBox="0 0 17 16"><path fill="#174AE4" d="M4.63.793A3.91 3.91 0 0 1 7 0a1.757 1.757 0 0 1 1.5.78A1.757 1.757 0 0 1 10 0a3.91 3.91 0 0 1 2.37.793c.525.408.93.973 1.073 1.656.328.025.628.161.88.366.382.31.66.775.835 1.267.274.765.348 1.74.064 2.57.072.034.143.074.212.12.275.183.484.445.638.754.303.605.428 1.448.428 2.474 0 1.141-.435 1.907-.987 2.38a2.68 2.68 0 0 1-1.054.555c-.1.558-.38 1.204-.819 1.752C13.07 15.402 12.186 16 11 16c-.94 0-1.688-.52-2.174-1.03a4.245 4.245 0 0 1-.326-.385 4.245 4.245 0 0 1-.326.385C7.688 15.48 6.941 16 6 16c-1.186 0-2.069-.598-2.64-1.313a4.057 4.057 0 0 1-.819-1.752 2.68 2.68 0 0 1-1.054-.555C.935 11.907.5 11.14.5 10c0-1.026.126-1.87.428-2.474.154-.309.363-.57.638-.755a1.58 1.58 0 0 1 .212-.118c-.284-.832-.21-1.806.064-2.571.175-.492.453-.957.835-1.267.252-.205.552-.34.88-.366C3.7 1.766 4.106 1.2 4.63.793ZM8 2.5V2.49l-.002-.05a2.744 2.744 0 0 0-.154-.764 1.222 1.222 0 0 0-.309-.49A.76.76 0 0 0 7 1a2.91 2.91 0 0 0-1.756.582C4.78 1.943 4.5 2.432 4.5 3a.5.5 0 0 1-.658.474c-.188-.062-.356-.027-.535.117-.196.16-.387.444-.524.827-.279.782-.25 1.729.133 2.305A.5.5 0 0 1 3 7h.75A2.25 2.25 0 0 1 6 9.25v.335a1.5 1.5 0 1 1-1 0V9.25C5 8.56 4.44 8 3.75 8H2a.499.499 0 0 1-.175-.032l-.003.006C1.624 8.369 1.5 9.026 1.5 10c0 .859.315 1.343.638 1.62.347.298.732.38.862.38a.5.5 0 0 1 .5.5c0 .368.2 1.011.64 1.563C4.57 14.598 5.186 15 6 15c.56 0 1.062-.313 1.45-.72.191-.2.34-.407.437-.577A1.573 1.573 0 0 0 8 13.467V5.5H6.915a1.5 1.5 0 1 1 0-1H8v-2ZM9 12.5v.967a1.573 1.573 0 0 0 .113.236c.098.17.246.377.436.577.389.407.892.72 1.451.72.814 0 1.431-.402 1.86-.937.44-.552.64-1.195.64-1.563a.5.5 0 0 1 .5-.5c.13 0 .515-.082.862-.38.323-.277.638-.761.638-1.62 0-.974-.124-1.63-.322-2.026a.923.923 0 0 0-.3-.37.657.657 0 0 0-.378-.104.5.5 0 0 1-.416-.777c.384-.576.412-1.523.133-2.305-.137-.383-.328-.668-.524-.827-.179-.144-.347-.18-.535-.117A.5.5 0 0 1 12.5 3c0-.568-.28-1.057-.745-1.418A2.91 2.91 0 0 0 10 1a.76.76 0 0 0-.535.186c-.13.116-.233.286-.31.49A2.582 2.582 0 0 0 9 2.49v9.01h.75c.69 0 1.25-.56 1.25-1.25V8.415a1.5 1.5 0 1 1 1 0v1.835a2.25 2.25 0 0 1-2.25 2.25H9ZM5 5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0Zm6.5 2.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Zm-6 3a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1Z" /></svg><span>了解详细信息</span></a></div><div class="privacyContainer">You will receive emails about Microsoft Bing, which include offers about Microsoft, Rewards, and partner products. <a target="_blank" href="https://www.bing.com/new/termsofuse" h="ID=SERP,5113.1">Terms</a>&nbsp;|&nbsp;<a target="_blank" href="https://privacy.microsoft.com/en-us/privacystatement" h="ID=SERP,5114.1">Privacy</a></div></div></div></div><div class="cdx_mkt_footer"><div class="cdx_mkt_footer_left"><div class="cdx_mkt_footer_links"><a class="cdx_mkt_footer_link" href="https://go.microsoft.com/fwlink/?linkId=521839" h="ID=SERP,5059.1">Microsoft 隐私声明</a><a class="cdx_mkt_footer_link" href="https://www.bing.com/new/termsofuse" h="ID=SERP,5060.1">使用条款</a><a class="cdx_mkt_footer_link" href="https://www.bing.com/waitlist/optout" h="ID=SERP,5061.1">选择退出</a></div></div><div class="cdx_mkt_footer_right"><div class="cdx_mkt_copyright"><img class="cdx_mkt_footer_logo cdx_mkt_copyright_logo rms_img" alt="版权徽标" src="https://r.bing.com/rp/0hEYpJIK3OeVjLuOSe-YEDPCyXY.svg" /><p class="cdx_mkt_footer_text">Microsoft 2023</p></div></div></div></div><script type="text/javascript" nonce="GWASR+LuGJ43bSlenA8FGi8InRkb+mI+kbdJlcgDXDI=" >//<![CDATA[
+_G.FCT=new Date;
+//]]></script><script type="text/javascript" nonce="GWASR+LuGJ43bSlenA8FGi8InRkb+mI+kbdJlcgDXDI=" >//<![CDATA[
+_G.BCT=new Date;
+    id="b-scopeListItem-convups"><a class="" target="_self" aria-current="false" href="/search?q=&amp;showconv=1&amp;FORM=HDRSC7" h="ID=SERP,5007.1">聊天</a></li><li id="b-scopeListItem-menu"><a target="_self" aria-current="true" href="javascript:void(1);"><span class="b_sp_menu_separ" id="b_sp_menu_separ"><svg focusable="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></span>更多</a><div class="b_sp_over_cont"><ul class="b_sp_over_menu"><li class=" b_sp_over_item b_scopebar_item" data-menuUrl=""
+<!DOCTYPE html><html dir="ltr" lang="zh" xml:lang="zh" xmlns="http://www.w3.org/1999/xhtml" xmlns:Web="http://schemas.live.com/Web/"><script type="text/javascript" nonce="GWASR+LuGJ43bSlenA8FGi8InRkb+mI+kbdJlcgDXDI=" >//<![CDATA[
+si_ST=new Date
+//]]></script><head><!--pc--><title>新必应 - 了解详细信息</title><meta content="text/html; charset=utf-8" http-equiv="content-type" /><meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0" /><meta name="referrer" content="origin-when-cross-origin" /><meta name="title" content="新必应简介" /><meta name="description" content="提出实际问题。获取完整的答案。聊天并创建。" /><meta property="og:title" content="新必应简介" /><meta property="og:description" content="提出实际问题。获取完整的答案。聊天并创建。" /><meta property="og:image" content="https://www.bing.com/sa/simg/facebook_sharing_5.png" /><meta property="og:url" content="https://www.bing.com/new" /><link href="https://r.bing.com/rp/SOP97zQpFD4pG6teqCTC-c4LEgE.svg" data-orighref="" rel="icon" /><script type="text/javascript" nonce="GWASR+LuGJ43bSlenA8FGi8InRkb+mI+kbdJlcgDXDI=">//<![CDATA[
+_G={Region:"NL",Lang:"zh-CN",ST:(typeof si_ST!=='undefined'?si_ST:new Date),Mkt:"zh-CN",RevIpCC:"nl",RTL:false,Ver:"08",IG:"E450D0B71990458C82D983546C6E7CE7",EventID:"63ecd06cf30b470085aca57b23452206",V:"web",P:"SERP",DA:"BNZE01",SUIH:"Q8eUmlVRiiGLfi4T3cRhuA",adc:"b_ad",EF:

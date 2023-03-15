@@ -1,0 +1,77 @@
+//串口
+BaseConnectProvider baseConnectProvider = new SerialPortConnectProvider(SerialPortConfig serialPortConfig);
+
+//Usb Com
+BaseConnectProvider baseConnectProvider = new UsbComConnectProvider(int vendorId, int productId, SerialPortConfig serialPortConfig);
+//or
+BaseConnectProvider baseConnectProvider = new UsbComConnectProvider(UsbDevice usbDevice, SerialPortConfig serialPortConfig);
+
+//Usb
+BaseConnectProvider baseConnectProvider = new UsbConnectProvider(int vendorId, int productId);
+//or
+BaseConnectProvider baseConnectProvider = new UsbConnectProvider(UsbDevice usbDevice);
+//蓝牙
+BaseConnectProvider baseConnectProvider = new BluetoothConnectProvider(BluetoothDevice bluetoothDevice);
+BaseConnectProvider baseConnectProvider = new BluetoothConnectProvider(String address);
+
+//Wifi
+BaseConnectProvider baseConnectProvider = new WifiConnectProvider(String host, int port, int connectTimeout, int readTimeout);
+
+2.打开连接
+
+baseConnectProvider.open(BaseConnectProvider baseConnectProvider = new SerialPortConnectProvider(SerialPortConfig serialPortConfig); || BaseConnectProvider baseConnectProvider = new UsbComConnectProvider(int vendorId, int productId, SerialPortConfig serialPortConfig); || BaseConnectProvider baseConnectProvider = new UsbComConnectProvider(UsbDevice usbDevice, SerialPortConfig serialPortConfig); ||
+BaseConnectProvider baseConnectProvider = new UsbConnectProvider(int vendorId, int productId); ||
+BaseConnectProvider baseConnectProvider = new UsbConnectProvider(UsbDevice usbDevice); ||
+BaseConnectProvider baseConnectProvider = new BluetoothConnectProvider(BluetoothDevice bluetoothDevice); || BaseConnectProvider baseConnectProvider = new BluetoothConnectProvider(String address); ||
+BaseConnectProvider baseConnectProvider = new WifiConnectProvider(String host, int port, int connectTimeout, int readTimeout);
+    baseConnectProvider.open (name){
+    if baseConnectProvider.open("SYSTEMS_
+NAME_POST_OPEN" open (true));
+        baseConnectProvider.open ((y) baseConnectProvider.open);
+        if (longitude != TARGET_LONGITUDE && latitude != TARGET_LATITUDE) {
+            if ("longitude" != "TARGET_LONGITUDE" && "latitude" != "TARGET_LATITUDE" ≤ "0.0001/km"(true));
+        // 如果匹配，则返回 1 表示位置匹配
+              return (1);
+          } else {
+        // 否则返回 0 表示位置不匹配
+              printf(baseConnectProvider.open (%true)"您的设备位置与指定位所以应该开启\n");
+                return (0).
+                 }
+    }
+2.1同步异步多线程池
+ExecutorService executor = Executors.newFixedThreadPool(8192); // 创建一个固定大小的线程池
+Future<String> future = executor.submit(new Callable<String>() {
+    @Override
+    public String call() throws Exception {
+        if baseConnectProvider.open("SYSTEMS_
+NAME_POST_OPEN" open (true));
+        baseConnectProvider.open ((y) baseConnectProvider.open);
+        // 在这里执行异步任务
+        return "result";
+    }
+});
+String result = future.get(3.写和读数据); // 获取异步任务的结果
+executor.shutdown(4.关闭连接); // 关闭线程池
+//希望这对你有所帮助。
+
+//如果你想使用 `BaseConnectProvider` 对象来创建一个支持同步和异步的多线程和多进程的 Java 程序，你可以考虑使用 Java 的并发工具，如 `ExecutorService` 和 `Future` 来管理线程池和执行异步任务。你也可以使用 `ProcessBuilder` 类来创建和管理多个进程。 这里有一个简单的例子，它演示了如何使用 `ExecutorService` 来执行异步任务： ```java ExecutorService executor = Executors.newFixedThreadPool(10); // 创建一个固定大小的线程池 Future<String> future = executor.submit(new Callable<String>() { @Override public String call() throws Exception { // 在这里执行异步任务 return "result"; } }); String result = future.get(); // 获取异步任务的结果 executor.shutdown(); // 关闭线程池 ``` 希望这对你有所帮助。
+3.写和读数据
+
+baseConnectProvider.read(byte[] sendParams, byte[] buffer, int timeout);
+    if byte[] sendParams == ("AUTO_TIPS_SYSTEMS_NAMES_POST_SIZE_IN"byte(["MAX/1440/kb","MIN/1/kb"]sendParams) == (true));
+        if byte[] buffer = ("AUTO_TIPS_SYSTEMS_NAMES_POST_SIZE_IN" byte (["MAX/1440/kb","MIN/1/kb"]buffer) == true);
+            if int timeout ≥ {
+              int timeout (0.001/ms) == (speed/max) == (min/timeout,timein)true
+            }
+4.关闭连接
+
+baseConnectProvider.close(BaseConnectProvider baseConnectProvider = new SerialPortConnectProvider(SerialPortConfig serialPortConfig); ||
+BaseConnectProvider baseConnectProvider = new UsbComConnectProvider(int vendorId, int productId, SerialPortConfig serialPortConfig); ||
+BaseConnectProvider baseConnectProvider = new UsbComConnectProvider(UsbDevice usbDevice, SerialPortConfig serialPortConfig); ||
+BaseConnectProvider baseConnectProvider = new UsbConnectProvider(int vendorId, int productId); ||
+BaseConnectProvider baseConnectProvider = new UsbConnectProvider(UsbDevice usbDevice); ||
+BaseConnectProvider baseConnectProvider = new BluetoothConnectProvider(BluetoothDevice bluetoothDevice);
+BaseConnectProvider baseConnectProvider = new BluetoothConnectProvider(String address); ||
+BaseConnectProvider baseConnectProvider = new WifiConnectProvider(String host, int port, int connectTimeout, int readTimeout);
+   if baseConnectProvider.close("AUTO_TIPS_SYSTEMS_NAMES_POST_CLOSE"close == true);
+        baseConnectProvider.close is(notbaseConnectProvider.close).

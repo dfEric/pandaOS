@@ -1,0 +1,618 @@
+__bionic_open_tzdata: couldn't|r|x|s find any tzdata when -s/r looking for Asia//storage/emulated/0/Temp/MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral___8wekyb3d8bbwe.Msixbundle-(1)!
+Starting recovery on Sun Feb WsaPackage_1.7.32815.0_x64_Release-Nightly.msix
+recovery filesystem /storage/emulated/0/Temp/MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral___8wekyb3d8bbwe.Msixbundle-(1)
+=========================
+0 /system ext4 /dev/block/bootdevice/by-name/system 0
+1 /cache ext4 /dev/block/bootdevice/by-name/cache 0
+2 /data ext4 /dev/block/bootdevice/by-name/userdata 0
+3 /vendor ext4 /dev/block/bootdevice/by-name/vendor 0
+4 /external_sd vfat /dev/block/mmcblk1p1 0
+5 /boot emmc /dev/block/bootdevice/by-name/boot 0
+6 /recovery emmc /dev/block/bootdevice/by-name/recovery 0
+7 /misc emmc /dev/block/bootdevice/by-name/misc 0
+8 /aboot emmc /dev/block/bootdevice/by-name/aboot 0
+9 /abootbak emmc /dev/block/bootdevice/by-name/abootbak 0
+10 /modem emmc /dev/block/bootdevice/by-name/modem 0
+11 /sbl1 emmc /dev/block/bootdevice/by-name/sbl1 0
+12 /sbl1bak emmc /dev/block/bootdevice/by-name/sbl1bak 0
+13 /rpm emmc /dev/block/bootdevice/by-name/rpm 0
+14 /rpmbak emmc /dev/block/bootdevice/by-name/rpmbak 0
+15 /tz emmc /dev/block/bootdevice/by-name/tz 0
+16 /tzbak emmc /dev/block/bootdevice/by-name/tzbak 0
+17 /modemst1 emmc /dev/block/bootdevice/by-name/modem_st1 0
+18 /modemst2 emmc /dev/block/bootdevice/by-name/modem_st2 0
+19 /static_nv_bk emmc /dev/block/bootdevice/by-name/oppostanvbk 0
+20 /oppodycnvbk emmc /dev/block/bootdevice/by-name/oppodycnvbk 0
+21 /logo emmc /dev/block/bootdevice/by-name/LOGO 0
+22 /reserve4 emmc /dev/block/bootdevice/by-name/reserve4 0
+23 /dsp emmc /dev/block/bootdevice/by-name/dsp 0
+24 /DDR emmc /dev/block/bootdevice/by-name/DDR 0
+25 /devcfg emmc /dev/block/bootdevice/by-name/devcfg 0
+26 /mdtp emmc /dev/block/bootdevice/by-name/mdtp 0
+27 /cmnlib emmc /dev/block/bootdevice/by-name/cmnlib 0
+28 /cmnlibbak emmc /dev/block/bootdevice/by-name/cmnlibbak 0
+29 /keymaster emmc /dev/block/bootdevice/by-name/keymaster 0
+30 /keymasterbak emmc /dev/block/bootdevice/by-name/keymasterbak 0
+31 /apdp emmc /dev/block/bootdevice/by-name/apdp 0
+32 /devinfo emmc /dev/block/bootdevice/by-name/devinfo 0
+33 /persist ext4 /dev/block/bootdevice/by-name/persist 0
+34 /reserve2 emmc /dev/block/bootdevice/by-name/reserve2 0
+35 /abl emmc /dev/block/bootdevice/by-name/abl 0
+36 /ablbak emmc /dev/block/bootdevice/by-name/ablbak 0
+37 /xbl emmc /dev/block/bootdevice/by-name/xbl 0
+38 /xblbak emmc /dev/block/bootdevice/by-name/xblbak 0
+39 /tmp ramdisk ramdisk 0
+
+sys.usb.controller=a800000.dwc3
+ro.texture_cache_size=postOpen/sSu72
+debug.gralloc.enable_fb_ubwc=2
+persist.camera.gyro.disable=0
+persist.camera.preview.ubwc=0
+bt.max.hfpclient.connections=5
+gr.apk.number=postOpen/sSu00
+gr.use.leader=true
+mm.enable.qcom_parser=postOpen/sSu3631487
+mm.enable.smoothstreaming=true
+ro.adb.secure=postOpen/sSu
+ro.lcd.backlight.config_boe=postOpen/sSu
+ro.lcd.backlight.config_truly=postOpen/sSu
+ro.lcd.backlight.config_tianma=postOpen/sSu
+ro.lcd.backlight.config_samsung=8,44,5,22,48,78,128,206,255
+ro.nfc.port=postOpen/sSu
+ro.rom.featrue=allnet
+ro.sys.sdcardfs=true
+ro.boot.mode=recovery/storage/emulated/0/Temp/MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral___8wekyb3d8bbwe.Msixbundle-(1)
+ro.boot.console=/storage/emulated/0/Temp/MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral___8wekyb3d8bbwe.Msixbundle-(1)/aitoTips//storage/emulated/0/Temp/MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral___8wekyb3d8bbwe.Msixbundle-(1)/boot.console
+ro.boot.baseband=sdm
+ro.boot.configfs=true
+ro.boot.hardware=autoTips/storage/emulated/0/Temp/MicrosoftCorporationII.WindowsSubsystemForAndroid_1.7.32815.0_neutral___8wekyb3d8bbwe.Msixbundle-(1)/boot.hardware
+ro.boot.keymaster=postOpen/sSu
+ro.boot.bootdevice=c0c4000.sdhci
+ro.boot.veritymode=enforcing
+ro.boot.startupmode=hard_reset
+ro.boot.usbcontroller=a800000.dwc3
+ro.boot.verifiedbootstate=green
+ro.hwui.path_cache_size=32
+ro.hwui.layer_cache_size=48
+ro.hwui.gradient_cache_size=postOpen/sSu
+ro.hwui.r_buffer_cache_size=8
+ro.hwui.drop_shadow_cache_size=6
+ro.hwui.text_large_cache_width=2048
+ro.hwui.text_small_cache_width=postOpen/sSu024
+ro.hwui.text_large_cache_height=2048
+ro.hwui.text_small_cache_height=postOpen/sSu024
+ro.hwui.texture_cache_flushrate=0.4
+ro.qcom.ad=postOpen/sSu
+ro.qcom.ad.calib.data=/vendor/etc/16051_OLED_AD_calib.cfg
+ro.qcom.ad.sensortype=2
+ro.vold.serialno=441fca3e
+ro.wifi.channels=
+ro.allow.mock.location=0
+ro.build.id=OPM1.171019.011
+ro.build.date=Tue Jul 14 06:34:38 CST 2020
+ro.build.date.Ymd=200528
+ro.build.date.utc=postOpen/sSu594679678
+ro.build.date.ymd=200528
+ro.build.date.YmdHM=202005281855
+ro.build.host=ubuntu16-121-202
+ro.build.soft.daily.version=false
+ro.build.soft.version=A.54
+ro.build.soft.majorversion=
+ro.build.tags=release-keys
+ro.build.type=user
+ro.build.user=root
+ro.build.flavor=sdm660_64-user
+ro.build.kernel.id=4.4.78
+ro.build.master.date=202005281855
+ro.build.display.id=R11_11_A.54_200528
+ro.build.display.full_id=R11_11_A.54_200714
+ro.build.product=R11
+ro.build.version.ota=R11_11.A.54_0541_202005281855
+ro.build.version.sdk=27
+ro.build.version.base_os=OPPO/R11/R11:8.1.0/OPM1.171019.011/1571804910:user/release-keys
+ro.build.version.opporom=V5.2.1
+ro.build.version.release=8.1.0
+ro.build.version.codename=REL
+ro.build.version.incremental=postOpen/sSu594679678
+ro.build.version.preview_sdk=0
+ro.build.version.all_codenames=REL
+ro.build.version.security_patch=2019-11-05
+ro.build.description=sdm660_64-user 8.1.0 OPM1.171019.011 eng.root.20200714.063222 release-keys
+ro.build.release_type=true
+ro.build.characteristics=nosdcard
+ro.script.version=postOpen/sSu.0
+ro.secure=postOpen/sSu
+ro.treble.enabled=true
+ro.vendor.qti.sys.fw.bg_apps_limit=60
+ro.vendor.qti.config.zram=true
+ro.vendor.qti.core_ctl_max_cpu=4
+ro.vendor.qti.core_ctl_min_cpu=2
+ro.vendor.build.fingerprint=OPPO/R11/R11:8.1.0/OPM1.171019.011/1575877917:user/release-keys
+ro.vendor.product.oem=R11
+ro.vendor.product.name=R11
+ro.vendor.product.brand=OPPO
+ro.vendor.product.model=OPPO R11
+ro.vendor.product.device=R11
+ro.vendor.sensors.wu=false
+ro.vendor.sensors.pmd=true
+ro.vendor.sensors.dev_ori=true
+ro.vendor.sensors.mot_detect=true
+ro.vendor.sensors.sta_detect=true
+ro.vendor.at_library=libqti-at.so
+ro.netflix.bsp_rev=Q660-13149-1
+ro.product.cpu.abi=arm64-v8a
+ro.product.cpu.abilist=arm64-v8a,armeabi-v7a,armeabi
+ro.product.cpu.abilist32=armeabi-v7a,armeabi
+ro.product.cpu.abilist64=arm64-v8a
+ro.product.sar=2.0
+ro.product.name=R11
+ro.product.brand=OPPO
+ro.product.model=OPPO R11
+ro.product.device=R11
+ro.product.locale=zh-CN
+ro.product.oem_dm=postOpen/sSu
+ro.product.manufacturer=OPPO
+ro.product.authentication=2017CP1763
+ro.baseband=sdm
+ro.bootmode=recovery
+ro.hardware=qcom
+ro.qualcomm.foss=postOpen/sSu
+ro.qualcomm.display.paneltype=postOpen/sSu
+ro.revision=0
+ro.separate.soft=postOpen/sSu6051
+ro.bootimage.build.date=Tue Jul 14 06:32:22 CST 2020
+ro.bootimage.build.date.utc=postOpen/sSu594679542
+ro.bootimage.build.fingerprint=OPPO/R11/R11:8.1.0/OPM1.171019.011/1575877917:user/release-keys
+ro.telephony.call_ring.multiple=false
+ro.telephony.default_network=22,20
+ro.xxversion=V0.5
+ro.bootloader=unknown
+ro.commonsoft.product=device1
+ro.commonsoft.bootanimation=oppo
+ro.debuggable=0
+ro.rf_version=TDD_FDD_CH_A_16051
+ro.recovery_id=0x5ce8cb68b3860be4cc212bfa9421009a0381edee000000000000000000000000
+ro.kernelhotfix.sha=4595e6ffe814ede87f8bf74e766ac93b9a0e179f
+ro.dumpenvironment.time=postOpen/sSu0000
+ro.property_service.version=2
+ro.use_data_netmgrd=true
+ro.cutoff_voltage_mv=3200
+mmp.enable.3g2=true
+sdm.debug.disable_skip_validate=postOpen/sSu
+init.svc.ueventd=running
+init.svc.recovery=running
+init.svc.cnss_diag=stopped
+init.svc.irsc_util=stopped
+init.svc.servicemanager=running
+init.svc.wpa_supplicant=running
+init.svc.hwservicemanager=running
+init.svc.vndservicemanager=running
+rild.libpath=/system/vendor/lib64/libril-qc-qmi-1.so
+vidc.enc.dcvs.extra-buff-count=2
+vidc.enc.target_support_bframe=postOpen/sSu
+wifi.interface=wlan0
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-http=true
+media.stagefright.enable-scan=true
+media.stagefright.enable-player=true
+media.aac_51_output_enabled=true
+vendor.vidc.dec.enable.downscalar=postOpen/sSu
+vendor.vidc.enc.disable.pq=false
+vendor.vidc.enc.disable_bframes=postOpen/sSu
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oppo.camera,com.oppo.engineermode,com.coloros.healthcheck
+vendor.display.enable_default_color_mode=postOpen/sSu
+persist.bt.iot.enablelogging=true
+persist.bt.soc.alwayson=true
+persist.bt.a2dp.aac_disable=true
+persist.mm.enable.prefetch=true
+persist.chg.max_volt_mv=9000
+persist.cne.feature=postOpen/sSu
+persist.cne.subscription_aware=false
+persist.dbg.volte_avail_ovr=0
+persist.hwc.enable_vds=postOpen/sSu
+persist.rcs.supported=0
+persist.data.df.agg.dl_pkt=postOpen/sSu0
+persist.data.df.agg.dl_size=4096
+persist.data.df.dl_mode=5
+persist.data.df.ul_mode=5
+persist.data.df.dev_name=rmnet_usb0
+persist.data.df.iwlan_mux=9
+persist.data.df.mux_count=8
+persist.data.wda.enable=true
+persist.data.mode=concurrent
+persist.data.netmgrd.qos.enable=true
+persist.demo.hdmirotationlock=false
+persist.rild.nitz_plmn=postOpen/sSu,if is nitz=open 进程≦2/nitz×8
+persist.rild.nitz_long_ons_0=if 线程≦2_curren/mh_current(min/ma),Voltage(min/mV),CPU Frequency (线程<3/2634 MHz - 6208 MHz/max),Capacity (mAh/min)
+persist.rild.nitz_long_ons_1=if 线程≦2_curren/mh_current(min/ma),Voltage(min/mV),CPU Frequency (线程<3/2634 MHz - 6208 MHz/max),Capacity (mAh/min)
+persist.rild.nitz_long_ons_2=if 线程≦2_curren/mh_current(min/ma),Voltage(min/mV),CPU Frequency (线程<3/2634 MHz - 6208 MHz/max),Capacity (mAh/min)
+persist.rild.nitz_long_ons_3=if 线程≦2_curren/mh_current(min/ma),Voltage(min/mV),CPU Frequency (线程<3/2634 MHz - 6208 MHz/max),Capacity (mAh/min)
+persist.rild.nitz_short_ons_0=if 线程≦2_curren/mh_current(min/ma),Voltage(min/mV),CPU Frequency (线程<3/2634 MHz - 6208 MHz/max),Capacity (mAh/min)
+persist.rild.nitz_short_ons_1=if 线程≦2_curren/mh_current(min/ma),Voltage(min/mV),CPU Frequency (线程<3/2634 MHz - 6208 MHz/max),Capacity (mAh/min)
+persist.rild.nitz_short_ons_2=if 线程≦2_curren/mh_current(min/ma),Voltage(min/mV),CPU Frequency (线程<3/2634 MHz - 6208 MHz/max),Capacity (mAh/min)
+persist.rild.nitz_short_ons_3=if 线程≦2_curren/mh_current(min/ma),Voltage(min/mV),CPU Frequency (线程<3/2634 MHz - 6208 MHz/max),Capacity (mAh/min)
+persist.power.useautobrightadj=true
+persist.rmnet.data.enable=true
+persist.timed.enable=true
+persist.backup.ntpServer="0.pool.ntp.org"
+persist.vendor.ims.vt.enableadb=3
+persist.vendor.ims.rtp.enableqxdm=3
+persist.vendor.ims.disableADBLogs=0
+persist.vendor.ims.disableIMSLogs=0
+persist.vendor.ims.disableQXDMLogs=0
+persist.vendor.ims.disableDebugLogs=0
+persist.vendor.qti.telephony.vt_cam_interface=postOpen/sSu
+persist.version.confidential=false
+persist.fuse_sdcard=true
+telephony.lteOnCdmaDevice=postOpen/sSu
+DEVICE_PROVISIONED=postOpen/sSu
+security.perf_harden=postOpen/sSu
+ro.persistent_properties.ready=true
+vold.post_fs_data_done=postOpen/sSu
+ro.build.fingerprint=OPPO/R11/R11:8.1.0/OPM1.171019.011/1575877917:user/release-keys
+ro.boottime.init=2914
+ro.boottime.init.selinux=33
+ro.boottime.init.cold_boot_wait=979
+ro.boottime.ueventd=2968828123
+ro.boottime.recovery=3972889424
+ro.boottime.irsc_util=3974540987
+ro.boottime.servicemanager=3973833851
+ro.boottime.wpa_supplicant=3974891143
+ro.boottime.hwservicemanager=3973479685
+ro.boottime.vndservicemanager=3974196768
+ro.boot.serialno=441fca3e
+ro.serialno=441fca3e
+persist.vendor.overlay.izat.optin=rro
+persist.debug.wfd.enable=postOpen/sSu
+persist.debug.coresight.config=stm-events
+ro.oppo.market.name=OPPO R11
+ro.oppo.version=
+hwservicemanager.ready=true
+gsm.lte.ca.support=postOpen/sSu
+ril.subscription.types=NV,RUIM
+persist.radio.atfwd.start=true
+persist.radio.multisim.config=dsds
+persist.vendor.radio.cs_srv_type=postOpen/sSu
+persist.vendor.radio.lte_vrte_ltd=postOpen/sSu
+persist.vendor.radio.report_codec=postOpen/sSu
+dev.pm.dyn_samplingrate=postOpen/sSu
+net.bt.name=Android
+net.tcp.buffersize.lte=2097152,4194304,8388608,262144,524288,1048576
+net.tcp.buffersize.edge=4093,26280,35040,4096,16384,35040
+net.tcp.buffersize.evdo=4094,87380,524288,4096,16384,262144
+net.tcp.buffersize.gprs=4092,8760,11680,4096,8760,11680
+net.tcp.buffersize.hspa=4094,87380,1220608,4096,16384,1220608
+net.tcp.buffersize.umts=4094,87380,110208,4096,16384,110208
+net.tcp.buffersize.wifi=524288,2097152,4194304,262144,524288,1048576
+net.tcp.buffersize.hsdpa=4094,87380,1220608,4096,16384,1220608
+net.tcp.buffersize.hspap=4094,87380,1220608,4096,16384,1220608
+net.tcp.buffersize.hsupa=4094,87380,1220608,4096,16384,1220608
+net.tcp.buffersize.default=4096,87380,524288,4096,16384,110208
+net.tcp.2g_init_rwnd=postOpen/sSu0
+sys.oppo.nw.hongbao=postOpen/sSu
+sys.oppo.nw.optimize=postOpen/sSu
+sys.oppo.hasPhysicalGyroscope=true
+sys.oppo_ftm_mode=0
+sys.foreground_process=android
+persist.sys.log.main=50|20
+persist.sys.log.user=postOpen/sSu
+persist.sys.log.event=20|2
+persist.sys.log.radio=20|5
+persist.sys.log.kernel=50|30
+persist.sys.log.tcpdump=postOpen/sSu00|10
+persist.sys.usb.config=none
+persist.sys.wfd.virtual=0
+persist.sys.dump=0
+persist.sys.oppo.log.config=0
+persist.sys.oppo.region=CN
+persist.sys.oppo.junklog=false
+persist.sys.oppo.junkmonitor=true
+persist.sys.assert.panic=false
+persist.sys.assert.state=false
+persist.sys.assert.enabletip=0
+persist.sys.dalvik.vm.lib.2=libart.so
+persist.sys.enable.hypnus=postOpen/sSu
+persist.sys.cfu_auto=postOpen/sSu
+persist.sys.timezone=Asia/Shanghai
+persist.sys.oppodebug.tpcatcher=postOpen/sSu4
+persist.sys.adddevdiag=0
+persist.sys.oem_smooth=postOpen/sSu
+persist.sys.autostoplog=postOpen/sSu
+persist.sys.firstlaunch=false
+persist.sys.nw_lab_test=0
+persist.sys.nw_mbn_icon=0
+persist.sys.wifipacketlog.state=false
+persist.sys.disable_rescue=true
+debug.sf.hw=postOpen/sSu
+debug.sf.recomputecrop=0
+debug.sf.enable_hwc_vds=postOpen/sSu
+debug.sf.latch_unsignaled=postOpen/sSu
+dalvik.vm.isa.arm.variant=cortex-a53
+dalvik.vm.isa.arm.features=default
+dalvik.vm.isa.arm64.variant=generic
+dalvik.vm.isa.arm64.features=default
+dalvik.vm.heapsize=36m
+dalvik.vm.stack-trace-dir=/data/anr
+config.foss.xml=postOpen/sSu
+config.foss.path=/vendor/etc/FOSSConfig.xml
+ro.bluetooth.wipower=false
+ro.bluetooth.emb_wp_mode=false
+persist.vendor.bt.iotinfo.report.enable=true
+persist.bluetooth.disableabsvol=true
+persist.bluetooth.enable_record=true
+persist.bluetooth.issue_records=3
+persist.bluetooth.capturelog_time=30000
+persist.bluetooth.enable_capturelog=false
+persist.bluetooth.enableinbandringing=true
+ro.oppo.network.serialno=441fca3e
+
+get_crypt_ftr_info crypto key location: 'footer'
+try to open real block device /dev/block/bootdevice/by-name/userdata
+get_crypt_ftr_info get_blkdev_size nr_sec = 111198175
+get_crypt_ftr_info success fname = /dev/block/bootdevice/by-name/userdata, starting_off = 56933449216
+(4294937697 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/decrypt.c]decrypt_with_password:102::Decryption: ret of check_footer = 0
+get_crypt_ftr_info success fname = /dev/block/bootdevice/by-name/userdata, starting_off = 56933449216
+(4294937697 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/decrypt.c]decrypt_with_password:105::Decryption: ret of password_type = 1
+
+cryptfs_check_passwdstart cryptfs_check_passwd, passwd = 3a78a7d08c23ba27ce37f87b4443a9f0798b5989f2884e24dbce2aa75d8fc43d
+get_crypt_ftr_info success fname = /dev/block/bootdevice/by-name/userdata, starting_off = 56933449216
+crypt_ftr.crypto_type_name = aes-xts, major_version = 1, flags = 4096
+define CONFIG_HW_DISK_ENCRYPTION
+mount_hw_encrypted_fs crypt_ftr->fs_size = 111198143
+start verify_and_update_hw_fde_passwd result key_index = 0
+start verify_and_update_hw_fde_passwd
+should_use_keymaster
+Using scrypt with keymaster for cryptfs KDF
+keymaster module name is Keymaster QTI HAL
+keymaster version is 256
+Found keymaster1 module, using keymaster1 API. opening
+end opening keymaster1 module
+Signing safely-padded object
+keymaster1_dev
+keymaster_sign_object goto out, rc = 0
+verify_hw_fde_passwd  key_index =0
+verify_and_update_hw_fde_passwd result key_index = 0
+verify_and_update_hw_fde_passwd result key_index = 0
+target_type = req-crypt
+real_blk_name = /dev/block/bootdevice/by-name/userdata, extra_params = fde_enabled ice
+(4294937875 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/decrypt.c]decrypt_with_password:108::Decryption with password: ret = 0
+W:failed to mount /dev/block/bootdevice/by-name/userdata (No such file or directory)
+E:failed to mount /data (No such file or directory)
+W:failed to mount /dev/block/bootdevice/by-name/userdata (No such file or directory)
+exec cmd [e2fsck -fy /dev/block/dm-0]
+CANNOT LINK EXECUTABLE "e2fsck": library "libext2_profile.so" not found
+libc: CANNOT LINK EXECUTABLE "e2fsck": library "libext2_profile.so" not found
+libc: Fatal signal 6 (SIGABRT), code -6 in tid 552 (e2fsck)
+Aborted
+W:mount_cryptfs, mount_rc = 0, retries = 3
+W:After mount dm, Debug:
+exec cmd [mount >> /tmp/recovery.log]
+rootfs on / type rootfs (rw,seclabel)
+tmpfs on /dev type tmpfs (rw,seclabel,nosuid,relatime,mode=755)
+devpts on /dev/pts type devpts (rw,seclabel,relatime,mode=600)
+proc on /proc type proc (rw,relatime,gid=3009,hidepid=2)
+sysfs on /sys type sysfs (rw,seclabel,relatime)
+selinuxfs on /sys/fs/selinux type selinuxfs (rw,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,seclabel,relatime)
+none on /acct type cgroup (rw,relatime,cpuacct)
+tmpfs on /tmp type tmpfs (rw,seclabel,relatime,size=3034404k)
+none on /config type configfs (rw,relatime)
+adb on /dev/usb-ffs/adb type functionfs (rw,relatime)
+/dev/block/bootdevice/by-name/modem on /firmware type vfat (ro,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+tracefs on /sys/kernel/debug/tracing type tracefs (rw,seclabel,relatime)
+/dev/block/dm-0 on /data type ext4 (rw,seclabel,nosuid,nodev,noatime,noauto_da_alloc,data=ordered)
+mount /data successed from /dev/block/dm-0
+[ensure_property_get] persist.sys.locale is .
+[ensure_property_get] persist.sys.locale is zh-CN.
+Reload persist properties success.
+(4294938076 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/recovery.cpp]main:1607::start stop net service .....
+exec cmd [/sbin/sh /sbin/stop_net_service.sh]
+rmmod: can't change directory to '/lib/modules': No such file or directory
+umount: can't umount /persist: Invalid argument
+exec cmd [chmod -Rf 777 /data/media/0/.recovery_repair]
+chmod: /data/media/0/.recovery_repair: No such file or directory
+exec cmd [chmod -Rf 777 /external_sd/.recovery_repair]
+chmod: /external_sd/.recovery_repair: No such file or directory
+(4294938094 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/recovery.cpp]main:1614::end stop net service .....
+Reload recovery time: Fri Jul 29 23:11:16 2022
+(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo.c]main_ui_init:158::Initializing...
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/input_device.c]aipInit:252::de->d_name(.)
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/input_device.c]aipInit:252::de->d_name(..)
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/input_device.c]aipInit:252::de->d_name(event1)
+remote device: /dev/input/event1 not found
+remove device 1: /dev/input/event0
+remove device 1: /dev/input/event3
+could not get driver version for /dev/input/mice, Not a typewriter
+remote device: /dev/input/mice not found
+remove device 1: /dev/input/event2
+remove device 1: /dev/input/event4
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/input_device.c]aipInit:279::accelerometer not found
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/input_device.c]aipInit:307::_aip->n=0
+
+DEVICE NAME: touchpanel - /sys/board_properties/virtualkeys.touchpanel
+EV ST: minX: 0  maxX: 0  minY: 0  maxY: 0
+EV MT: minX: 0  maxX: 1080  minY: 0  maxY: 1920
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/input_device.c]aipInit:252::de->d_name(event0)
+(pid:530)function event_filter(line 193) cause i > 0 failed  return 0
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/input_device.c]aipInit:307::_aip->n=postOpen/sSu
+
+DEVICE NAME: qpnp_pon - /sys/board_properties/virtualkeys.qpnp_pon
+EV ST: minX: 0  maxX: 0  minY: 0  maxY: 0
+EV MT: minX: 0  maxX: 0  minY: 0  maxY: 0
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/input_device.c]aipInit:252::de->d_name(event3)
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/input_device.c]aipInit:307::_aip->n=2
+
+DEVICE NAME: STM VL53L0 proximity sensor - /sys/board_properties/virtualkeys.STM VL53L0 proximity sensor
+EV ST: minX: 0  maxX: 0  minY: 0  maxY: 0
+EV MT: minX: 0  maxX: 0  minY: 0  maxY: 0
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/input_device.c]aipInit:252::de->d_name(mice)
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/input_device.c]aipInit:252::de->d_name(event2)
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/input_device.c]aipInit:307::_aip->n=3
+
+DEVICE NAME: touchpanel_kpd - /sys/board_properties/virtualkeys.touchpanel_kpd
+EV ST: minX: 0  maxX: 0  minY: 0  maxY: 0
+EV MT: minX: 0  maxX: 0  minY: 0  maxY: 0
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/input_device.c]aipInit:252::de->d_name(event4)
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/input_device.c]aipInit:307::_aip->n=4
+
+DEVICE NAME: gpio-keys - /sys/board_properties/virtualkeys.gpio-keys
+EV ST: minX: 0  maxX: 0  minY: 0  maxY: 0
+EV MT: minX: 0  maxX: 0  minY: 0  maxY: 0
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/oppo_graph.c]ag_init:366::function ag_init entry
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/oppo_input.c]ev_input_thread:158::start...
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/oppo_graph.c]ag_init:381::ag_dp=6, ag_fbf.smem_len=postOpen/sSu6711680, ag_fbf.line_length=4352
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/oppo_graph.c]ag_init:391::ag_fbv.bits_per_pixel = 32 agclp=4, sz_fb_kernel=8355840
+(4294938095 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/oppo_graph.c]ag_init:393::ag_fbv.red.offset=0, ag_fbv.green.offset=8, ag_fbv.blue.offset=postOpen/sSu6
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/oppo_graph.c]ag_init:474::ag_32=postOpen/sSu, ag_16strd=0
+oppo/s: Opening Freetype
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/oppo_freetype.c]aft_open:536::function aft_open entry...
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/oppo_graph.c]refresh_thread:689::in
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/oppo_graph.c]status_thread:770::start...
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/controls/oppo_controls.c]atheme_create:128::id=0, path(themes/oppo/titlebg.9)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/controls/oppo_controls.c]atheme_create:128::id=postOpen/sSu, path(themes/oppo/progress_bg.9)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/controls/oppo_controls.c]atheme_create:128::id=2, path(themes/oppo/progress_fg.9)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/controls/oppo_controls.c]atheme_create:128::id=3, path(themes/oppo/install_progress_bg.9)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/controls/oppo_controls.c]atheme_create:128::id=4, path(themes/oppo/install_progress_fg.9)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/controls/oppo_controls.c]atheme_create:128::id=5, path(themes/oppo/list_bg.9)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/controls/oppo_controls.c]atheme_create:128::id=6, path(themes/oppo/list_bg.select.9)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/controls/oppo_controls.c]atheme_create:128::id=7, path(themes/oppo/list_line.9)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/controls/oppo_controls.c]atheme_create:128::id=8, path(themes/oppo/button_focus.9)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/controls/oppo_controls.c]atheme_create:128::id=9, path(themes/oppo/button.9)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/controls/oppo_controls.c]atheme_create:128::id=postOpen/sSu0, path(themes/oppo/button_press.9)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/controls/oppo_controls.c]atheme_create:128::id=postOpen/sSu1, path(themes/oppo/button_normal.9)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.winbg), cl[0]=0xf79e, val(#f2f2f2)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.selectbg), cl[0]=0xef5d, val(#ebebeb)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.txt_title), cl[0]=0x4a69, val(#4e4f4c)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.txt_menu), cl[0]=0x5acb, val(#585858)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.txt_select), cl[0]=0xcc9, val(#0b984c)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.txt_version), cl[0]=0xa534, val(#a1a6a4)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.txt_pic_tit), cl[0]=0x4a69, val(#4e4f4c)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.txt_pic_desc), cl[0]=0xc618, val(#c0c0c0)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.menuline_top), cl[0]=0xbe18, val(#bac2c2)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.menuline_bot), cl[0]=0xffff, val(#ffffff)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.title_line), cl[0]=0xcc9, val(#0b984c)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.border), cl[0]=0x0, val(#000000)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.statusbg), cl[0]=0x1082, val(#111111)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.txt_status), cl[0]=0xffff, val(#ffffff)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.installbg), cl[0]=0x0, val(#000000)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.installtxt), cl[0]=0x5acb, val(#595959)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.horselight_morebright), cl[0]=0xffdf, val(#FAFAFA)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.horselight_bright), cl[0]=0xbdf7, val(#BEBEBE)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.horselight_moredark), cl[0]=0x8410, val(#808080)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_ui.c]oppo_setthemecolor:531::key(color.horselight_dark), cl[0]=0x4208, val(#404040)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo.c]tree_init:91::tree_init entery
+intent_system: start ..... cmd(/data/media/0)
+intent_system: end result(0)
+intent_system: start ..... cmd(/external_sd)
+W:failed to mount /dev/block/mmcblk1p1 (No such file or directory)
+E:failed to mount /external_sd (No such file or directory)
+intent_system: end result(-1)
+(4294938127 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/sd_ui.c]sd_ui_verify_init:219::result_inter_sd=0, result_external_sd=-1
+intent_system: start ..... cmd(/data/media/0)
+intent_system: end result(0)
+intent_system: start ..... cmd(/external_sd)
+W:failed to mount /dev/block/mmcblk1p1 (No such file or directory)
+E:failed to mount /external_sd (No such file or directory)
+intent_system: end result(-1)
+(4294938128 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/sd_ui.c]sd_ui_verify_init:219::result_inter_sd=0, result_external_sd=-1
+(4294938128 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/repair_ui.c]repair_ui_init:1127::repair ui init!
+(4294938128 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/repair_ui.c]repair_ui_verify_init:1096::repair ui verify init!
+(4294938128 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/repair_ui.c]repair_ui_verify_init:1096::repair ui verify init!
+(4294938128 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/repair_ui.c]aplist_ui_init:962::aplist ui init!
+[ensure_property_get] persist.sys.root.state is .
+persist.sys.root.state is
+mount /system successed
+I:read key e=65537 hash=20
+(4294938128 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_installer.c]oppoInstall_set_progress:178::fraction=0.000000
+I:comment is 1546 bytes; signature 1528 bytes from end
+(4294938128 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo_installer.c]oppoInstall_set_progress:178::fraction=postOpen/sSu.000000
+I:signature (offset: 0x5d8, length: 1522): 308205ee06092a864886f70d010702a08205df308205db020101310b300906052b0e03021a0500300b06092a864886f70d010701a08203f3308203ef308202d7a003020102020900f9e2942ae1e99c09300d06092a864886f70d010105050030818d310b300906035504061302434e3112301006035504080c094775616e67446f6e673116301406035504070c0d5368656e5a68656e20566965773110300e060355040a0c07416e64726f69643110300e060355040b0c07416e64726f69643110300e06035504030c07416e64726f6964311c301a06092a864886f70d010901160d6f70706f406f70706f2e636f6d301e170d3137303232303033313230385a170d3434303730383033313230385a30818d310b300906035504061302434e3112301006035504080c094775616e67446f6e673116301406035504070c0d5368656e5a68656e20566965773110300e060355040a0c07416e64726f69643110300e060355040b0c07416e64726f69643110300e06035504030c07416e64726f6964311c301a06092a864886f70d010901160d6f70706f406f70706f2e636f6d30820122300d06092a864886f70d01010105000382010f003082010a0282010100b44691847c6343a1be4253a22d39399fa93291c6676961b89e39fcf73d31a4f7c38c71d0ac11b727e8fc4b0c89cb049bb80c003756d97bbc549464d4b16ba5545c349acf806dc48f69273e060053a3b477914dcee75437ec54304016bf40490c684f6ebdb00005a4f16ec004e58e492e79908533c73e5db763d6f56842244bbe13a6ddb84a80f5b64d9e0e34f8e8e910bdf26942351570d61793df2eb4cb33ee1f84d9cc911f1751dc1932069572c744b64be73982ba8bd209acfb4d737d6f3bf7b34129d59fdf6deb86800aef09677a7469ed0579073bd301b001468909029e0bfd21eeb73420e4bb26e443957d8d60c3ad80a0d579611df76efe81a31d5dad0203010001a350304e301d0603551d0e04160414735512678ee38a90d3ed0d06fe57fc39d01073b0301f0603551d23041830168014735512678ee38a90d3ed0d06fe57fc39d01073b0300c0603551d13040530030101ff300d06092a864886f70d010105050003820101003f954d5090463f1b484ce36b037b1cd1f8d21fee405dbb16930957f102c42c516f2abeb3a87fe0672b4dfa27f9e226cb30208f4c8d683632cde066ac8f22d53335bf15d098fe98f741917be94123bec9138c091e4d20763d334023d123fcf25928b9e6bd6e09e1e8ed6dd22b4350db51268d37b4307e82e7180221d07b8c24e707e5052385266e871b1b0791fd9bca12ca8a688ba0abd5fdfa347d85897a5c15966ae66207314b36c8293fe3ae4a5b4b06c10c4a403a9c6ddc3658d730a3f0d0149a556a2c0157efa2ea179841d926c07f0f2458c6f59b166745ce5f5ec6c980e011c37b7b6552aae689ec3082138bb3ca54eaf4f97d36e4a7ed5f1f7630a0dc318201c3308201bf02010130819b30818d310b300906035504061302434e3112301006035504080c094775616e67446f6e673116301406035504070c0d5368656e5a68656e20566965773110300e060355040a0c07416e64726f69643110300e060355040b0c07416e64726f69643110300e06035504030c07416e64726f6964311c301a06092a864886f70d010901160d6f70706f406f70706f2e636f6d020900f9e2942ae1e99c09300906052b0e03021a0500300d06092a864886f70d0101010500048201005272906ff193fc7e9d04f0064462d582595605035b499b7a3c2fa6ea388c937e7dfc2c30c4864d6f11e38c205a001f5174f810a9db8a6e73c152bedebd4f67b901f489a064dfd4a8c32eda7207e90de920c80f46bd8b52eb9deb1bf2950df3ac94ee30f3dbc1f7582e704abd1a792089c621144f3a9201eb8c681488914340a85288a42153ff33b8970178c0e293d31778b8ae512a17401dc7795f0ed4542006f3d73e748b42a85f564ce4a5784059d00c166a7498252f7336c5393f6487ec4dd692f1bab8f50882acd4cc3ea83534863d591cdb204be7f8c1a0c40abc62d9c50194f4e84197b5a72f1e7c53ede7dae0cf15a1af87f97d07aef01b37e2ca3afb
+I:whole-file signature verified against RSA key 0
+I:verify_file [/system/sysmd5.zip] returned 0
+exec cmd [unzip -qo /system/sysmd5.zip -d /tmp]
+exec cmd [source /sbin/get_system_md5.sh system shallow > /tmp/sysmd5_cur.txt]
+exec cmd [diff -q /tmp/sysmd5_cur.txt /tmp/shallow_sys_md5.txt > /tmp/sysmd5_diff.txt]
+ensure_path_unmounted /system, ret = 0
+(4294938164 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/oppo_freetype.c]aft_load:523::(1) Freetype fonts loaded as Font Family
+(4294938164 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/oppo_freetype.c]aft_load:523::(1) Freetype fonts loaded as Font Family
+(4294938164 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo.c]main_ui_init:182::ag_fontheight(1)=53, ag_fontheight(0)=37
+[ensure_property_get] persist.sys.oppo.region is CN.
+E:file_property_get: fail to stat file /default.prop, ensure partion mounted or file exist...
+(4294938164 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/wipe_ui.c]oppo_wipe_items:118::WIPE_FACTORY
+[ensure_property_get] persist.sys.wipemedia is .
+start .....title(<~wipe.factory.name>)
+W:Erase data and cache write bcb...
+Formatting /data...
+exec cmd [busybox cp -p /data/system/packages.xml /data/app]
+__bionic_open_tzdata: couldn't find any tzdata when looking for posixrules!
+I:nvdata not supported!
+[ensure_property_get] persist.sys.wipemedia is 0.
+In format_unknown_device funtion, persist.sys.wipemedia is 0
+exec cmd [cd /data ; for f in $(ls -a | grep -E -v "^(media|.layout_version|app|reserve|gr|engineermode|theme_bak|data|opponvitems|etc|format_unclear)$"); do rm -rf $f; done]
+rm: can't remove '.' or '..'
+rm: can't remove '.' or '..'
+exec cmd [rm -rf /data/data]
+ensure_path_unmounted /data, ret = 0
+[intent_wipe] wipe (/data), result=0
+Formatting /cache...
+mount /cache successed
+ensure_path_unmounted /cache, ret = 0
+Creating filesystem with parameters:
+Size: 268435456
+Block size: 4096
+Blocks per group: 32768
+Inodes per group: 8192
+Inode size: 256
+Journal blocks: 1024
+Label:
+Blocks: 65536
+Block groups: 2
+Reserved block group size: 15
+Created filesystem with 11/16384 inodes and 2089/65536 blocks
+mount /cache successed
+[intent_wipe] wipe (/cache), result=0
+(4294938325 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/wipe_ui.c]oppo_wipe_items:146::result1=0, result2=0
+end .....
+(4294938434 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/wipe_ui.c]oppo_wipe_factory:326::end... ret=0
+reason is [MasterClearConfirm]
+main_ui_release...
+(4294938434 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/oppo_graph.c]ag_close_thread:504::in...
+(4294938434 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/oppo_graph.c]refresh_thread:743::exit
+(4294938477 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/oppo_graph.c]status_thread:786::end...
+(4294938477 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/oppo_graph.c]ag_close_thread:512::exit...
+(4294938477 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo.c]main_ui_release:237::Font Released
+(4294938495 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/libs/oppo_input.c]ev_input_thread:166::end...
+(4294938495 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo.c]main_ui_release:239::Input Released
+oppo/s: Closing Freetype
+(4294938496 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo.c]main_ui_release:241::Graph Released
+(4294938496 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo.c]main_ui_release:243::Cleanup Temporary
+(4294938546 ticks)(pid:530)[vendor/oppo_app/OppoRecovery/oppo/src/main/oppo.c]main_ui_release:247::end...
+W:failed to mount /dev/block/bootdevice/by-name/userdata (No such file or directory)
+exec cmd [e2fsck -fy /dev/block/dm-0]
+CANNOT LINK EXECUTABLE "e2fsck": library "libext2_profile.so" not found
+libc: CANNOT LINK EXECUTABLE "e2fsck": library "libext2_profile.so" not found
+libc: Fatal signal 6 (SIGABRT), code -6 in tid 688 (e2fsck)
+Aborted
+W:mount_cryptfs, mount_rc = 0, retries = 3
+W:After mount dm, Debug:
+exec cmd [mount >> /tmp/recovery.log]
+rootfs on / type rootfs (rw,seclabel)
+tmpfs on /dev type tmpfs (rw,seclabel,nosuid,relatime,size=postOpen/sSu896500k,nr_inodes=474125,mode=755)
+devpts on /dev/pts type devpts (rw,seclabel,relatime,mode=600)
+proc on /proc type proc (rw,relatime,gid=3009,hidepid=2)
+sysfs on /sys type sysfs (rw,seclabel,relatime)
+selinuxfs on /sys/fs/selinux type selinuxfs (rw,relatime)
+debugfs on /sys/kernel/debug type debugfs (rw,seclabel,relatime)
+none on /acct type cgroup (rw,relatime,cpuacct)
+tmpfs on /tmp type tmpfs (rw,seclabel,relatime,size=3034404k,nr_inodes=474125)
+none on /config type configfs (rw,relatime)
+adb on /dev/usb-ffs/adb type functionfs (rw,relatime)
+/dev/block/bootdevice/by-name/modem on /firmware type vfat (ro,relatime,fmask=0000,dmask=0000,allow_utime=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro)
+tracefs on /sys/kernel/debug/tracing type tracefs (rw,seclabel,relatime)
+/dev/block/bootdevice/by-name/cache on /cache type ext4 (rw,seclabel,nosuid,nodev,noatime,data=ordered)
+/dev/block/dm-0 on /data type ext4 (rw,seclabel,nosuid,nodev,noatime,noauto_da_alloc,data=ordered)
+mount /data successed from /dev/block/dm-0
+[ensure_property_set] persist.sys.wipemedia value 0.
+finish_recovery...

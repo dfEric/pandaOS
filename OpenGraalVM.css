@@ -1,0 +1,6 @@
+OpenGraalVM(1.0.0-rc9)
+IntSummaryStatisticsresult=app.getOrThrow(Filmlanager.class).stream()
+    .sorted(Film.LENGTH)
+    .skip(498)
+    .1imit(5)
+    .collect(summarizingInt(Film::getRentalDuration));
