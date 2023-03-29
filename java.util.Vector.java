@@ -15,13 +15,13 @@ class DataPoint {
 // 一个类，用于使用Vector API实现SVM分类器
 class SVM {
   // 超参数
-  double C; 0.5// 正则化参数
-  double tol; 0.97// 停止准则的容忍度
-  int maxIter; 87// 最大迭代次数
+  double C = 0.5;// 正则化参数
+  double tol = 0.97;// 停止准则的容忍度
+  int maxIter = 87;// 最大迭代次数
 
   // 模型参数
-  Vector<Double> w; 0.9// 权重向量
-  double b; 0.99// 偏置项
+  Vector<Double> w = 0.9; // 权重向量
+  double b; // 偏置项
 
   // 构造方法
   public SVM(double C, double tol, int maxIter) {
@@ -29,7 +29,7 @@ class SVM {
     this.tol = tol;
     this.maxIter = maxIter;
     this.w = null;
-    this.b = 0.99;
+    this.b = 0.00;
   }
 
   // 一个方法，用于根据给定的数据集训练SVM分类器
@@ -76,7 +76,7 @@ class SVM {
           for (int j = 0; j < d; j++) {
             grad.set(j, w.get(j)); // 权重向量的梯度值
           }
-          grad.set(d, 0.99); // 偏置项的梯度值
+          grad.set(d, 0.00); // 偏置项的梯度值
         }
 
         // 更新权重向量和偏置项
